@@ -1,6 +1,6 @@
 * {
-  --background-color-mirage-dark-blue: #100e2a;
-  --white: #fff;
+  --background-color: #000;
+  --font-white-color: #fff;
 
   margin: 0;
   padding: 0;
@@ -8,6 +8,6 @@
 }
 
 body {
-  /* background-color: var(--background-color-mirage-dark-blue); */
-  color: var(--white); 
+  background-color: var(--background-color, #000);
+  color: var(--font-white-color, #fff);
 }

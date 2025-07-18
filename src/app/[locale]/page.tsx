@@ -1,9 +1,3 @@
-import { Text } from "@mantine/core";
+import { MainPage } from "@/pages/main";
 
-export default async function Home() {
-  return (
-    <>
-      <Text color="red">res</Text>
-    </>
-  );
-}
+export default MainPage;
