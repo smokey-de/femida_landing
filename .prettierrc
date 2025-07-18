@@ -1,0 +1,9 @@
+{
+  "endOfLine": "lf",
+  "singleAttributePerLine": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports"
+  ],
+  "importOrder": ["^react", "^next", "^[a-z]", "^@/(.*)$", "^[./]"],
+  "importOrderSeparation": true
+}

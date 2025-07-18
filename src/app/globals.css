@@ -1,0 +1,13 @@
+* {
+  --background-color-mirage-dark-blue: #100e2a;
+  --white: #fff;
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: var(--background-color-mirage-dark-blue); */
+  color: var(--white); 
+}
