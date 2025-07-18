@@ -9,6 +9,7 @@ import { routing } from "@/i18n/routing";
 import { seoConf, theme } from "@/shared/config";
 
 import "../globals.css";
+import { ContactForm } from "@/shared/ui";
 
 export function generateStaticParams() {
   return [{ locale: "uz" }, { locale: "en" }, { locale: "ru" }];
@@ -36,6 +37,7 @@ export default async function Layout({ children, params }: LayoutProps) {
         <NextIntlClientProvider>
           <MantineProvider theme={theme}>{children}</MantineProvider>
         </NextIntlClientProvider>
+
       </body>
     </html>
   );

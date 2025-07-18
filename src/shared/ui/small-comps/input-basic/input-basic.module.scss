@@ -1,0 +1,17 @@
+.label{
+    color: black;
+}
+
+.input {
+    transition: none;
+
+    &::placeholder{
+        color: #161616;
+        opacity: .7;
+    }
+  
+    &:focus-within {
+        border-color: #00000026;
+        box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    }
+  }
