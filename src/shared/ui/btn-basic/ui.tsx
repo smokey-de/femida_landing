@@ -1,24 +1,12 @@
-import { Button, ButtonProps } from "@mantine/core";
-import s from "./style.module.scss"
-import React from "react";
+import { Button } from "@mantine/core";
+import s from "./style.module.scss";
 
-interface BtnBasicProps extends ButtonProps {
-  text: string;
-}
-
-export const BtnBasic: React.FC<BtnBasicProps> = ({ text, ...props }) => {
-  return (
-    <Button
-      variant="outline"
-      color="#161616"
-      size="xl"
-      radius="0px"
-      {...props}
-      classNames={{
-        root: s.button,
-      }}
-    >
-      {text}
-    </Button>
-  );
-};
+export const BtnBasic = Button.withProps({
+  variant: "outline",
+  color: "#161616",
+  size: "xl",
+  radius: "0px",
+  classNames: {
+    root: s.button,
+  },
+});
