@@ -1,0 +1,8 @@
+@import "../../lib/colors.scss";
+
+.link {
+  color: $white;
+  &:hover {
+    color: $primary-color;
+  }
+}
