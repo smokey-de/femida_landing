@@ -1,0 +1,12 @@
+@import "../../colors.scss";
+.label {
+  color: $secondary-color; 
+}
+
+.input {
+    transition: none;
+
+    @include placeholder($placeholder-color);
+
+    @include focus-effect($accent-color, rgba(0, 0, 0, .3))
+}

@@ -36,6 +36,7 @@ export default async function Layout({ children, params }: LayoutProps) {
         <NextIntlClientProvider>
           <MantineProvider theme={theme}>{children}</MantineProvider>
         </NextIntlClientProvider>
+
       </body>
     </html>
   );
