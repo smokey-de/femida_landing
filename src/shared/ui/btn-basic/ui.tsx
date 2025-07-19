@@ -1,5 +1,5 @@
 import { Button, ButtonProps } from "@mantine/core";
-import s from "./btn-basic.module.scss"
+import s from "./style.module.scss"
 import React from "react";
 
 interface BtnBasicProps extends ButtonProps {
