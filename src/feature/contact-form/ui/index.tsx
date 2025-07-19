@@ -64,7 +64,7 @@ export const ContactForm = () => {
         justify={"flex-end"}
         w={"100%"}
       >
-        <BtnBasic text="Send"></BtnBasic>
+        <BtnBasic>Send</BtnBasic>
       </Flex>
     </Flex>
   );
