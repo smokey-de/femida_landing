@@ -8,5 +8,6 @@ export const BtnBasic = Button.withProps({
   radius: "0px",
   classNames: {
     root: s.button,
+    label: s.label,
   },
 });

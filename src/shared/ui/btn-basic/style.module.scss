@@ -1,8 +1,28 @@
 @import "../../colors.scss";
 
-
 .button {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 
   @include hover-effect($primary-color, $primary-color);
+}
+
+.label {
+  position: relative;
+  color: black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 10px; // adjust as needed
+    left: 0;
+    width: 0%;
+    height: .5px;
+    background-color: black;
+    transition: width 0.4s ease-in-out;
+  }
+}
+
+// Trigger underline animation on hover
+.button:hover .label::after {
+  width: 100%;
 }
