@@ -1,5 +1,8 @@
+"use client";
+
 import { Textarea } from "@mantine/core";
-import s from "./style.module.scss";
+
+import s from "./styles.module.scss";
 
 export const TextAreaBasic = Textarea.withProps({
   classNames: {
@@ -9,7 +12,7 @@ export const TextAreaBasic = Textarea.withProps({
   size: "lg",
   radius: "0",
   placeholder: "Enter your message",
-  autosize: true, 
+  autosize: true,
   minRows: 3,
   mb: "60px",
 });

@@ -26,6 +26,8 @@ const images = [
   "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1446755424.jpg",
 ];
 
+import { Navbar } from "@/shared/ui";
+
 export const MainPage = () => {
   const [index, setIndex] = useState(0);
   const [bgIndex, setBgIndex] = useState(0);

@@ -1,0 +1,8 @@
+@use "../../lib/colors.scss" as colors;
+
+.link {
+  color: colors.$white;
+  &:hover {
+    color: colors.$primary-color;
+  }
+}

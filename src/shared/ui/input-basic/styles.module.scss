@@ -1,0 +1,13 @@
+@use "../../lib/colors.scss" as colors;
+
+.label {
+  color: colors.$secondary-color;
+}
+
+.input {
+  transition: none;
+
+  @include colors.placeholder(colors.$placeholder-color);
+
+  @include colors.focus-effect(colors.$accent-color, rgba(0, 0, 0, 0.3));
+}

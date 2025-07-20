@@ -1,6 +1,8 @@
 import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 
+import { PropsWithChildren } from "react";
+
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import "next-intl/server";
 import { notFound } from "next/navigation";
@@ -18,10 +20,7 @@ export const generateMetadata = async () => await seoConf.metadataBase();
 
 export const viewport = seoConf.viewportBase;
 
-type LayoutProps = Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ locale: string }>;
-}>;
+type LayoutProps = PropsWithChildren & { params: Promise<{ locale: string }> };
 
 export default async function Layout({ children, params }: LayoutProps) {
   const { locale } = await params;
