@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: cornflowerblue;
-  /* background-color: var(--background-color, #000); */
+  /* background-color: cornflowerblue; */
+  background-color: var(--background-color, #000);
   /* color: var(--font-white-color, #fff); */
 }

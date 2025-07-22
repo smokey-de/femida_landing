@@ -6,3 +6,32 @@
     border-color 0.3s ease;
   @include colors.hover-effect(colors.$primary-color, colors.$primary-color);
 }
+
+.button:hover{
+  color: black !important;
+}
+
+
+.label {
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.7em;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .button:hover &::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}

@@ -3,9 +3,15 @@
 .languageSwitcher {
   background-color: transparent;
   border-radius: 0 !important;
-  border-color: #000;
+  border-color: colors.$white;
+  color: colors.$white;
 
   &:active {
     border-color: colors.$primary-color;
   }
+}
+
+
+.icons svg{
+  color: colors.$white;
 }

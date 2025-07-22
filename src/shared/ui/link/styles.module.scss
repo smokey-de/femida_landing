@@ -1,8 +1,31 @@
 @use "../../lib/colors.scss" as colors;
 
 .link {
+  position: relative;
   color: colors.$white;
+  text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: colors.$primary-color;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
   &:hover {
     color: colors.$primary-color;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
   }
 }
