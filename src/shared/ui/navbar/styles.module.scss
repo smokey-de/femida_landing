@@ -1,7 +1,25 @@
 .nav {
+  z-index: 5;
   width: 100%;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
-  //   background-color: steelblue;
+
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+
+  .dividerWrapper {
+    transition: opacity 0.3s ease;
+  }
+
+  &.scrolled {
+    background-color: #374B47;
+    border-top: none !important;
+  }
+
+  &.scrolled .dividerWrapper {
+    opacity: 0;
+  }
+
 }
+

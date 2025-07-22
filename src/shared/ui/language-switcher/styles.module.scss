@@ -1,11 +1,17 @@
-@import "../../lib/colors.scss";
+@use "../../lib/colors.scss" as colors;
 
 .languageSwitcher {
   background-color: transparent;
   border-radius: 0 !important;
-  border-color: #000;
+  border-color: colors.$white;
+  color: colors.$white;
 
   &:active {
-    border-color: $primary-color;
+    border-color: colors.$primary-color;
   }
+}
+
+
+.icons svg{
+  color: colors.$white;
 }

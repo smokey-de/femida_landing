@@ -1,0 +1,18 @@
+@import "../../colors.scss";
+
+.label {
+  color: black;
+}
+
+.input {
+  transition: none;
+
+  @include placeholder($placeholder-color);
+
+  @include focus-effect($accent-color, rgba(0, 0, 0, 0.3));
+
+  resize: vertical;
+  overflow: auto;
+  min-height: 60px;
+}
+

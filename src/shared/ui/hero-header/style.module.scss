@@ -1,0 +1,43 @@
+.heroWrapper {
+    position: relative;
+    min-height: 80vh;
+    width: 100%;
+    color: white;
+    overflow: hidden;
+    align-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 100px;
+  }
+  
+  .heroBg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .heroTextContainer {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .heroText {
+    font-size: 3rem;
+    font-weight: 700;
+    perspective: 1000px;
+  }
+  
+  .line {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.02em;
+  }
+  
+  .letter {
+    display: inline-block;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    will-change: transform;
+  }
