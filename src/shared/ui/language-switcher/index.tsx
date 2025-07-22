@@ -43,7 +43,7 @@ export const LanguageSwitcher = () => {
   return (
     <Select
       w={70}
-      classNames={{ input: s.languageSwitcher }}
+      classNames={{ input: s.languageSwitcher, section: s.icons }}
       allowDeselect={false}
       disabled={isPending}
       data={languageOptions}

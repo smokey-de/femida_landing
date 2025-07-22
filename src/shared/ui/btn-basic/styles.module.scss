@@ -1,8 +1,37 @@
-@import "../../lib/colors.scss";
+@use "../../lib/colors.scss" as colors;
 
 .button {
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease;
-  @include hover-effect($primary-color, $primary-color);
+  @include colors.hover-effect(colors.$primary-color, colors.$primary-color);
+}
+
+.button:hover{
+  color: black !important;
+}
+
+
+.label {
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0.7em;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .button:hover &::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
 }

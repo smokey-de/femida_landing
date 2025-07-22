@@ -3,3 +3,6 @@ export { BtnBasic } from "./btn-basic/ui";
 export { InputBasic } from "./input-basic/ui";
 export { Navbar } from "./navbar";
 export { BaseLink } from "./link";
+export { HeroHeader } from "./hero-header";
+export { IndustriesSection } from "./industries-links";
+export { SplitterBanner } from "./splitter-banner";

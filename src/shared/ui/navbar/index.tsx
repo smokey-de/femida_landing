@@ -10,7 +10,12 @@ import {
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
 
+import { useEffect, useRef } from "react";
+
 import Image from "next/image";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { mediaQueries } from "@/shared/lib/constants";
 
@@ -18,6 +23,8 @@ import { BtnBasic } from "../btn-basic/ui";
 import { LanguageSwitcher } from "../language-switcher";
 import { BaseLink } from "../link";
 import s from "./styles.module.scss";
+
+gsap.registerPlugin(ScrollTrigger);
 
 type NavbarRoute = {
   label: string;
@@ -36,8 +43,56 @@ const navbarRoutes: NavbarRoute[] = [
 
 export const Navbar = () => {
   const isNotMobile = useMediaQuery(mediaQueries.mobile);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const nav = navRef.current;
+
+    if (!nav) return;
+
+    let lastScroll = 0;
+
+    gsap.to(nav, {
+      yPercent: -100,
+      ease: "power2.out",
+      scrollTrigger: {
+        start: 0,
+        end: "max",
+        onUpdate: (self) => {
+          const currentScroll = self.scroll();
+          const scrollDown = currentScroll > lastScroll;
+          gsap.to(nav, {
+            yPercent: scrollDown ? -100 : 0,
+            duration: 0.4,
+            ease: "power2.out",
+          });
+          lastScroll = currentScroll;
+        },
+      },
+    });
+    ScrollTrigger.create({
+      start: "top top",
+      end: 99999,
+      onUpdate: (self) => {
+        if (!nav) return;
+        if (self.scroll() > 10) {
+          nav.classList.add(s.scrolled);
+        } else {
+          nav.classList.remove(s.scrolled);
+        }
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t) => t.kill());
+    };
+  }, []);
+
   return (
-    <nav className={s.nav}>
+    <nav
+      ref={navRef}
+      className={s.nav}
+    >
       <NavContainer>
         <NavElement>
           <Image
@@ -48,7 +103,11 @@ export const Navbar = () => {
           />
           {isNotMobile ? <DesktopNavList /> : <MobileNavList />}
         </NavElement>
-        <Divider />
+
+        <div className={s.dividerWrapper}>
+          <Divider className={s.divider} />
+        </div>
+        
       </NavContainer>
     </nav>
   );
@@ -109,7 +168,14 @@ const NavItems = () =>
     </BaseLink>
   ));
 
-const ContactBtn = () => <BtnBasic size="sm">Contact us</BtnBasic>;
+const ContactBtn = () => (
+  <BtnBasic
+    size="sm"
+    color="#fff"
+  >
+    Contact us
+  </BtnBasic>
+);
 
 const NavContainer = Container.withProps({
   h: "5rem",

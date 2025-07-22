@@ -1,9 +1,6 @@
 import { Anchor, AnchorProps } from "@mantine/core";
-
 import { FC, PropsWithChildren } from "react";
-
 import Link from "next/link";
-
 import s from "./styles.module.scss";
 
 const defaultProps: AnchorProps = {
@@ -22,6 +19,7 @@ export const BaseLink: FC<LinkProps> = (props) => {
       component={Link}
       href={props.href || "#"}
       className={s.link}
+      unstyled
       {...defaultProps}
       {...props}
     >
