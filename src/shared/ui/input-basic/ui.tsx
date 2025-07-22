@@ -1,6 +1,8 @@
+"use client";
+
 import { TextInput } from "@mantine/core";
 
-import s from "./style.module.scss";
+import s from "./styles.module.scss";
 
 export const InputBasic = TextInput.withProps({
   classNames: {
@@ -11,5 +13,5 @@ export const InputBasic = TextInput.withProps({
   radius: "0",
   placeholder: "Enter text",
   type: "text",
-  mb: "60px"
+  mb: "60px",
 });

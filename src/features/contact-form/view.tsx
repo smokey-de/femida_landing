@@ -1,21 +1,20 @@
 "use client";
 
-import s from "./index.module.scss"
-import { BtnBasic, InputBasic, TextAreaBasic } from "@/shared/ui";
 import { Flex, SimpleGrid, Text } from "@mantine/core";
-// import { useTranslations } from "use-intl";
 
+import { BtnBasic, InputBasic, TextAreaBasic } from "@/shared/ui";
+
+// import { useTranslations } from "use-intl";
 
 export const ContactForm = () => {
   // const t = useTranslations();
 
   return (
-    <Flex direction={"column"}> 
+    <Flex direction={"column"}>
       <Text
         size="xl"
         fw={"600"}
         fz={"48px"}
-        className={s.title}
         h={"100%"}
         mb={"60px"}
       >

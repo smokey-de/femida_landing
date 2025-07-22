@@ -1,10 +1,15 @@
+"use client";
+
 import { Button } from "@mantine/core";
-import s from "./style.module.scss";
+
+import s from "./styles.module.scss";
 
 export const BtnBasic = Button.withProps({
   variant: "outline",
   color: "#161616",
-  size: "xl",
+  fz: ".875rem",
+  lh: "1.25rem",
+  fw: 500,
   radius: "0px",
   classNames: {
     root: s.button,

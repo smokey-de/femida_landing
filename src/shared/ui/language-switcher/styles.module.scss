@@ -1,0 +1,11 @@
+@import "../../lib/colors.scss";
+
+.languageSwitcher {
+  background-color: transparent;
+  border-radius: 0 !important;
+  border-color: #000;
+
+  &:active {
+    border-color: $primary-color;
+  }
+}
