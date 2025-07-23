@@ -1,9 +1,13 @@
 "use client";
 
 import { Box, Container, Flex, Group, Text } from "@mantine/core";
+
 import { useEffect, useRef, useState } from "react";
+
 import gsap from "gsap";
+
 import { BtnBasic } from "@/shared/ui";
+
 import s from "./style.module.scss";
 
 const headlines = [
@@ -101,10 +105,23 @@ export const HeroHeader = () => {
         />
       ))}
 
-      <Container size="xl" className={s.heroTextContainer}>
-        <Flex direction={"column"} align={"flex-start"}>
-          <Flex className={s.heroText} direction={"column"}>
-            <Text fz={"60px"} fw={500} lh={"1.2em"}>
+      <Container
+        size="xl"
+        className={s.heroTextContainer}
+      >
+        <Flex
+          direction={"column"}
+          align={"flex-start"}
+        >
+          <Flex
+            className={s.heroText}
+            direction={"column"}
+          >
+            <Text
+              fz={"60px"}
+              fw={500}
+              lh={"1.2em"}
+            >
               Unlock your financial potential with
             </Text>
             <Group className={s.line}>
@@ -121,14 +138,19 @@ export const HeroHeader = () => {
                       if (el) letterRefs.current[i] = el;
                     }}
                     classNames={{
-                        root: s.mtr
+                      root: s.mtr,
                     }}
                   >
                     {letters[i] ?? "\u00A0"}
                   </Text>
                 ))}
             </Group>
-            <Text fz={"24px"} fw={500} lh={"1.2em"} mb={"30px"}>
+            <Text
+              fz={"24px"}
+              fw={500}
+              lh={"1.2em"}
+              mb={"30px"}
+            >
               Comprehensive financial consulting services tailored to your needs
             </Text>
           </Flex>
