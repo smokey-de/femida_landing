@@ -11,7 +11,7 @@ export const ContactForm = () => {
 
   return (
     <Flex direction={"column"}>
-      <Text
+      {/* <Text
         size="xl"
         fw={"600"}
         fz={"48px"}
@@ -19,7 +19,7 @@ export const ContactForm = () => {
         mb={"60px"}
       >
         Contact form
-      </Text>
+      </Text> */}
 
       <SimpleGrid cols={3}>
         <InputBasic
@@ -60,10 +60,10 @@ export const ContactForm = () => {
       ></TextAreaBasic>
 
       <Flex
-        justify={"flex-end"}
+        justify={"flex-start"}
         w={"100%"}
       >
-        <BtnBasic>Send</BtnBasic>
+        <BtnBasic size="xl">Submit</BtnBasic>
       </Flex>
     </Flex>
   );
