@@ -1,11 +1,16 @@
+"use client";
+
 import {
   Container,
   Divider,
   Flex,
   Image,
-  Paper,
   Space,
   Text,
+  Box,
+  Card,
+  Center,
+  Paper,
 } from "@mantine/core";
 
 import { ContactForm } from "@/features/contact-form";
@@ -35,6 +40,64 @@ export const MainPage = () => (
     <GuidePrinciples />
     <ClientReviews />
     <TeamBanner />
+    <MainServiceContainer>
+      <ContentWrapper>
+        <Box
+          maw={"1280px"}
+          m={"0 auto"}
+          pos={"relative"}
+        >
+          <Center>
+            <ServiceText>01 Financial</ServiceText>
+          </Center>
+          <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
+          <CardWrapper>
+            <ServiceCard>
+              <CardIcon>icon</CardIcon>
+              <CardTitle>Investment planning </CardTitle>
+              <CardDescription>
+                Tailored investment strategies to help clients grow their wealth
+                and achieve their financial goals.
+              </CardDescription>
+            </ServiceCard>
+            <ServiceCard>
+              <CardIcon>icon2</CardIcon>
+              <CardTitle>Investment planning </CardTitle>
+              <CardDescription>
+                Tailored investment strategies to help clients grow their wealth
+                and achieve their financial goals.
+              </CardDescription>
+            </ServiceCard>
+            <ServiceCard>
+              <CardIcon>icon3</CardIcon>
+              <CardTitle>Investment planning </CardTitle>
+              <CardDescription>
+                Tailored investment strategies to help clients grow their wealth
+                and achieve their financial goals.
+              </CardDescription>
+            </ServiceCard>
+          </CardWrapper>
+          <Space h="xl" />
+          <Box
+            pos={"absolute"}
+            w={"500px"}
+            h={"470px"}
+            bottom={"0"}
+            right={"0"}
+            className="clipped-image"
+          >
+            <Image
+              w={"100%"}
+              h={"100%"}
+              src={
+                "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
+              }
+              alt="service"
+            />
+          </Box>
+        </Box>
+      </ContentWrapper>
+    </MainServiceContainer>
     <ContactSection />
   </Flex>
 );
@@ -125,3 +188,69 @@ const ContactSection = () => (
     </Flex>
   </Container>
 );
+
+const MainServiceContainer = Container.withProps({
+  fluid: true,
+  px: "2rem",
+});
+
+const ContentWrapper = Paper.withProps({
+  bdrs: 0,
+  shadow: "none",
+  bg: "#E7E8DB",
+  p: "1rem 1.25rem 3.125rem",
+});
+
+const ServiceText = Text.withProps({
+  component: "p",
+  fw: 600,
+  fz: "0.875rem",
+  lh: "1.25rem",
+  c: "rgba(0, 0, 0, 0.5)",
+});
+
+const ServiceTitle = Text.withProps({
+  component: "h3",
+  fw: 700,
+  fz: "4.375rem",
+  lh: "4.375rem",
+  c: "rgba(0, 0, 0, 0.5)",
+  mb: "1.25rem",
+});
+
+const CardWrapper = Flex.withProps({
+  gap: "1px",
+  pos: "relative",
+});
+
+const ServiceCard = Card.withProps({
+  bg: "#fff",
+  bdrs: "0",
+  maw: "25%",
+  p: "4.375rem 1.875rem 3.125rem",
+});
+
+const CardIcon = Text.withProps({
+  component: "span",
+  w: "100%",
+  mb: "1rem",
+});
+
+const CardTitle = Text.withProps({
+  component: "h5",
+  fz: "1.25rem",
+  fw: 400,
+  lh: "1.5rem",
+  c: "rgb(22, 22, 22)",
+  m: "0.875rem 0 1.25rem",
+});
+
+const CardDescription = Text.withProps({
+  component: "p",
+  fw: 400,
+  fz: "0.875rem",
+  lh: "1.25rem",
+  c: "rgb(95, 101, 103)",
+});
+
+const CardImage = {};
