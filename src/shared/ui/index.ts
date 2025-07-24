@@ -8,3 +8,4 @@ export { IndustriesSection } from "./industries-links";
 export { SplitterBanner } from "./splitter-banner";
 export { TrustSection } from "./trust-section";
 export { GuidePrinciples } from "./guide-principles";
+export { ClientReviews } from "./client-reviews";

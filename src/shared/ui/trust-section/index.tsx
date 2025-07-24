@@ -6,7 +6,6 @@ import {
   Container,
   Divider,
   Flex,
-  Grid,
   Image,
   Space,
   Text,
@@ -45,8 +44,11 @@ export const TrustSection = () => {
         </Text>
       </Flex>
 
-      <Grid>
-        <Grid.Col span={4}>
+      <Flex
+        justify={"space-between"}
+        mb={"6.25rem"}
+      >
+        <Box w={"30%"}>
           <Flex
             direction={"column"}
             gap={"1.25rem"}
@@ -71,17 +73,21 @@ export const TrustSection = () => {
           >
             About us
           </BaseLink>
-        </Grid.Col>
-        <Grid.Col
-          span={4}
-          h={558}
-        >
-          <Image
-            src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1408433542.svg"
-            alt="Description"
-          />
-        </Grid.Col>
-        <Grid.Col span={4}>
+        </Box>
+        <Box>
+          <Box
+            w={"585px"}
+            h={"653px"}
+          >
+            <Image
+              height={"100%"}
+              width={"100%"}
+              src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1408433542.svg"
+              alt="Description"
+            />
+          </Box>
+        </Box>
+        <div>
           <Flex
             direction={"column"}
             gap={"1.25rem"}
@@ -107,8 +113,8 @@ export const TrustSection = () => {
               description="A dedicated team of financial experts at your service."
             />
           </Flex>
-        </Grid.Col>
-      </Grid>
+        </div>
+      </Flex>
     </Container>
   );
 };

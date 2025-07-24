@@ -1,7 +1,9 @@
 "use client";
 
 import { Container, Grid, Text } from "@mantine/core";
+
 import { BaseLink } from "@/shared/ui";
+
 import s from "./style.module.scss";
 
 const links = [
@@ -18,16 +20,34 @@ const links = [
 
 export const IndustriesSection = () => (
   <Container size="xl">
-    <Grid columns={3} mb={100} mt={100}>
-      <Grid.Col span={1} className={s.wrapAbout}>
-        <Text size="xl" fw={700}>Industries</Text>
+    <Grid
+      columns={3}
+      mb={100}
+      mt={100}
+    >
+      <Grid.Col
+        span={1}
+        className={s.wrapAbout}
+      >
+        <Text
+          size="xl"
+          fw={700}
+        >
+          Industries
+        </Text>
       </Grid.Col>
 
       <Grid.Col span={2}>
         <Grid columns={2}>
           {links.map((link, index) => (
-            <Grid.Col span={1} key={index}>
-              <BaseLink href={link.href} style={{ color: "black" }}>
+            <Grid.Col
+              span={1}
+              key={index}
+            >
+              <BaseLink
+                href={link.href}
+                style={{ color: "black" }}
+              >
                 {link.title}
               </BaseLink>
             </Grid.Col>

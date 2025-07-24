@@ -1,27 +1,20 @@
-import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
+import { Box, Container, Flex, SimpleGrid, Text } from "@mantine/core";
 import { IconCheck } from "@tabler/icons-react";
+
+import s from "./styles.module.scss";
 
 export const GuidePrinciples = () => (
   <Container
     size={"xl"}
     fluid
   >
-    <Flex
-      w={"100%"}
-      h={"100%"}
-    >
-      <Box w={"50%"}>
-        <Image
-          height={"100%"}
-          width={"100%"}
-          fit="cover"
-          src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-997745894.jpg"
-          alt="Description"
-        />
-      </Box>
+    <Flex bg={"#E4EDF2"}>
       <Box
-        w={"50%"}
-        bg={"#E4EDF2"}
+        flex={1}
+        className={s.cardImage}
+      />
+      <Box
+        flex={1}
         p={"3.62rem 4.5rem"}
       >
         <Text
