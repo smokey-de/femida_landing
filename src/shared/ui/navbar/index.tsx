@@ -107,7 +107,6 @@ export const Navbar = () => {
         <div className={s.dividerWrapper}>
           <Divider className={s.divider} />
         </div>
-        
       </NavContainer>
     </nav>
   );

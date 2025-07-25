@@ -1,0 +1,50 @@
+@use "../../lib/colors.scss" as colors;
+
+.topLeft {
+  display: flex;
+  color: colors.$primary-color;
+  justify-content: flex-start;
+
+  &:hover {
+    color: colors.$primary-color !important;
+  }
+
+  @include colors.hover-effect(colors.$limed-spruce, colors.$limed-spruce);
+}
+
+.topRight span {
+  display: flex;
+  justify-content: space-between;
+
+  color: colors.$secondary-color;
+}
+
+.topLeft span::after {
+  background-color: colors.$primary-color !important;
+}
+
+.logoLink {
+  color: colors.$primary-color;
+  cursor: pointer;
+}
+
+.titleText {
+  color: colors.$primary-color;
+}
+
+
+.about{
+
+    color: colors.$white;
+
+}
+
+.secTop {
+    will-change: transform;
+    transition: transform 0.5s ease;
+  }
+  
+  .secBot {
+    transition: opacity 0.5s ease;
+  }
+  

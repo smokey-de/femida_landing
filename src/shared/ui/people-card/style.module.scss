@@ -1,0 +1,20 @@
+@use "../../lib/colors.scss" as colors;
+
+.title {
+  color: colors.$secondary-color;
+  cursor: pointer;
+
+  transition: color 200ms;
+
+  &:hover {
+    color: colors.$primary-color;
+  }
+}
+
+.image {
+  cursor: pointer;
+}
+
+.subtitle {
+  color: colors.$boulder;
+}

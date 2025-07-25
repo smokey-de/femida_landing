@@ -10,18 +10,19 @@ export const ContactForm = () => {
   // const t = useTranslations();
 
   return (
-    <Flex direction={"column"}>
+    <Flex direction={"column"} w={"100%"}>
       <Text
         size="xl"
         fw={"600"}
         fz={"48px"}
         h={"100%"}
-        mb={"60px"}
+        mb={"60px"} 
+        w={"100%"}
       >
         Contact form
       </Text>
 
-      <SimpleGrid cols={3}>
+      <SimpleGrid cols={3} w={"100%"}>
         <InputBasic
           label="Name"
           placeholder="Your name"
@@ -57,13 +58,15 @@ export const ContactForm = () => {
       <TextAreaBasic
         label="Message"
         placeholder="Textarea"
+        maw={1280}
+        w={"100%"}
       ></TextAreaBasic>
 
       <Flex
         justify={"flex-end"}
         w={"100%"}
       >
-        <BtnBasic>Send</BtnBasic>
+        <BtnBasic size="xl">Send</BtnBasic>
       </Flex>
     </Flex>
   );

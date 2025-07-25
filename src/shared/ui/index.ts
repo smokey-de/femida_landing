@@ -1,3 +1,4 @@
+export { OtherHeader } from './others-header/index';
 export { TextAreaBasic } from "./text-area/ui";
 export { BtnBasic } from "./btn-basic/ui";
 export { InputBasic } from "./input-basic/ui";
@@ -6,3 +7,10 @@ export { BaseLink } from "./link";
 export { HeroHeader } from "./hero-header";
 export { IndustriesSection } from "./industries-links";
 export { SplitterBanner } from "./splitter-banner";
+export { TrustSection } from "./trust-section";
+export { GuidePrinciples } from "./guide-principles";
+export { ClientReviews } from "./client-reviews";
+export { ServiceContact } from './service-links';
+export { OtherSplitter } from './other-splitter';
+export { PeopleCard } from './people-card';
+export { OtherFooter } from './other-footer';
