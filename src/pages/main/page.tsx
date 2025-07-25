@@ -1,32 +1,59 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import {
+  Box,
+  Card,
+  Center,
   Container,
   Divider,
   Flex,
   Image,
+  Paper,
   Space,
   Text,
-  Box,
-  Card,
-  Center,
-  Paper,
 } from "@mantine/core";
+import { IconArmchair2, IconBrain, IconChartBar } from "@tabler/icons-react";
+
+import { useRef } from "react";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import { ContactForm } from "@/features/contact-form";
 import {
   ClientReviews,
+  Footer,
   GuidePrinciples,
   HeroHeader,
-  IndustriesSection,
   Navbar,
   SplitterBanner,
-  TrustSection,
-  MotivationInsight,
   TeamBanner,
+  TrustSection,
 } from "@/shared/ui";
 
 import s from "./style.module.scss";
+
+const serviceData = [
+  {
+    icon: <IconChartBar />,
+    title: "Investment planning",
+    description:
+      "Tailored investment strategies to help clients grow their wealth and achieve their financial goals.",
+  },
+  {
+    icon: <IconArmchair2 />,
+    title: "Retirement planning",
+    description:
+      "Comprehensive retirement strategies to ensure financial security in later years.",
+  },
+  {
+    icon: <IconBrain />,
+    title: "Tax optimization",
+    description:
+      "Effective tax strategies to minimize liabilities and maximize returns.",
+  },
+];
 
 export const MainPage = () => (
   <Flex
@@ -35,78 +62,165 @@ export const MainPage = () => (
   >
     <Navbar />
     <HeroHeader />
-    <IndustriesSection />
+    <ShowServices />
     <SplitterBanner />
     <TrustSection />
     <GuidePrinciples />
     <ClientReviews />
     <TeamBanner />
-    <MainServiceContainer>
-      <ContentWrapper>
-        <Box
-          maw={"1280px"}
-          m={"0 auto"}
-          pos={"relative"}
-        >
-          <Center>
-            <ServiceText>01 Financial</ServiceText>
-          </Center>
-          <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
-          <CardWrapper>
-            <ServiceCard>
-              <CardIcon>icon</CardIcon>
-              <CardTitle>Investment planning </CardTitle>
-              <CardDescription>
-                Tailored investment strategies to help clients grow their wealth
-                and achieve their financial goals.
-              </CardDescription>
-            </ServiceCard>
-            <ServiceCard>
-              <CardIcon>icon2</CardIcon>
-              <CardTitle>Investment planning </CardTitle>
-              <CardDescription>
-                Tailored investment strategies to help clients grow their wealth
-                and achieve their financial goals.
-              </CardDescription>
-            </ServiceCard>
-            <ServiceCard>
-              <CardIcon>icon3</CardIcon>
-              <CardTitle>Investment planning </CardTitle>
-              <CardDescription>
-                Tailored investment strategies to help clients grow their wealth
-                and achieve their financial goals.
-              </CardDescription>
-            </ServiceCard>
-          </CardWrapper>
-          <Space h="xl" />
-          <Box
-            pos={"absolute"}
-            w={"500px"}
-            h={"470px"}
-            bottom={"0"}
-            right={"0"}
-            className="clipped-image"
-          >
-            <Image
-              w={"100%"}
-              h={"100%"}
-              src={
-                "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
-              }
-              alt="service"
-            />
-          </Box>
-        </Box>
-      </ContentWrapper>
-    </MainServiceContainer>
     <ContactSection />
-    <MotivationInsight />
+    <Footer />
   </Flex>
 );
 
+gsap.registerPlugin(ScrollTrigger);
+
+const ShowServices = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const panels = gsap.utils.toArray<HTMLElement>(".scroll-panel");
+
+      panels.forEach((panel) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top top",
+          pin: true,
+          pinSpacing: false,
+          scrub: true,
+        });
+      });
+
+      ScrollTrigger.create({
+        trigger: panels[0],
+        start: "top top",
+        endTrigger: panels[panels.length - 1],
+        end: "bottom bottom",
+        snap: 1 / (panels.length - 1),
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef },
+  );
+
+  return (
+    <Box mb={"2rem"}>
+      <Container
+        size={"xl"}
+        mt={"7.5rem"}
+        mb={"2.813rem"}
+      >
+        <Text
+          component="h5"
+          fw={400}
+          lh={"1.5rem"}
+          fz={"1.25rem"}
+        >
+          Services
+        </Text>
+        <Text
+          component="h2"
+          fw={600}
+          lh={"3.875rem"}
+          fz={"3rem"}
+        >
+          To meet your needs
+        </Text>
+      </Container>
+      <MainServiceContainer ref={containerRef}>
+        <ContentWrapper
+          className="scroll-panel"
+          mb={"2rem"}
+        >
+          <Box
+            maw={"1280px"}
+            m={"0 auto"}
+            pos={"relative"}
+          >
+            <Center>
+              <ServiceText>01 Financial</ServiceText>
+            </Center>
+            <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
+            <CardWrapper>
+              {serviceData.map((service, index) => (
+                <ServiceCard key={index}>
+                  <CardIcon>{service.icon}</CardIcon>
+                  <CardTitle>{service.title}</CardTitle>
+                  <CardDescription>{service.description}</CardDescription>
+                </ServiceCard>
+              ))}
+            </CardWrapper>
+            <Space h="xl" />
+            <Box
+              pos={"absolute"}
+              w={"500px"}
+              h={"470px"}
+              bottom={"0"}
+              right={"0"}
+              className="clipped-image"
+            >
+              <Image
+                w={"100%"}
+                h={"100%"}
+                src={
+                  "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
+                }
+                alt="service"
+              />
+            </Box>
+          </Box>
+        </ContentWrapper>
+        <ContentWrapper className="scroll-panel">
+          <Box
+            maw={"1280px"}
+            m={"0 auto"}
+            pos={"relative"}
+          >
+            <Center>
+              <ServiceText>01 Financial</ServiceText>
+            </Center>
+            <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
+            <CardWrapper>
+              {serviceData.map((service, index) => (
+                <ServiceCard key={index}>
+                  <CardIcon>{service.icon}</CardIcon>
+                  <CardTitle>{service.title}</CardTitle>
+                  <CardDescription>{service.description}</CardDescription>
+                </ServiceCard>
+              ))}
+            </CardWrapper>
+            <Space h="xl" />
+            <Box
+              pos={"absolute"}
+              w={"500px"}
+              h={"470px"}
+              bottom={"0"}
+              right={"0"}
+              className="clipped-image"
+            >
+              <Image
+                w={"100%"}
+                h={"100%"}
+                src={
+                  "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
+                }
+                alt="service"
+              />
+            </Box>
+          </Box>
+        </ContentWrapper>
+      </MainServiceContainer>
+    </Box>
+  );
+};
+
 const ContactSection = () => (
   <Container
-    size={"lg"}
+    size={"xl"}
     component={"section"}
     id="contact"
   >
@@ -189,6 +303,7 @@ const ContactSection = () => (
 const MainServiceContainer = Container.withProps({
   fluid: true,
   px: "2rem",
+  m: 0,
 });
 
 const ContentWrapper = Paper.withProps({
@@ -218,6 +333,7 @@ const ServiceTitle = Text.withProps({
 const CardWrapper = Flex.withProps({
   gap: "1px",
   pos: "relative",
+  style: { zIndex: 1 },
 });
 
 const ServiceCard = Card.withProps({
@@ -249,5 +365,3 @@ const CardDescription = Text.withProps({
   lh: "1.25rem",
   c: "rgb(95, 101, 103)",
 });
-
-const CardImage = {};

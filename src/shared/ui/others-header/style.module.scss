@@ -1,0 +1,73 @@
+@use "../../lib/colors.scss" as colors;
+
+
+.bgOverlay {
+  background-image: url("https://beratung.vamtam.com/wp-content/uploads/2023/07/dots-left-GettyImages-1478119123.png");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 15%;
+
+  height: 100%;
+
+  background-color: colors.$iceberg ;
+}
+
+.headerUpper {
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.aboutTitle {
+  display: flex;
+  align-items: center;
+
+  background-color: colors.$limed-spruce;
+  margin: 0px;
+
+  & img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .title {
+    font-family: "Geologica";
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: none;
+    line-height: 1.5em;
+    letter-spacing: -0.3px;
+
+    color: colors.$white;
+  }
+}
+
+.mtWrap {
+  background-color: colors.$white;
+
+  border-bottom: 1px solid colors.$iceberg;
+
+  .mainTitle {
+    font-family: "Geologica";
+    font-size: 48px;
+    text-transform: none;
+    font-style: normal;
+    line-height: 1.3em;
+    letter-spacing: -1px;
+  }
+}
+
+.slash {
+  user-select: none;
+  pointer-events: none;
+}
+
+.tsxtBox {
+  align-content: center;
+  align-items: center;
+
+  .text {
+    font-family: "Geologica";
+
+    color: colors.$secondary-color;
+  }
+}

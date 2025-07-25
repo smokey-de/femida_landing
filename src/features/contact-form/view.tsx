@@ -13,16 +13,18 @@ export const ContactForm = () => {
     <Flex
       direction={"column"}
       gap={"lg"}
+      w={"100%"}
     >
       {/* <Text
         size="xl"
         fw={"600"}
         fz={"48px"}
         h={"100%"}
-        mb={"60px"}
+        mb={"60px"} 
+        w={"100%"}
       >
         Contact form
-      </Text> */}
+      </Text>
 
       {/* <SimpleGrid cols={3}> */}
       <InputBasic
