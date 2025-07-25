@@ -4,6 +4,9 @@ $accent-color: #00000026;
 $error-color: #ff4d4f;
 $placeholder-color: rgba(22, 22, 22, 0.7);
 $white: #ffffff;
+$iceberg: #e4edf3;
+$limed-spruce: #374b47;
+$boulder: #777;
 
 @mixin placeholder($color) {
   &::placeholder {

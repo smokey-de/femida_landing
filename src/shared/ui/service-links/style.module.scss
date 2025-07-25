@@ -1,0 +1,52 @@
+@use "../../lib/colors.scss" as colors;
+
+.linkWrap {
+  border-bottom: 1px solid colors.$accent-color;
+}
+
+.linkNoAfter .link::after {
+  display: none;
+  content: none;
+}
+
+.serviceLink {
+  color: colors.$secondary-color;
+  cursor: pointer;
+
+  transition: color 200ms;
+
+  &:hover {
+    color: colors.$primary-color;
+  }
+
+  &:last-child {
+    color: colors.$primary-color;
+
+    &:hover {
+      color: colors.$secondary-color;
+    }
+  }
+}
+
+.link {
+  font-family: "Geologica";
+  text-transform: none;
+
+  margin-bottom: 20px;
+}
+
+.text {
+  font-family: "Helvetica";
+  word-spacing: 0;
+  color: #5f6567;
+}
+
+.serviceIcon{
+
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+}
