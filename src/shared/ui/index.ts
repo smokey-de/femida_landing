@@ -9,3 +9,5 @@ export { SplitterBanner } from "./splitter-banner";
 export { TrustSection } from "./trust-section";
 export { GuidePrinciples } from "./guide-principles";
 export { ClientReviews } from "./client-reviews";
+export { MotivationInsight } from "./motivation-insight";
+export { TeamBanner } from "./team-banner";

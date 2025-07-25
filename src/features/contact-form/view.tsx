@@ -10,7 +10,10 @@ export const ContactForm = () => {
   // const t = useTranslations();
 
   return (
-    <Flex direction={"column"}>
+    <Flex
+      direction={"column"}
+      gap={"lg"}
+    >
       {/* <Text
         size="xl"
         fw={"600"}
@@ -21,50 +24,45 @@ export const ContactForm = () => {
         Contact form
       </Text> */}
 
-      <SimpleGrid cols={3}>
-        <InputBasic
-          label="Name"
-          placeholder="Your name"
-          type="text"
-        />
-        <InputBasic
-          label="Email"
-          placeholder="Your email"
-          type="email"
-        />
-        <InputBasic
-          label="Phone number"
-          placeholder="Your phone number"
-          type="tel"
-        />
-        <InputBasic
-          label="Company"
-          placeholder="Company name"
-          type="text"
-        />
-        <InputBasic
-          label="Reason for contacting"
-          placeholder="Reason for contacting"
-          type="text"
-        />
-        <InputBasic
-          label="Subject"
-          placeholder="Enter here"
-          type="text"
-        />
-      </SimpleGrid>
+      {/* <SimpleGrid cols={3}> */}
+      <InputBasic
+        label="Name"
+        placeholder="Your name"
+        type="text"
+      />
+      {/* <InputBasic
+        label="Email"
+        placeholder="Your email"
+        type="email"
+      /> */}
+      <InputBasic
+        label="Phone number"
+        placeholder="Your phone number"
+        type="tel"
+      />
+      {/* <InputBasic
+        label="Company"
+        placeholder="Company name"
+        type="text"
+      /> */}
+      {/* <InputBasic
+        label="Reason for contacting"
+        placeholder="Reason for contacting"
+        type="text"
+      /> */}
+      <InputBasic
+        label="Subject"
+        placeholder="Enter here"
+        type="text"
+      />
+      {/* </SimpleGrid> */}
 
       <TextAreaBasic
         label="Message"
         placeholder="Textarea"
-      ></TextAreaBasic>
+      />
 
-      <Flex
-        justify={"flex-start"}
-        w={"100%"}
-      >
-        <BtnBasic size="xl">Submit</BtnBasic>
-      </Flex>
+      <BtnBasic size="md">Submit</BtnBasic>
     </Flex>
   );
 };

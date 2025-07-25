@@ -13,5 +13,5 @@ export const InputBasic = TextInput.withProps({
   radius: "0",
   placeholder: "Enter text",
   type: "text",
-  mb: "60px",
+  // mb: "60px",
 });
