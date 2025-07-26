@@ -2,11 +2,10 @@
 
 import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
 
-
 import {
   BtnBasic,
   Navbar,
-  OtherFooter,
+  Footer,
   OtherHeader,
   OtherSplitter,
   PeopleCard,
@@ -86,7 +85,7 @@ export const PeoplePage = () => {
     >
       <Navbar />
 
-      <Box mb={"110px"}>
+      <Box>
         <OtherHeader
           aboutTitle="Our People"
           title="Building Bridges for Sustainable and Inclusive Growth"
@@ -109,7 +108,8 @@ export const PeoplePage = () => {
               "https://beratung.vamtam.com/wp-content/uploads/2023/07/BPTW-logo-ENG.svg"
             }
             w={250}
-          ></Image>
+            alt="Best Place to Work"
+          />
         </Flex>
       </Box>
 
@@ -119,7 +119,7 @@ export const PeoplePage = () => {
           mb={115}
           gap={160}
         >
-          <Flex
+          {/* <Flex
             direction={"column"}
             gap={40}
           >
@@ -140,7 +140,7 @@ export const PeoplePage = () => {
             >
               Explore our open positions
             </BtnBasic>
-          </Flex>
+          </Flex> */}
 
           <Flex
             direction={"column"}
@@ -148,7 +148,7 @@ export const PeoplePage = () => {
           >
             <Text
               maw={625}
-              style={{ color: "#5F6567" }}
+              c={"#5F6567"}
               fz={20}
               lh={"1.5em"}
             >
@@ -200,6 +200,7 @@ export const PeoplePage = () => {
                   "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
                 }
                 h={18}
+                alt="footer_icon"
               />
               <Text>Empower</Text>
             </Flex>
@@ -253,7 +254,10 @@ export const PeoplePage = () => {
         </Flex>
       </Container>
 
-      <Container size={"xl"} w={1280}>
+      <Container
+        size={"xl"}
+        w={1280}
+      >
         <Flex
           direction={"row"}
           justify={"space-between"}
@@ -288,6 +292,7 @@ export const PeoplePage = () => {
             src={
               "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-2.svg"
             }
+            alt="service illustration"
             w={160}
           />
         </Flex>
@@ -315,7 +320,7 @@ export const PeoplePage = () => {
         </SimpleGrid>
       </Container>
 
-      <OtherFooter />
+      <Footer />
     </Flex>
   );
 };

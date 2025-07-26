@@ -1,16 +1,11 @@
 "use client";
 
-import { Box, Container, Flex } from "@mantine/core";
+import { Box, Container, Divider, Flex, Text } from "@mantine/core";
 
 import { ContactForm } from "@/features/contact-form";
-import {
-  Navbar,
-  OtherFooter,
-  OtherHeader,
-} from "@/shared/ui";
+import { Navbar, Footer, OtherHeader } from "@/shared/ui";
 
 import s from "./style.module.scss";
-
 
 export const ContactPage = () => {
   return (
@@ -20,7 +15,7 @@ export const ContactPage = () => {
     >
       <Navbar />
 
-      <Box mb={"40px"} pb={110} style={{ borderBottom: "1px solid #00000026" }}>
+      <Box>
         <OtherHeader
           aboutTitle="Contacts"
           title="Expert Financial Guidance Just a Call Away"
@@ -28,13 +23,29 @@ export const ContactPage = () => {
         />
       </Box>
 
-        <Container size={"xl"} w={1280}>
+      <Container
+        size={"xl"}
+        mb={"40px"}
+        w={1280}
+      >
+        <Divider
+          size={"1px"}
+          color="#00000026"
+        />
+        <Text
+          size="xl"
+          fw={"600"}
+          fz={"48px"}
+          h={"100%"}
+          my={"60px"}
+          w={"100%"}
+        >
+          Contact form
+        </Text>
+        <ContactForm />
+      </Container>
 
-            <ContactForm  />
-
-        </Container>
-
-      <OtherFooter />
+      <Footer />
     </Flex>
   );
 };
