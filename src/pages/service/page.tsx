@@ -80,7 +80,7 @@ export const ServicePage = () => {
       direction="column"
       className={s.page}
     >
-      <Navbar />
+      <Navbar darkMode />
 
       <Box style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader

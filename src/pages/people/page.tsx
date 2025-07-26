@@ -111,7 +111,7 @@ export const PeoplePage = () => {
       direction="column"
       className={s.page}
     >
-      <Navbar />
+      <Navbar darkMode />
 
       <Box>
         <OtherHeader
