@@ -1,3 +1,4 @@
+export { SplitSection } from './split-section/index';
 export { OtherHeader } from './others-header/index';
 export { TextAreaBasic } from "./text-area/ui";
 export { BtnBasic } from "./btn-basic/ui";
