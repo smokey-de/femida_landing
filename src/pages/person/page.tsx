@@ -8,10 +8,11 @@ import { useParams } from "next/navigation";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import s from "./style.module.scss";
 
 import { people } from "@/pages/people/page";
 import { BaseLink, Navbar, Footer } from "@/shared/ui";
+
+import s from "./style.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,9 @@ export const PersonPage = () => {
     if (!rightRef.current) return;
 
     const ctx = gsap.context(() => {
-      const elements = rightRef.current!.querySelectorAll("div, p, h1, h2, h3, span");
+      const elements = rightRef.current!.querySelectorAll(
+        "div, p, h1, h2, h3, span",
+      );
 
       gsap.fromTo(
         elements,
@@ -44,7 +47,7 @@ export const PersonPage = () => {
             end: "bottom 20%",
             scrub: true,
           },
-        }
+        },
       );
     }, rightRef);
 
@@ -55,7 +58,7 @@ export const PersonPage = () => {
 
   return (
     <Flex direction="column">
-      <Navbar />
+      <Navbar darkMode />
 
       <Container
         size="xl"
@@ -95,7 +98,7 @@ export const PersonPage = () => {
             </Text>
             <Text
               fz={24}
-              style={{color: "#8fd299"}}
+              style={{ color: "#8fd299" }}
             >
               {person.subtitle}
             </Text>
@@ -125,7 +128,13 @@ export const PersonPage = () => {
               sint nisi perferendis maiores vitae aliquid et facilis, error
               quaerat mollitia unde praesentium. Non, molestias id?
             </Text>
-            <BaseLink style={{color:"#8fd299"}} maw={130} mt={60}>Back to our people</BaseLink>
+            <BaseLink
+              style={{ color: "#8fd299" }}
+              maw={130}
+              mt={60}
+            >
+              Back to our people
+            </BaseLink>
           </Flex>
         </Flex>
       </Container>

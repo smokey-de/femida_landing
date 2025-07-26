@@ -47,7 +47,7 @@ export const AboutPage = () => {
       direction="column"
       className={s.page}
     >
-      <Navbar />
+      <Navbar darkMode />
 
       <Box
         mb={"40px"}
@@ -387,7 +387,12 @@ export const AboutPage = () => {
             direction={"row"}
             pl={70}
           >
-            <Flex direction={"column"} ml={20} mr={20} gap={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+              gap={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -405,7 +410,11 @@ export const AboutPage = () => {
                 Forbes World’s Best Management Consulting Firms
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -423,7 +432,11 @@ export const AboutPage = () => {
                 100 Best Companies To Work For 2022, FORTUNE
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -441,7 +454,11 @@ export const AboutPage = () => {
                 Glassdoor Best Places to Work
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}

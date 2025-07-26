@@ -12,14 +12,12 @@
     transition: opacity 0.3s ease;
   }
 
-  &.scrolled {
-    background-color: #374B47;
-    border-top: none !important;
-  }
-
   &.scrolled .dividerWrapper {
     opacity: 0;
   }
-
 }
 
+.scrolled {
+  background-color: #374b47;
+  border-top: none !important;
+}
