@@ -34,10 +34,10 @@ type NavbarRoute = {
 const LOGO_URL =
   "https://beratung.vamtam.com/wp-content/uploads/2023/07/logo-white.svg";
 const navbarRoutes: NavbarRoute[] = [
-  { label: "Service", href: "/#service" },
-  { label: "People", href: "/#people" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Service", href: "/service" },
+  { label: "People", href: "/people" },
+  { label: "About", href: "/about" },
+  // { label: "Contact", href: "/contact" },
   // { label: "Call us: +1 234 567 890", href: "tel:+1234567890" },
 ];
 
@@ -169,6 +169,8 @@ const NavItems = () =>
 
 const ContactBtn = () => (
   <BtnBasic
+    component={BaseLink}
+    href="/contact"
     size="sm"
     color="#fff"
   >

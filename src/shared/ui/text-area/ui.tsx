@@ -14,5 +14,4 @@ export const TextAreaBasic = Textarea.withProps({
   placeholder: "Enter your message",
   autosize: true,
   minRows: 3,
-  mb: "60px",
 });

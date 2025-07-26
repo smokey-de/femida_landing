@@ -5,7 +5,7 @@ import { Anchor, Box, Container, Flex, Image, Text } from "@mantine/core";
 import {
   BaseLink,
   Navbar,
-  OtherFooter,
+  Footer,
   OtherHeader,
   OtherSplitter,
   SplitSection,
@@ -463,7 +463,7 @@ export const AboutPage = () => {
         </Flex>
       </Container>
 
-      <OtherFooter />
+      <Footer />
     </Flex>
   );
 };

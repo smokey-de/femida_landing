@@ -12,3 +12,7 @@ body {
   background-color: var(--background-color, #000);
   /* color: var(--font-white-color, #fff); */
 }
+
+.clipped-image {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}

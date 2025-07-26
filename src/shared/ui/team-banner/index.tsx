@@ -1,6 +1,7 @@
 import { Box, Flex, Text } from "@mantine/core";
 
 import { BtnBasic } from "../btn-basic/ui";
+import { BaseLink } from "../link";
 import s from "./styles.module.scss";
 
 export const TeamBanner = () => (
@@ -42,8 +43,12 @@ export const TeamBanner = () => (
         </Text>
         <Box>
           <BtnBasic
+            component={BaseLink}
+            href="/people"
             variant="filled"
-            size="lg"
+            size="xl"
+            style={{ color: "black" }}
+            color="rgba(255, 255, 255, 1)"
           >
             Our People
           </BtnBasic>

@@ -6,7 +6,7 @@ import {
   BaseLink,
   BtnBasic,
   Navbar,
-  OtherFooter,
+  Footer,
   OtherHeader,
   OtherSplitter,
   PeopleCard,
@@ -82,10 +82,7 @@ export const ServicePage = () => {
     >
       <Navbar />
 
-      <Box
-        style={{ borderBottom: "1px solid #00000026" }}
-        mb={"110px"}
-      >
+      <Box style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader
           aboutTitle="Practice Аreas"
           title="Expert Business Consulting Services"
@@ -96,7 +93,7 @@ export const ServicePage = () => {
 
       <Container
         size={"xl"}
-        mb={"130px"}
+        my={"130px"}
       >
         <SimpleGrid
           cols={3}
@@ -130,6 +127,8 @@ export const ServicePage = () => {
               If you do not see your specific practice areas, please contact us
             </Text>
             <BtnBasic
+              component={BaseLink}
+              href="/contact"
               maw={"140px"}
               size="xl"
             >
@@ -149,6 +148,7 @@ export const ServicePage = () => {
           <Flex
             direction={"row"}
             gap={"130px"}
+            align={"center"}
             justify={"center"}
           >
             <Flex
@@ -166,12 +166,6 @@ export const ServicePage = () => {
                 We provide actionable insights that stem from our extensive
                 in-market experience in the world’s major industries.
               </Text>
-              <BtnBasic
-                maw={"190px"}
-                size="xl"
-              >
-                See our industries
-              </BtnBasic>
             </Flex>
             <Image
               w={"160px"}
@@ -179,6 +173,7 @@ export const ServicePage = () => {
               src={
                 "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-3.svg"
               }
+              alt="service illustration"
             />
           </Flex>
         </Container>
@@ -208,14 +203,16 @@ export const ServicePage = () => {
           align-content={"center"}
           justify={"center"}
         >
-          <BaseLink style={{ color: "#161616" }}>View more</BaseLink>
+          <BtnBasic
+            component={BaseLink}
+            href="/people"
+          >
+            View more
+          </BtnBasic>
         </Flex>
       </Container>
 
-        
-      <OtherFooter /> 
-          
-
+      <Footer />
     </Flex>
   );
 };

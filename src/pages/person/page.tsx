@@ -11,7 +11,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import s from "./style.module.scss";
 
 import { people } from "@/pages/people/page";
-import { BaseLink, Navbar, OtherFooter } from "@/shared/ui";
+import { BaseLink, Navbar, Footer } from "@/shared/ui";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,7 +130,7 @@ export const PersonPage = () => {
         </Flex>
       </Container>
 
-      <OtherFooter />
+      <Footer />
     </Flex>
   );
 };
