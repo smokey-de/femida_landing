@@ -1,6 +1,6 @@
 "use client";
 
-import { Flex, SimpleGrid, Text } from "@mantine/core";
+import { Flex } from "@mantine/core";
 
 import { BtnBasic, InputBasic, TextAreaBasic } from "@/shared/ui";
 

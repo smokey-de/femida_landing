@@ -1,4 +1,4 @@
-import { Anchor, Flex, Text, Box } from "@mantine/core";
+import { Anchor, Flex, Text } from "@mantine/core";
 import { IconCaretRightFilled } from "@tabler/icons-react";
 
 import s from "./style.module.scss";
@@ -6,14 +6,9 @@ import s from "./style.module.scss";
 type ServiceContactProps = {
   linkLabel: string;
   text: string;
-  href?: string;
 };
 
-export const ServiceContact = ({
-  linkLabel,
-  text,
-  href,
-}: ServiceContactProps) => (
+export const ServiceContact = ({ linkLabel, text }: ServiceContactProps) => (
   <Flex
     direction={"row"}
     gap={"15px"}
@@ -29,7 +24,7 @@ export const ServiceContact = ({
     >
       <Anchor
         unstyled
-        fz={{base: "20px", md: "24px"}}
+        fz={{ base: "20px", md: "24px" }}
         fw={500}
         lh={"1.4em"}
         lts={"-.5px"}
