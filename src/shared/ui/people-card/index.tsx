@@ -1,4 +1,4 @@
-import { Anchor, Box, Flex, Image, Text } from "@mantine/core";
+import { Anchor, Flex, Image, Text } from "@mantine/core";
 
 import s from "./style.module.scss";
 

@@ -1,4 +1,4 @@
-import { Anchor, Box, Button, Flex, Image, Text } from "@mantine/core";
+import { Box, Flex, Image, Text } from "@mantine/core";
 import { IconPlayerPlayFilled } from "@tabler/icons-react";
 
 import { BtnBasic } from "../btn-basic/ui";
@@ -29,7 +29,7 @@ export const SplitSection = ({
 
   return (
     <Flex
-      direction={{base: "column", lg: "row"}}
+      direction={{ base: "column", lg: "row" }}
       gap={150}
       justify="space-between"
     >
@@ -37,8 +37,9 @@ export const SplitSection = ({
         <Box>
           <Image
             src={imageSrc}
-            w={{base: "100%", lg: 625}}
-            h={{base: "100%", lg: 600}} 
+            w={{ base: "100%", lg: 625 }}
+            h={{ base: "100%", lg: 600 }}
+            alt="left image"
           />
         </Box>
       )}
@@ -68,7 +69,7 @@ export const SplitSection = ({
 
           <Text
             ff={"Geologica"}
-            fz={{base: 32, md: 48}}
+            fz={{ base: 32, md: 48 }}
             fw={600}
             tt={"none"}
             fs={"normal"}
@@ -114,8 +115,8 @@ export const SplitSection = ({
         <Box>
           <Image
             src={imageSrc}
-            w={{base: "100%", lg: 625}}
-            h={{base: "100%", lg: 600}}
+            w={{ base: "100%", lg: 625 }}
+            h={{ base: "100%", lg: 600 }}
           />
         </Box>
       )}
