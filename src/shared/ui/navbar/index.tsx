@@ -137,6 +137,7 @@ const MobileNavList = () => {
       <Burger
         opened={opened}
         onClick={toggle}
+        color="white"
       />
       <Transition
         mounted={opened}
@@ -177,6 +178,7 @@ const ContactBtn = () => (
     href="/contact"
     size="sm"
     color="#fff"
+    visibleFrom="md"
   >
     Contact us
   </BtnBasic>

@@ -30,64 +30,89 @@ export const ClientReviews = () => {
 
   return (
     <Container
-      size={"xl"}
+      size="xl"
       component="section"
-      mt={"7.5rem"}
+      mt="7.5rem"
+      pos="relative"
+      m={{ base: "7.5rem 0", md: "auto" }}
     >
       <Flex
-        align={"center"}
-        direction={"column"}
-        gap={"1rem"}
+        align="center"
+        direction="column"
+        gap="1rem"
       >
         <Text
-          lh={"1.625rem"}
-          fz={"1.25rem"}
+          lh="1.625rem"
+          fz={{ base: "1.125rem", sm: "1.25rem" }}
           fw={400}
         >
           Testimonials
         </Text>
         <Text
-          lh={"3.875rem"}
-          fz={"3rem"}
+          lh={{ base: "2.5rem", sm: "3.875rem" }}
+          fz={{ base: "2rem", sm: "3rem" }}
           fw={400}
+          ta="center"
         >
           Those who trust us
         </Text>
-
-        <Flex align={"center"}>
-          <ActionIcon
-            bg={"transparent"}
-            onClick={() => carouselRef.current?.scrollNext()}
-          >
-            <IconArrowBadgeLeftFilled color="gray" />
-          </ActionIcon>
-          <Carousel
-            w={1280}
-            mb={"2.5rem"}
-            withControls={false}
-            plugins={[autoplay.current]}
-            emblaOptions={{ loop: true }}
-            getEmblaApi={(api) => (carouselRef.current = api)}
-            withIndicators
-            classNames={{
-              indicators: s.indicators,
-              indicator: s.indicator,
-            }}
-          >
-            {client.map((item, index) => (
-              <Carousel.Slide key={index}>
-                <Review {...item} />
-              </Carousel.Slide>
-            ))}
-          </Carousel>
-          <ActionIcon
-            bg={"transparent"}
-            onClick={() => carouselRef.current?.scrollNext()}
-          >
-            <IconArrowBadgeRightFilled color="gray" />
-          </ActionIcon>
-        </Flex>
       </Flex>
+
+      <Box
+        pos="relative"
+        w="100%"
+        mt="2rem"
+      >
+        <ActionIcon
+          variant="subtle"
+          onClick={() => carouselRef.current?.scrollPrev()}
+          size="lg"
+          pos="absolute"
+          left={0}
+          top="50%"
+          style={{ transform: "translateY(-50%)", zIndex: 100 }}
+          visibleFrom="sm"
+        >
+          <IconArrowBadgeLeftFilled
+            color="gray"
+            size="2rem"
+          />
+        </ActionIcon>
+
+        <Carousel
+          withControls={false}
+          plugins={[autoplay.current]}
+          emblaOptions={{ loop: true }}
+          getEmblaApi={(api) => (carouselRef.current = api)}
+          withIndicators
+          classNames={{
+            indicators: s.indicators,
+            indicator: s.indicator,
+          }}
+        >
+          {client.map((item, index) => (
+            <Carousel.Slide key={index}>
+              <Review {...item} />
+            </Carousel.Slide>
+          ))}
+        </Carousel>
+
+        <ActionIcon
+          variant="subtle"
+          onClick={() => carouselRef.current?.scrollNext()}
+          size="lg"
+          pos="absolute"
+          right={0}
+          top="50%"
+          style={{ transform: "translateY(-50%)" }}
+          visibleFrom="sm"
+        >
+          <IconArrowBadgeRightFilled
+            color="gray"
+            size="2rem"
+          />
+        </ActionIcon>
+      </Box>
     </Container>
   );
 };
@@ -106,7 +131,7 @@ const client: ReviewProps[] = [
       "Working with Beratung has been a game-changer for my financial future. Their expertise and personalized guidance have helped me achieve my goals with confidence.",
   },
   {
-    url: "	https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138997324-reviews.jpg",
+    url: "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138997324-reviews.jpg",
     name: "Jennifer P",
     review:
       "I have been a client for years, and they consistently exceed my expectations. Their professionalism, integrity, and commitment to my financial success are unmatched.",
@@ -120,45 +145,49 @@ type ReviewProps = {
 };
 
 const Review = ({ url, name, review }: ReviewProps) => (
-  <Flex align={"flex-end"}>
-    <Box flex={1}>
+  <Flex
+    direction={{ base: "column", md: "row" }}
+    align={{ base: "center", md: "center" }}
+    gap="md"
+    w="100%"
+  >
+    <Box w={{ base: "100%", md: "50%" }}>
       <Image
-        height={"100%"}
-        width={"100%"}
         src={url}
         alt="Client Review"
       />
     </Box>
     <Box
-      flex={1}
-      p={"2.5rem"}
+      w={{ base: "100%", md: "50%" }}
+      p={{ base: "0", md: "lg" }}
     >
       <Flex
-        direction={"column"}
-        gap={"1rem"}
+        direction="column"
+        gap="1rem"
       >
         <ThemeIcon
-          bg={"transparent"}
-          size={70}
+          variant="light"
+          size={110}
+          radius="xl"
+          color="gray.2"
         >
           <IconQuote
-            width={"100%"}
-            height={"100%"}
+            width="100%"
+            height="100%"
             color="#374B47"
           />
         </ThemeIcon>
         <Text
           fw={300}
-          fz={"1.875rem"}
-          lh={"2.438rem"}
-          fs={"normal"}
+          fz={{ base: "1.125rem", sm: "1.875rem" }}
+          lh="1.8"
         >
           {review}
         </Text>
         <Text
           fw={500}
-          fz={"0.875rem"}
-          lh={"1.313rem"}
+          fz="0.875rem"
+          lh="1.313rem"
         >
           {name}
         </Text>

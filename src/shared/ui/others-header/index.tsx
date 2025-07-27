@@ -23,10 +23,10 @@ export const OtherHeader = ({
       pos={"relative"}
       pt={"150px"}
     >
-      <Container size={"xl"}>
-        <Flex
+      <Container size={"xl"} p={{base: "0", md: "0 16px"}}>
+         <Flex
           direction={"column"}
-          w={"75%"}
+          w={{base: "100%", md: "75%"}}
           className={s.headerUpper}
           pt={"36px"}
           align={"flex-start"}
@@ -52,6 +52,12 @@ export const OtherHeader = ({
             <Title
               order={2}
               className={s.mainTitle}
+              ff={"Geologica"}
+              fz={{base: "32px", md: "48px"}}
+              tt={"none"}
+              fs={"normal"}
+              lh={"1.3em"}
+              lts={"-1px"}
             >
               {title}
             </Title>
@@ -68,6 +74,7 @@ export const OtherHeader = ({
         right={"-80px"}
         w={250}
         opacity={0.6}
+        visibleFrom="md"
       />
       <Image
         src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
@@ -78,6 +85,7 @@ export const OtherHeader = ({
         right={"-90px"}
         w={250}
         opacity={0.6}
+        visibleFrom="md"
       />
       <Image
         src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
@@ -88,6 +96,7 @@ export const OtherHeader = ({
         right={"-100px"}
         w={250}
         opacity={0.6}
+        visibleFrom="md"
       />
     </Box>
 
@@ -96,7 +105,7 @@ export const OtherHeader = ({
         <Box className={s.textBox}>
           <Text
             className={s.text}
-            fz={"24px"}
+            fz={{base: "20px", md: "24px"}}
             fw={500}
             lts={"-.5px"}
             lh={"1.4em"}

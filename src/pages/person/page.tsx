@@ -38,13 +38,13 @@ export const PersonPage = () => {
         { opacity: 0, y: 50 },
         {
           opacity: 1,
-          y: 0,
+          y: 50,
           duration: 1,
           stagger: 0.2,
           scrollTrigger: {
             trigger: rightRef.current!,
             start: "top 80%",
-            end: "bottom 20%",
+            end: "bottom 100%",
             scrub: true,
           },
         },
@@ -70,13 +70,15 @@ export const PersonPage = () => {
         <Flex
           gap={140}
           align="flex-start"
+          direction={{ base: "column", md: "row" }}
         >
           <Box
-            w="50%"
-            pos="sticky"
+            w={"50%"}
+            pos={"sticky"}
             top="50%"
             className={s.vector}
             style={{ transform: "translateY(-45%)", alignSelf: "flex-start" }}
+            visibleFrom="md"
           >
             <Image
               src={person.img}
@@ -85,25 +87,41 @@ export const PersonPage = () => {
           </Box>
 
           <Flex
+            w={"100%"}
+            hiddenFrom="md"
+            align={"center"}
+            justify={"center"}
+            pos={"relative"}
+          >
+            <Image
+              w={"70%"}
+              src={person.img}
+              alt={person.title}
+            />
+          </Flex>
+
+          <Flex
             direction="column"
+            justify={"center"}
+            align={{ base: "center", md: "flex-start" }}
             gap="md"
-            w="50%"
+            w={{ base: "100%", md: "50%" }}
             ref={rightRef}
           >
             <Text
-              fz={48}
+              fz={{ base: 32, md: 48 }}
               fw={700}
             >
               {person.title}
             </Text>
             <Text
-              fz={24}
+              fz={{ base: 20, md: 24 }}
               style={{ color: "#8fd299" }}
             >
               {person.subtitle}
             </Text>
             <Text
-              fz={18}
+              fz={{ base: 16, md: 18 }}
               mt="md"
             >
               {person.about}
@@ -132,6 +150,7 @@ export const PersonPage = () => {
               style={{ color: "#8fd299" }}
               maw={130}
               mt={60}
+              href="/people"
             >
               Back to our people
             </BaseLink>

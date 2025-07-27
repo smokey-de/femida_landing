@@ -34,8 +34,8 @@ export const TeamBanner = () => (
           Team
         </Text>
         <Text
-          fz={"4.375rem"}
-          lh={"4.375rem"}
+          fz={{base: "42px", md: "4.375rem"}}
+          lh={{base: "3.5rem", md: "4.375rem"}}
           fw={400}
           c={"white"}
         >
@@ -49,6 +49,18 @@ export const TeamBanner = () => (
             size="xl"
             style={{ color: "black" }}
             color="rgba(255, 255, 255, 1)"
+            visibleFrom="md"
+          >
+            Our People
+          </BtnBasic>
+          <BtnBasic
+            component={BaseLink}
+            href="/people"
+            variant="filled"
+            size="md"
+            style={{ color: "black" }}
+            color="rgba(255, 255, 255, 1)"
+            hiddenFrom="md"
           >
             Our People
           </BtnBasic>

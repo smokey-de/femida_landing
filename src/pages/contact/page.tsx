@@ -26,7 +26,8 @@ export const ContactPage = () => {
       <Container
         size={"xl"}
         mb={"40px"}
-        w={1280}
+        maw={1280}
+        w={"100%"}
       >
         <Divider
           size={"1px"}
@@ -35,7 +36,7 @@ export const ContactPage = () => {
         <Text
           size="xl"
           fw={"600"}
-          fz={"48px"}
+          fz={{ base: 32, md: 48 }}
           h={"100%"}
           my={"60px"}
           w={"100%"}

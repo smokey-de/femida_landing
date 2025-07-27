@@ -8,19 +8,29 @@ export const GuidePrinciples = () => (
     size={"xl"}
     fluid
   >
-    <Flex bg={"#E4EDF2"}>
+    <Flex
+      bg={"#E4EDF2"}
+      direction={{ base: "column", sm: "row" }}
+    >
       <Box
         flex={1}
         className={s.cardImage}
+        visibleFrom="sm"
+      />
+      <Box
+        className={s.cardImage}
+        hiddenFrom="sm"
+        h={300}
       />
       <Box
         flex={1}
-        p={"3.62rem 4.5rem"}
+        p={{ base: "20px 20px", sm: "3.62rem 4.5rem" }}
       >
         <Text
           fw={600}
           fz={"3rem"}
           lh={"3.875rem"}
+          visibleFrom="md"
         >
           Guided by integrity, trust, and client-centricity, our values drive
           everything we do.

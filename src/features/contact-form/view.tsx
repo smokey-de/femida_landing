@@ -63,8 +63,17 @@ export const ContactForm = () => {
         label="Message"
         placeholder="Textarea"
       />
-
-      <BtnBasic size="md">Submit</BtnBasic>
+      <Flex
+        w={"100%"}
+        justify={"flex-end"}
+      >
+        <BtnBasic
+          size="md"
+          maw={140}
+        >
+          Submit
+        </BtnBasic>
+      </Flex>
     </Flex>
   );
 };

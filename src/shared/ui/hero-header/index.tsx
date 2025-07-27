@@ -89,7 +89,10 @@ export const HeroHeader = () => {
   }, [bgIndex]);
 
   return (
-    <Box className={s.heroWrapper}>
+    <Box
+      className={s.heroWrapper}
+      mih={{ base: "70vh", md: "80vh" }}
+    >
       {images.map((img, i) => (
         <Box
           key={i}
@@ -108,6 +111,7 @@ export const HeroHeader = () => {
       <Container
         size="xl"
         className={s.heroTextContainer}
+        mt={{ base: "41px", md: "81px" }}
       >
         <Flex
           direction={"column"}
@@ -118,7 +122,7 @@ export const HeroHeader = () => {
             direction={"column"}
           >
             <Text
-              fz={"60px"}
+              fz={{ base: "24px", md: "60px" }}
               fw={500}
               lh={"1.2em"}
             >
@@ -129,7 +133,7 @@ export const HeroHeader = () => {
                 .fill("")
                 .map((_, i) => (
                   <Text
-                    fz={"60px"}
+                    fz={{ base: "24px", md: "60px" }}
                     fw={500}
                     lh={"1.2em"}
                     mb={"20px"}
@@ -146,7 +150,7 @@ export const HeroHeader = () => {
                 ))}
             </Group>
             <Text
-              fz={"24px"}
+              fz={{ base: "16px", sm: "20px", md: "24px" }}
               fw={500}
               lh={"1.2em"}
               mb={"30px"}
@@ -159,8 +163,18 @@ export const HeroHeader = () => {
             size="xl"
             style={{ color: "black" }}
             color="rgba(255, 255, 255, 1)"
+            visibleFrom="md"
           >
             Schedule a free consultation
+          </BtnBasic>
+          <BtnBasic
+            variant="filled"
+            size="md"
+            style={{ color: "black" }}
+            color="rgba(255, 255, 255, 1)"
+            hiddenFrom="md"
+          >
+            Schedule
           </BtnBasic>
         </Flex>
       </Container>

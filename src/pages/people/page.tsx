@@ -130,6 +130,7 @@ export const PeoplePage = () => {
           p={"30px 75px"}
           right={200}
           bottom={120}
+          visibleFrom="md"
         >
           <Image
             src={
@@ -143,7 +144,7 @@ export const PeoplePage = () => {
 
       <Container size={"xl"}>
         <Flex
-          direction={"row"}
+          direction={{ base: "column", md: "row" }}
           mb={115}
           gap={160}
         >
@@ -153,7 +154,7 @@ export const PeoplePage = () => {
           >
             <Text
               ff={"Geologica"}
-              fz={48}
+              fz={{ base: "32px", md: "48px" }}
               fw={600}
               tt={"none"}
               fs={"normal"}
@@ -165,6 +166,14 @@ export const PeoplePage = () => {
             <BtnBasic
               size="xl"
               maw={250}
+              visibleFrom="md"
+            >
+              Explore our open positions
+            </BtnBasic>
+            <BtnBasic
+              size="md"
+              maw={250}
+              hiddenFrom="md"
             >
               Explore our open positions
             </BtnBasic>
@@ -177,7 +186,7 @@ export const PeoplePage = () => {
             <Text
               maw={625}
               c={"#5F6567"}
-              fz={20}
+              fz={{ base: 16, md: 20 }}
               lh={"1.5em"}
             >
               At Beratung, we firmly believe that a robust culture built on
@@ -200,7 +209,8 @@ export const PeoplePage = () => {
       <Container
         size={"xl"}
         mb={95}
-        w={1280}
+        maw="1280px"
+        w={"100%"}
         pt={35}
         pb={35}
         style={{
@@ -234,10 +244,12 @@ export const PeoplePage = () => {
             </Flex>
           </Flex>
           <Flex
-            direction="row"
+            direction={{ base: "column", md: "row" }}
+            align={"center"}
+            justify={"center"}
             gap={60}
-            pr={100}
-            pl={100}
+            pr={{ base: 0, md: 100 }}
+            pl={{ base: 0, md: 100 }}
           >
             {highlights.map((item, index) => (
               <Flex
@@ -248,7 +260,7 @@ export const PeoplePage = () => {
               >
                 <Text
                   ff="Geologica"
-                  fz={70}
+                  fz={{ base: 52, md: 70 }}
                   fw={700}
                   tt="none"
                   fs="normal"
@@ -284,7 +296,8 @@ export const PeoplePage = () => {
 
       <Container
         size={"xl"}
-        w={1280}
+        w={"100%"}
+        maw={1280}
       >
         <Flex
           direction={"row"}
@@ -293,7 +306,7 @@ export const PeoplePage = () => {
           <Flex direction={"column"}>
             <Text
               ff={"Geologica"}
-              fz={48}
+              fz={{ base: 32, md: 48 }}
               fw={600}
               tt={"none"}
               fs={"normal"}
@@ -322,6 +335,7 @@ export const PeoplePage = () => {
             }
             alt="service illustration"
             w={160}
+            visibleFrom="md"
           />
         </Flex>
       </Container>
@@ -329,10 +343,10 @@ export const PeoplePage = () => {
       <Container
         size={"xl"}
         mt={"40px"}
-        mb={"130px"}
+        mb={{ base: 80, md: 130 }}
       >
         <SimpleGrid
-          cols={4}
+          cols={{ base: 2, sm: 3, md: 4 }}
           spacing={"30px"}
           verticalSpacing={"35px"}
           mb={"40px"}
