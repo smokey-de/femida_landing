@@ -15,7 +15,6 @@ import {
   Navbar,
   Footer,
   OtherHeader,
-  OtherSplitter,
   SplitSection,
 } from "@/shared/ui";
 
@@ -349,9 +348,9 @@ export const AboutPage = () => {
                   lts={0}
                   style={{ color: "#5F6567" }}
                 >
-                  We don't just plan, we execute. Our talented team supports
-                  your implementation, as part of your founding team or on
-                  project basis.
+                  We don&apos;t just plan, we execute. Our talented team
+                  supports your implementation, as part of your founding team or
+                  on project basis.
                 </Text>
               </Flex>
             </Flex>
