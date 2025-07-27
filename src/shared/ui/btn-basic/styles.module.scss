@@ -7,10 +7,9 @@
   @include colors.hover-effect(colors.$primary-color, colors.$primary-color);
 }
 
-.button:hover{
+.button:hover {
   color: black !important;
 }
-
 
 .label {
   position: relative;
@@ -20,7 +19,7 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: 0.7em;
+    bottom: 0.5em;
     left: 0;
     height: 1px;
     width: 100%;

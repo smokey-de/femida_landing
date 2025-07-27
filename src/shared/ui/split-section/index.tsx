@@ -29,7 +29,7 @@ export const SplitSection = ({
 
   return (
     <Flex
-      direction={"row"}
+      direction={{base: "column", lg: "row"}}
       gap={150}
       justify="space-between"
     >
@@ -37,8 +37,8 @@ export const SplitSection = ({
         <Box>
           <Image
             src={imageSrc}
-            w={625}
-            h={600}
+            w={{base: "100%", lg: 625}}
+            h={{base: "100%", lg: 600}} 
           />
         </Box>
       )}
@@ -46,6 +46,7 @@ export const SplitSection = ({
       <Flex
         direction="column"
         justify={"space-between"}
+        gap={20}
       >
         <Flex
           direction={"column"}
@@ -67,7 +68,7 @@ export const SplitSection = ({
 
           <Text
             ff={"Geologica"}
-            fz={48}
+            fz={{base: 32, md: 48}}
             fw={600}
             tt={"none"}
             fs={"normal"}
@@ -113,8 +114,8 @@ export const SplitSection = ({
         <Box>
           <Image
             src={imageSrc}
-            w={625}
-            h={600}
+            w={{base: "100%", lg: 625}}
+            h={{base: "100%", lg: 600}}
           />
         </Box>
       )}

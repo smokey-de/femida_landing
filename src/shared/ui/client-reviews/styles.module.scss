@@ -7,5 +7,11 @@
   background-color: #000;
   width: 0.5rem;
   height: 0.5rem;
+  margin: 0 4px;
   border-radius: 50%;
+  transition: background-color 0.3s;
+
+  &.mantine-Carousel-indicatorActive {
+    background-color: black;
+  }
 }

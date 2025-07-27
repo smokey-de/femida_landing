@@ -29,7 +29,7 @@ export const ServiceContact = ({
     >
       <Anchor
         unstyled
-        fz={24}
+        fz={{base: "20px", md: "24px"}}
         fw={500}
         lh={"1.4em"}
         lts={"-.5px"}

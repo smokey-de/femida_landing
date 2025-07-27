@@ -14,6 +14,7 @@ import { useEffect, useRef } from "react";
 
 import Image from "next/image";
 
+import cn from "classnames";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -41,7 +42,7 @@ const navbarRoutes: NavbarRoute[] = [
   // { label: "Call us: +1 234 567 890", href: "tel:+1234567890" },
 ];
 
-export const Navbar = () => {
+export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
   const isNotMobile = useMediaQuery(mediaQueries.mobile);
   const navRef = useRef<HTMLDivElement>(null);
 
@@ -77,7 +78,7 @@ export const Navbar = () => {
         if (!nav) return;
         if (self.scroll() > 10) {
           nav.classList.add(s.scrolled);
-        } else {
+        } else if (!darkMode) {
           nav.classList.remove(s.scrolled);
         }
       },
@@ -91,7 +92,7 @@ export const Navbar = () => {
   return (
     <nav
       ref={navRef}
-      className={s.nav}
+      className={cn(s.nav, [darkMode && s.scrolled])}
     >
       <NavContainer>
         <NavElement>
@@ -136,6 +137,7 @@ const MobileNavList = () => {
       <Burger
         opened={opened}
         onClick={toggle}
+        color="white"
       />
       <Transition
         mounted={opened}
@@ -145,7 +147,10 @@ const MobileNavList = () => {
         keepMounted
       >
         {(transitionStyle) => (
-          <NavbarDropdown style={{ ...transitionStyle, zIndex: 1 }}>
+          <NavbarDropdown
+            style={{ ...transitionStyle, zIndex: 1 }}
+            bg={"#374B47"}
+          >
             <NavList direction={"column"}>
               <NavItems />
               <LanguageSwitcher />
@@ -173,6 +178,7 @@ const ContactBtn = () => (
     href="/contact"
     size="sm"
     color="#fff"
+    visibleFrom="md"
   >
     Contact us
   </BtnBasic>

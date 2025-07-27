@@ -48,9 +48,10 @@ export const Footer = () => {
         w={"100%"}
         align={"center"}
         justify={"center"}
+        direction={{base: "column", md: "row"}}
       >
         <Flex
-          w={"50%"}
+           w={{base: "100%", md: "50%"}}
           justify={"flex-end"}
           bg={"#374b47"}
           pos={"relative"}
@@ -63,7 +64,8 @@ export const Footer = () => {
             pos={"absolute"}
             w={"130px"}
             bottom={0}
-            left={198}
+            left={110}
+            visibleFrom="md"
           />
 
           <BtnBasic
@@ -72,13 +74,13 @@ export const Footer = () => {
             leftSection={<IconPhoneFilled />}
             className={s.topLeft}
             size="xl"
-            w={"55%"}
+            w={{base: "100%", md: "55%"}}
           >
             1-800-356-8933
           </BtnBasic>
         </Flex>
         <Flex
-          w={"50%"}
+           w={{base: "100%", md: "50%"}}
           justify={"flex-start"}
           bg={"#8fd299"}
         >
@@ -90,7 +92,7 @@ export const Footer = () => {
             rightSection={<IconCaretRightFilled />}
             className={s.topRight}
             size="xl"
-            w={"80%"}
+            w={{base: "100%", md: "80%"}}
           >
             Schedule a free consultation
           </BtnBasic>
@@ -112,7 +114,6 @@ export const Footer = () => {
           >
             <Flex
               direction={"column"}
-              pr={"435px"}
               pt={45}
               pb={45}
               gap={10}
@@ -147,6 +148,7 @@ export const Footer = () => {
             pt={45}
             pb={45}
             className={s.secBot}
+            visibleFrom="md"
           >
             <BaseLink href="/">Home</BaseLink>
             <BaseLink href="/service">Services</BaseLink>

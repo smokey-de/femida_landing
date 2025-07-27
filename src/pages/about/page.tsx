@@ -1,6 +1,14 @@
 "use client";
 
-import { Anchor, Box, Container, Flex, Image, Text } from "@mantine/core";
+import {
+  Anchor,
+  Box,
+  Container,
+  Flex,
+  Image,
+  SimpleGrid,
+  Text,
+} from "@mantine/core";
 
 import {
   BaseLink,
@@ -47,7 +55,7 @@ export const AboutPage = () => {
       direction="column"
       className={s.page}
     >
-      <Navbar />
+      <Navbar darkMode />
 
       <Box
         mb={"40px"}
@@ -111,9 +119,9 @@ export const AboutPage = () => {
             <Text>Our purpose</Text>
           </Flex>
 
-          <Flex
-            direction="row"
-            gap={40}
+          <SimpleGrid
+            cols={{ base: 2, sm: 3, md: 5 }}
+            spacing={20}
           >
             {values.map((item, index) => (
               <Flex
@@ -142,7 +150,7 @@ export const AboutPage = () => {
                 </Text>
               </Flex>
             ))}
-          </Flex>
+          </SimpleGrid>
         </Flex>
       </Container>
 
@@ -160,7 +168,7 @@ export const AboutPage = () => {
       >
         <Text
           ff={"Geologica"}
-          fz={48}
+          fz={{ base: 32, md: 48 }}
           fw={600}
           tt={"none"}
           fs={"normal"}
@@ -171,7 +179,7 @@ export const AboutPage = () => {
         </Text>
         <Text
           style={{ color: "#5F6567" }}
-          fz={20}
+          fz={{ base: 16, md: 20 }}
           lh={"1.5em"}
           maw={800}
           ta={"center"}
@@ -194,8 +202,10 @@ export const AboutPage = () => {
           w={"100%"}
         >
           <Flex
-            direction={"row"}
-            justify={"space-between"}
+            w={"100%"}
+            direction={{ base: "column", md: "row" }}
+            justify={{ base: "center", md: "space-between" }}
+            align={"center"}
           >
             <Flex
               direction={"column"}
@@ -351,14 +361,15 @@ export const AboutPage = () => {
 
       <Container size={"xl"}>
         <Flex
-          direction={"row"}
+          direction={{ base: "column", md: "row" }}
           align={"center"}
           mb={130}
+          gap={70}
         >
           <Flex
             direction={"column"}
             style={{ borderRight: "1px solid #00000026" }}
-            pr={70}
+            visibleFrom="md"
           >
             <Flex>
               <Image
@@ -384,10 +395,45 @@ export const AboutPage = () => {
           </Flex>
 
           <Flex
-            direction={"row"}
-            pl={70}
+            direction={"column"}
+            style={{ borderBottom: "1px solid #00000026" }}
+            pb={30}
+            hiddenFrom="md"
           >
-            <Flex direction={"column"} ml={20} mr={20} gap={20}>
+            <Flex>
+              <Image
+                src={
+                  "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
+                }
+                h={18}
+                w={22}
+              />
+              <Text>We are honored</Text>
+            </Flex>
+
+            <Text
+              style={{ color: "#5F6567" }}
+              fz={20}
+              lh={"1.5em"}
+              maw={800}
+            >
+              5 years on Fortune 100 Best Companies to Work For list
+            </Text>
+
+            <BaseLink style={{ color: "#161616" }}>Learn more</BaseLink>
+          </Flex>
+
+          <SimpleGrid
+            cols={{ base: 1, sm: 2, md: 4 }}
+            verticalSpacing={30}
+            pl={{ base: 0, md: 70 }}
+          >
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+              gap={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -405,7 +451,11 @@ export const AboutPage = () => {
                 Forbes World’s Best Management Consulting Firms
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -423,7 +473,11 @@ export const AboutPage = () => {
                 100 Best Companies To Work For 2022, FORTUNE
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -441,7 +495,11 @@ export const AboutPage = () => {
                 Glassdoor Best Places to Work
               </Anchor>
             </Flex>
-            <Flex direction={"column"} ml={20} mr={20}>
+            <Flex
+              direction={"column"}
+              ml={20}
+              mr={20}
+            >
               <Text
                 ff={"Helvetica"}
                 fz={16}
@@ -459,7 +517,7 @@ export const AboutPage = () => {
                 Human Rights Campaign Best Places to Work for LGBTQ Equality
               </Anchor>
             </Flex>
-          </Flex>
+          </SimpleGrid>
         </Flex>
       </Container>
 

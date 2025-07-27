@@ -34,6 +34,8 @@ import {
 
 import s from "./style.module.scss";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const serviceData = [
   {
     icon: <IconChartBar />,
@@ -73,8 +75,6 @@ export const MainPage = () => (
   </Flex>
 );
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ShowServices = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -82,13 +82,15 @@ const ShowServices = () => {
     () => {
       const panels = gsap.utils.toArray<HTMLElement>(".scroll-panel");
 
-      panels.forEach((panel) => {
+      panels.forEach((panel, index) => {
         ScrollTrigger.create({
           trigger: panel,
           start: "top top",
+          end: () => `+=${panel.offsetHeight}`,
           pin: true,
           pinSpacing: false,
           scrub: true,
+          id: `panel-${index}`,
         });
       });
 
@@ -98,6 +100,7 @@ const ShowServices = () => {
         endTrigger: panels[panels.length - 1],
         end: "bottom bottom",
         snap: 1 / (panels.length - 1),
+        id: "panel-snap",
       });
 
       return () => {
@@ -108,111 +111,117 @@ const ShowServices = () => {
   );
 
   return (
-    <Box mb={"2rem"}>
+    <Box
+      ref={containerRef}
+      mb={{ base: "130vh", sm: "120vh", md: "130vh" }}
+    >
       <Container
-        size={"xl"}
-        mt={"7.5rem"}
-        mb={"2.813rem"}
+        size="xl"
+        mt="7.5rem"
+        mb="2.813rem"
       >
         <Text
           component="h5"
           fw={400}
-          lh={"1.5rem"}
-          fz={"1.25rem"}
+          lh="1.5rem"
+          fz="1.25rem"
         >
           Services
         </Text>
         <Text
           component="h2"
           fw={600}
-          lh={"3.875rem"}
-          fz={"3rem"}
+          lh={{ base: "2.875rem", md: "3.875rem" }}
+          fz={{ base: "2.25rem", md: "3rem" }}
+          lts={"-1px"}
         >
           To meet your needs
         </Text>
       </Container>
-      <MainServiceContainer ref={containerRef}>
-        <ContentWrapper
-          className="scroll-panel"
-          mb={"2rem"}
-        >
-          <Box
-            maw={"1280px"}
-            m={"0 auto"}
-            pos={"relative"}
+
+      <MainServiceContainer>
+        {[
+          {
+            type: "Financial",
+            image:
+              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg",
+          },
+          {
+            type: "Insurance",
+            image:
+              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
+          },
+          {
+            type: "Advisory",
+            image:
+              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
+          },
+        ].map((section, i) => (
+          <ContentWrapper
+            className="scroll-panel"
+            key={i}
           >
-            <Center>
-              <ServiceText>01 Financial</ServiceText>
-            </Center>
-            <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
-            <CardWrapper>
-              {serviceData.map((service, index) => (
-                <ServiceCard key={index}>
-                  <CardIcon>{service.icon}</CardIcon>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </ServiceCard>
-              ))}
-            </CardWrapper>
-            <Space h="xl" />
             <Box
-              pos={"absolute"}
-              w={"500px"}
-              h={"470px"}
-              bottom={"0"}
-              right={"0"}
-              className="clipped-image"
+              maw="1280px"
+              m={{ base: "0 0", md: "0 auto" }}
+              pos="relative"
             >
-              <Image
-                w={"100%"}
-                h={"100%"}
-                src={
-                  "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
-                }
-                alt="service"
-              />
+              <Center visibleFrom="md">
+                <ServiceText>
+                  0{i + 1} {section.type}
+                </ServiceText>
+              </Center>
+              <Flex justify={{ base: "center", md: "flex-start" }}>
+                <ServiceTitle
+                  mt={{ base: "0", md: "250px" }}
+                  pos={"relative"}
+                  fz={{ base: "2.5rem", md: "4.375rem" }}
+                  style={{ zIndex: 1000 }}
+                >
+                  {section.type} planning
+                </ServiceTitle>
+              </Flex>
+              <CardWrapper>
+                <Flex
+                  justify={{ base: "center", md: "flex-start" }}
+                  direction={{ base: "column", md: "row" }}
+                  w={"100%"}
+                >
+                  {serviceData.map((service, index) => (
+                    <ServiceCard
+                      key={index}
+                      p={{ base: "15px", md: "4.375rem 1.875rem 3.125rem" }}
+                      maw={{ base: "100%", md: "25%" }}
+                    >
+                      <Flex direction={{ base: "column", md: "column" }}>
+                        <CardIcon>{service.icon}</CardIcon>
+                        <CardTitle>{service.title}</CardTitle>
+                        <CardDescription>{service.description}</CardDescription>
+                      </Flex>
+                    </ServiceCard>
+                  ))}
+                </Flex>
+              </CardWrapper>
+              <Space h="xl" />
+              <Box
+                pos="absolute"
+                w="500px"
+                h="470px"
+                bottom="0"
+                right="0"
+                className="clipped-image"
+              >
+                <Image
+                  w="100%"
+                  h="100%"
+                  src={section.image}
+                  alt={section.type}
+                  visibleFrom="md"
+                />
+              </Box>
             </Box>
-          </Box>
-        </ContentWrapper>
-        <ContentWrapper className="scroll-panel">
-          <Box
-            maw={"1280px"}
-            m={"0 auto"}
-            pos={"relative"}
-          >
-            <Center>
-              <ServiceText>01 Financial</ServiceText>
-            </Center>
-            <ServiceTitle mt={"250px"}>Financial planning</ServiceTitle>
-            <CardWrapper>
-              {serviceData.map((service, index) => (
-                <ServiceCard key={index}>
-                  <CardIcon>{service.icon}</CardIcon>
-                  <CardTitle>{service.title}</CardTitle>
-                  <CardDescription>{service.description}</CardDescription>
-                </ServiceCard>
-              ))}
-            </CardWrapper>
-            <Space h="xl" />
-            <Box
-              pos={"absolute"}
-              w={"500px"}
-              h={"470px"}
-              bottom={"0"}
-              right={"0"}
-              className="clipped-image"
-            >
-              <Image
-                w={"100%"}
-                h={"100%"}
-                src={
-                  "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg"
-                }
-                alt="service"
-              />
-            </Box>
-          </Box>
-        </ContentWrapper>
+          </ContentWrapper>
+        ))}
       </MainServiceContainer>
     </Box>
   );
@@ -220,35 +229,36 @@ const ShowServices = () => {
 
 const ContactSection = () => (
   <Container
-    size={"xl"}
-    component={"section"}
+    size="xl"
+    component="section"
     id="contact"
+    mb={80}
   >
-    <Space h={"8.125rem"} />
+    <Space h="8.125rem" />
     <Box>
       <Text
         component="h5"
         fw={400}
-        lh={"1.5rem"}
-        fz={"1.25rem"}
+        lh="1.5rem"
+        fz="1.25rem"
       >
         Get started
       </Text>
       <Text
         component="h2"
         fw={600}
-        lh={"3.875rem"}
-        fz={"3rem"}
+        lh={{ base: "2.875rem", md: "3.875rem" }}
+        fz={{ base: "32px", md: "48px" }}
       >
         Schedule your personalized consultation today
       </Text>
     </Box>
-    <Space h={"1rem"} />
+    <Space h="1rem" />
 
-    <Flex>
+    <Flex visibleFrom="md">
       <Flex
-        direction={"column"}
-        gap={"0.75rem"}
+        direction="column"
+        gap="0.75rem"
         flex={1}
       >
         <Image
@@ -256,35 +266,35 @@ const ContactSection = () => (
           alt="Contact Us"
         />
         <Text
-          fz={"0.875rem"}
+          fz="0.875rem"
           fw={500}
-          lh={"1.313rem"}
-          c={"rgb(95, 101, 103)"}
+          lh="1.313rem"
+          c="rgb(95, 101, 103)"
         >
           OR REACH US AT:
         </Text>
         <Divider my="md" />
         <Text
-          fz={"1rem"}
+          fz="1rem"
           fw={400}
-          lh={"1.375rem"}
-          c={"rgb(95, 101, 103)"}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
         >
           T: 1-800-356-8933
         </Text>
         <Text
-          fz={"1rem"}
+          fz="1rem"
           fw={400}
-          lh={"1.375rem"}
-          c={"rgb(95, 101, 103)"}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
         >
           E: office@beratung.com
         </Text>
         <Text
-          fz={"1rem"}
+          fz="1rem"
           fw={400}
-          lh={"1.375rem"}
-          c={"rgb(95, 101, 103)"}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
         >
           Seventh Ave, 20th Floor New York
         </Text>
@@ -292,17 +302,78 @@ const ContactSection = () => (
       <Paper
         flex={1}
         bdrs={0}
-        px={"1rem"}
+        px="1rem"
       >
         <ContactForm />
       </Paper>
+    </Flex>
+
+    <Flex
+      direction={"column"}
+      hiddenFrom="md"
+    >
+      <Flex
+        direction="column"
+        gap="0.75rem"
+        flex={1}
+      >
+        <Image
+          src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg"
+          alt="Contact Us"
+        />
+        <Divider my="md" />
+
+        <ContactForm />
+      </Flex>
+      <Flex
+        flex={1}
+        bdrs={0}
+        px="1rem"
+        direction={"column"}
+        gap={"0.75rem"}
+      >
+        <Divider my="md" />
+
+        <Text
+          fz="0.875rem"
+          fw={500}
+          lh="1.313rem"
+          c="rgb(95, 101, 103)"
+        >
+          OR REACH US AT:
+        </Text>
+
+        <Text
+          fz="1rem"
+          fw={400}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
+        >
+          T: 1-800-356-8933
+        </Text>
+        <Text
+          fz="1rem"
+          fw={400}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
+        >
+          E: office@beratung.com
+        </Text>
+        <Text
+          fz="1rem"
+          fw={400}
+          lh="1.375rem"
+          c="rgb(95, 101, 103)"
+        >
+          Seventh Ave, 20th Floor New York
+        </Text>
+      </Flex>
     </Flex>
   </Container>
 );
 
 const MainServiceContainer = Container.withProps({
   fluid: true,
-  px: "2rem",
   m: 0,
 });
 
@@ -339,8 +410,6 @@ const CardWrapper = Flex.withProps({
 const ServiceCard = Card.withProps({
   bg: "#fff",
   bdrs: "0",
-  maw: "25%",
-  p: "4.375rem 1.875rem 3.125rem",
 });
 
 const CardIcon = Text.withProps({

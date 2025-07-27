@@ -80,7 +80,7 @@ export const ServicePage = () => {
       direction="column"
       className={s.page}
     >
-      <Navbar />
+      <Navbar darkMode />
 
       <Box style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader
@@ -96,7 +96,7 @@ export const ServicePage = () => {
         my={"130px"}
       >
         <SimpleGrid
-          cols={3}
+          cols={{ base: 1, sm: 2, md: 3 }}
           spacing={"20px"}
           verticalSpacing={"50px"}
         >
@@ -117,7 +117,7 @@ export const ServicePage = () => {
             justify={"center"}
           >
             <Text
-              fz={"20px"}
+              fz={{ base: "16px", md: "20px" }}
               fw={400}
               fs={"normal"}
               lh={"1.3em"}
@@ -131,6 +131,16 @@ export const ServicePage = () => {
               href="/contact"
               maw={"140px"}
               size="xl"
+              visibleFrom="md"
+            >
+              Contact Us
+            </BtnBasic>
+            <BtnBasic
+              component={BaseLink}
+              href="/contact"
+              maw={"140px"}
+              size="md"
+              hiddenFrom="md"
             >
               Contact Us
             </BtnBasic>
@@ -146,7 +156,7 @@ export const ServicePage = () => {
           pb={"120px"}
         >
           <Flex
-            direction={"row"}
+            direction={{ base: "column", md: "row" }}
             gap={"130px"}
             align={"center"}
             justify={"center"}
@@ -156,7 +166,7 @@ export const ServicePage = () => {
               gap={"30px"}
             >
               <Text
-                fz={"30px"}
+                fz={{ base: "26px", md: "30px" }}
                 fw={500}
                 fs={"normal"}
                 lh={"1.3em"}
@@ -185,7 +195,7 @@ export const ServicePage = () => {
         mb={"130px"}
       >
         <SimpleGrid
-          cols={4}
+          cols={{ base: 1, sm: 2, md: 4 }}
           spacing={"30px"}
           verticalSpacing={"35px"}
           mb={"40px"}

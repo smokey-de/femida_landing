@@ -12,14 +12,30 @@
     transition: opacity 0.3s ease;
   }
 
-  &.scrolled {
-    background-color: #374B47;
-    border-top: none !important;
-  }
-
   &.scrolled .dividerWrapper {
     opacity: 0;
   }
 
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+
+
+    .dividerWrapper {
+      display: none;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .mantine-Burger-root {
+      display: none;
+    }
+  }
 }
+
+.scrolled {
+  background-color: #374b47;
+  border-top: none !important;
+}
+
+
 
