@@ -105,7 +105,6 @@ export const ServicePage = () => {
               key={index}
               linkLabel={service.linkLabel}
               text={service.text}
-              href="#"
             />
           ))}
 
