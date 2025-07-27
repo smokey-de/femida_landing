@@ -40,7 +40,7 @@ export const HeroHeader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (index + 1) % headlines.length;
-      const current = headlines[index].padEnd(25, " ").split("");
+      // const current = headlines[index].padEnd(25, " ").split("");
       const next = headlines[nextIndex].padEnd(25, " ").split("");
 
       next.forEach((nextChar, i) => {
