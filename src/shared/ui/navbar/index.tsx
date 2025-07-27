@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Box,
   Burger,
   Container,
   Divider,
@@ -18,6 +19,7 @@ import cn from "classnames";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import { Link } from "@/i18n/navigation";
 import { mediaQueries } from "@/shared/lib/constants";
 
 import { BtnBasic } from "../btn-basic/ui";
@@ -96,12 +98,17 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
     >
       <NavContainer>
         <NavElement>
-          <Image
-            src={LOGO_URL}
-            alt="Logo"
-            width={120}
-            height={30}
-          />
+          <Box
+            component={Link}
+            href={"/"}
+          >
+            <Image
+              src={LOGO_URL}
+              alt="Logo"
+              width={120}
+              height={30}
+            />
+          </Box>
           {isNotMobile ? <DesktopNavList /> : <MobileNavList />}
         </NavElement>
 
