@@ -6,8 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
+    "lint": "next lint",
+    "postinstall": "patch-package"
+   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@mantine/carousel": "^8.1.3",
