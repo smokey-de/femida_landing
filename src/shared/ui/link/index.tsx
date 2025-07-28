@@ -1,6 +1,11 @@
+"use client";
+
 import { Anchor, AnchorProps } from "@mantine/core";
+
 import { FC, PropsWithChildren } from "react";
-import Link from "next/link";
+
+import { Link } from "@/i18n/navigation";
+
 import s from "./styles.module.scss";
 
 const defaultProps: AnchorProps = {

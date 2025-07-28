@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Container, Divider, Flex, Text } from "@mantine/core";
 
 import { ContactForm } from "@/features/contact-form";

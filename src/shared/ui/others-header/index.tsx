@@ -1,4 +1,4 @@
-import { Text, Title, Flex, Container, Box, Image } from "@mantine/core";
+import { Box, Container, Flex, Image, Text, Title } from "@mantine/core";
 
 import s from "./style.module.scss";
 
@@ -23,10 +23,13 @@ export const OtherHeader = ({
       pos={"relative"}
       pt={"150px"}
     >
-      <Container size={"xl"} p={{base: "0", md: "0 16px"}}>
-         <Flex
+      <Container
+        size={"xl"}
+        p={{ base: "0", md: "0 16px" }}
+      >
+        <Flex
           direction={"column"}
-          w={{base: "100%", md: "75%"}}
+          w={{ base: "100%", md: "75%" }}
           className={s.headerUpper}
           pt={"36px"}
           align={"flex-start"}
@@ -53,7 +56,7 @@ export const OtherHeader = ({
               order={2}
               className={s.mainTitle}
               ff={"Geologica"}
-              fz={{base: "32px", md: "48px"}}
+              fz={{ base: "32px", md: "48px" }}
               tt={"none"}
               fs={"normal"}
               lh={"1.3em"}
@@ -105,7 +108,7 @@ export const OtherHeader = ({
         <Box className={s.textBox}>
           <Text
             className={s.text}
-            fz={{base: "20px", md: "24px"}}
+            fz={{ base: "20px", md: "24px" }}
             fw={500}
             lts={"-.5px"}
             lh={"1.4em"}

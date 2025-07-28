@@ -1,18 +1,15 @@
-"use client";
-
 import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
 
 import {
-  BaseLink,
-  BtnBasic,
-  Navbar,
   Footer,
+  Navbar,
   OtherHeader,
   OtherSplitter,
   PeopleCard,
   ServiceContact,
 } from "@/shared/ui";
 
+import { ContactUs, ViewMore } from "./RedirectClient";
 import s from "./style.module.scss";
 
 const services = [
@@ -111,7 +108,7 @@ export const ServicePage = () => {
           <Flex
             direction={"column"}
             p={"25px"}
-            style={{ backgroundColor: "#e4edf3" }}
+            bg={"#e4edf3"}
             align-items={"center"}
             justify={"center"}
           >
@@ -125,24 +122,7 @@ export const ServicePage = () => {
             >
               If you do not see your specific practice areas, please contact us
             </Text>
-            <BtnBasic
-              component={BaseLink}
-              href="/contact"
-              maw={"140px"}
-              size="xl"
-              visibleFrom="md"
-            >
-              Contact Us
-            </BtnBasic>
-            <BtnBasic
-              component={BaseLink}
-              href="/contact"
-              maw={"140px"}
-              size="md"
-              hiddenFrom="md"
-            >
-              Contact Us
-            </BtnBasic>
+            <ContactUs />
           </Flex>
         </SimpleGrid>
       </Container>
@@ -212,12 +192,7 @@ export const ServicePage = () => {
           align-content={"center"}
           justify={"center"}
         >
-          <BtnBasic
-            component={BaseLink}
-            href="/people"
-          >
-            View more
-          </BtnBasic>
+          <ViewMore />
         </Flex>
       </Container>
 

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, Flex, Text } from "@mantine/core";
 
 import { BtnBasic } from "../btn-basic/ui";
@@ -34,8 +36,8 @@ export const TeamBanner = () => (
           Team
         </Text>
         <Text
-          fz={{base: "42px", md: "4.375rem"}}
-          lh={{base: "3.5rem", md: "4.375rem"}}
+          fz={{ base: "42px", md: "4.375rem" }}
+          lh={{ base: "3.5rem", md: "4.375rem" }}
           fw={400}
           c={"white"}
         >

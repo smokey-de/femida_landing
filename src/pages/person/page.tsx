@@ -9,7 +9,7 @@ import { useParams } from "next/navigation";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { people } from "@/pages/people/page";
+import { people } from "@/pages/people/List";
 import { BaseLink, Navbar, Footer } from "@/shared/ui";
 
 import s from "./style.module.scss";

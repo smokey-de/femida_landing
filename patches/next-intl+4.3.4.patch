@@ -1,0 +1,42 @@
+diff --git a/node_modules/next-intl/dist/esm/development/navigation/react-client/createNavigation.js b/node_modules/next-intl/dist/esm/development/navigation/react-client/createNavigation.js
+index 279b73c..5243433 100644
+--- a/node_modules/next-intl/dist/esm/development/navigation/react-client/createNavigation.js
++++ b/node_modules/next-intl/dist/esm/development/navigation/react-client/createNavigation.js
+@@ -1,4 +1,4 @@
+-import { useRouter, usePathname } from 'next/navigation';
++import { useRouter, usePathname } from 'next/navigation.js';
+ import { useMemo } from 'react';
+ import { useLocale } from 'use-intl';
+ import createSharedNavigationFns from '../shared/createSharedNavigationFns.js';
+diff --git a/node_modules/next-intl/dist/esm/development/navigation/react-client/useBasePathname.js b/node_modules/next-intl/dist/esm/development/navigation/react-client/useBasePathname.js
+index 876fa17..663423e 100644
+--- a/node_modules/next-intl/dist/esm/development/navigation/react-client/useBasePathname.js
++++ b/node_modules/next-intl/dist/esm/development/navigation/react-client/useBasePathname.js
+@@ -1,4 +1,4 @@
+-import { usePathname } from 'next/navigation';
++import { usePathname } from 'next/navigation.js';
+ import { useMemo } from 'react';
+ import { useLocale } from 'use-intl';
+ import { hasPathnamePrefixed, unprefixPathname, getLocalePrefix, getLocaleAsPrefix } from '../../shared/utils.js';
+diff --git a/node_modules/next-intl/dist/esm/development/navigation/shared/BaseLink.js b/node_modules/next-intl/dist/esm/development/navigation/shared/BaseLink.js
+index 29caa70..8e2877a 100644
+--- a/node_modules/next-intl/dist/esm/development/navigation/shared/BaseLink.js
++++ b/node_modules/next-intl/dist/esm/development/navigation/shared/BaseLink.js
+@@ -1,6 +1,6 @@
+ "use client";
+ import NextLink from 'next/link';
+-import { usePathname } from 'next/navigation';
++import { usePathname } from 'next/navigation.js';
+ import { forwardRef } from 'react';
+ import { useLocale } from 'use-intl';
+ import syncLocaleCookie from './syncLocaleCookie.js';
+diff --git a/node_modules/next-intl/dist/esm/development/navigation/shared/createSharedNavigationFns.js b/node_modules/next-intl/dist/esm/development/navigation/shared/createSharedNavigationFns.js
+index 0bbc764..a7ca299 100644
+--- a/node_modules/next-intl/dist/esm/development/navigation/shared/createSharedNavigationFns.js
++++ b/node_modules/next-intl/dist/esm/development/navigation/shared/createSharedNavigationFns.js
+@@ -1,4 +1,4 @@
+-import { redirect, permanentRedirect } from 'next/navigation';
++import { redirect, permanentRedirect } from 'next/navigation.js';
+ import { forwardRef } from 'react';
+ import { receiveRoutingConfig } from '../../routing/config.js';
+ import use from '../../shared/use.js';

@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Anchor,
   Box,
@@ -12,8 +10,8 @@ import {
 
 import {
   BaseLink,
-  Navbar,
   Footer,
+  Navbar,
   OtherHeader,
   SplitSection,
 } from "@/shared/ui";
@@ -114,6 +112,7 @@ export const AboutPage = () => {
               }
               h={18}
               w={22}
+              alt="favicon"
             />
             <Text>Our purpose</Text>
           </Flex>
@@ -281,7 +280,8 @@ export const AboutPage = () => {
                 src={
                   "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-1.svg"
                 }
-              ></Image>
+                alt="illustration"
+              />
             </Flex>
 
             <Flex
@@ -377,6 +377,7 @@ export const AboutPage = () => {
                 }
                 h={18}
                 w={22}
+                alt="favicon"
               />
               <Text>We are honored</Text>
             </Flex>
@@ -406,6 +407,7 @@ export const AboutPage = () => {
                 }
                 h={18}
                 w={22}
+                alt="favicon"
               />
               <Text>We are honored</Text>
             </Flex>
