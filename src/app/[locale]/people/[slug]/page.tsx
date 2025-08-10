@@ -16,7 +16,7 @@ import s from "@/pages/person/style.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const PersonPage = () => {
+const PersonPage = () => {
   const params = useParams();
   const slug = params?.slug as string;
   const rightRef = useRef<HTMLDivElement>(null);
