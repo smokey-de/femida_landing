@@ -6,7 +6,7 @@ import { ContactForm } from "@/features/contact-form";
 import s from "@/pages/contact/style.module.scss";
 import { Navbar, Footer, OtherHeader } from "@/shared/ui";
 
-export const ContactPage = () => {
+const ContactPage = () => {
   return (
     <Flex
       direction="column"

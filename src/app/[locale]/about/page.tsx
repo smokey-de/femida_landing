@@ -46,7 +46,7 @@ const values = [
   },
 ];
 
-export const AboutPage = () => {
+const AboutPage = () => {
   return (
     <Flex
       direction="column"
