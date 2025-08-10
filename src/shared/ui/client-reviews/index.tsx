@@ -46,7 +46,7 @@ export const ClientReviews = () => {
           fz={{ base: "1.125rem", sm: "1.25rem" }}
           fw={400}
         >
-          Testimonials
+          Отзывы
         </Text>
         <Text
           lh={{ base: "2.5rem", sm: "3.875rem" }}
@@ -54,7 +54,7 @@ export const ClientReviews = () => {
           fw={400}
           ta="center"
         >
-          Those who trust us
+          Те, кто нам доверяют
         </Text>
       </Flex>
 
@@ -120,21 +120,21 @@ export const ClientReviews = () => {
 const client: ReviewProps[] = [
   {
     url: "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1412591716-reviews.jpg",
-    name: "Mark H",
+    name: "Алишер Т.",
     review:
-      "The financial advice and support I received have been invaluable. They have a deep understanding of my needs and have helped me navigate complex financial decisions with ease.",
+      "Консультации и поддержка, которые я получил, оказались бесценными. Команда прекрасно понимает мои потребности и помогает легко принимать сложные финансовые решения.",
   },
   {
     url: "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-475566446-reviews.jpg",
-    name: "Robert G",
+    name: "Абдул Р.",
     review:
-      "Working with Beratung has been a game-changer for my financial future. Their expertise and personalized guidance have helped me achieve my goals with confidence.",
+      "Сотрудничество с FEMIDA FINANCE стало переломным моментом для моего финансового будущего. Их опыт и индивидуальный подход помогли мне уверенно достичь своих целей.",
   },
   {
     url: "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138997324-reviews.jpg",
-    name: "Jennifer P",
+    name: "Аня Б.",
     review:
-      "I have been a client for years, and they consistently exceed my expectations. Their professionalism, integrity, and commitment to my financial success are unmatched.",
+      "Я сотрудничаю с FEMIDA FINANCE уже продолжительное время, и всегда убеждаюсь в их высоком профессионализме, честности и полной отдаче делу. Они надёжны и всегда идут навстречу.",
   },
 ];
 

@@ -37,7 +37,7 @@ export const OtherHeader = ({
             gap={"4px"}
             p={"12px 35px 12px 30px"}
           >
-            <img
+            <Image
               src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
               alt="icon_slash"
             />

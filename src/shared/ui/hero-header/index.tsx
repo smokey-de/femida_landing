@@ -11,11 +11,11 @@ import { BtnBasic } from "@/shared/ui";
 import s from "./style.module.scss";
 
 const headlines = [
-  "comprehensive planning",
-  "expert guidance",
-  "cutting-edge technology",
-  "strategic insights",
-  "personalized advice",
+  "комплексное планирование",
+  "практичные решения",
+  "современные технологии",
+  "стратегический подход",
+  "персональные советы",
 ];
 
 const images = [
@@ -40,7 +40,6 @@ export const HeroHeader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (index + 1) % headlines.length;
-      // const current = headlines[index].padEnd(25, " ").split("");
       const next = headlines[nextIndex].padEnd(25, " ").split("");
 
       next.forEach((nextChar, i) => {
@@ -126,7 +125,7 @@ export const HeroHeader = () => {
               fw={500}
               lh={"1.2em"}
             >
-              Unlock your financial potential with
+              Раскройте потенциал вашего бизнеса с
             </Text>
             <Group className={s.line}>
               {Array(25)
@@ -155,7 +154,7 @@ export const HeroHeader = () => {
               lh={"1.2em"}
               mb={"30px"}
             >
-              Comprehensive financial consulting services tailored to your needs
+              Финансовые и юридические решения под ваши задачи
             </Text>
           </Flex>
           <BtnBasic
@@ -165,7 +164,7 @@ export const HeroHeader = () => {
             color="rgba(255, 255, 255, 1)"
             visibleFrom="md"
           >
-            Schedule a free consultation
+            Бесплатная консультация
           </BtnBasic>
           <BtnBasic
             variant="filled"
@@ -174,7 +173,7 @@ export const HeroHeader = () => {
             color="rgba(255, 255, 255, 1)"
             hiddenFrom="md"
           >
-            Schedule
+            Бесплатно
           </BtnBasic>
         </Flex>
       </Container>

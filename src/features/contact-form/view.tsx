@@ -28,8 +28,8 @@ export const ContactForm = () => {
 
       {/* <SimpleGrid cols={3}> */}
       <InputBasic
-        label="Name"
-        placeholder="Your name"
+        label="Имя"
+        placeholder="Ваше имя"
         type="text"
       />
       {/* <InputBasic
@@ -38,8 +38,8 @@ export const ContactForm = () => {
         type="email"
       /> */}
       <InputBasic
-        label="Phone number"
-        placeholder="Your phone number"
+        label="Номер"
+        placeholder="Ваш номер телефон"
         type="tel"
       />
       {/* <InputBasic
@@ -53,15 +53,15 @@ export const ContactForm = () => {
         type="text"
       /> */}
       <InputBasic
-        label="Subject"
-        placeholder="Enter here"
+        label="Тема"
+        placeholder="Введите сюда"
         type="text"
       />
       {/* </SimpleGrid> */}
 
       <TextAreaBasic
-        label="Message"
-        placeholder="Textarea"
+        label="Сообщение"
+        placeholder="Пишите сюда"
       />
       <Flex
         w={"100%"}
@@ -71,7 +71,7 @@ export const ContactForm = () => {
           size="md"
           maw={140}
         >
-          Submit
+          Отправить
         </BtnBasic>
       </Flex>
     </Flex>

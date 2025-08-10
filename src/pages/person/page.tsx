@@ -54,7 +54,7 @@ export const PersonPage = () => {
     return () => ctx.revert();
   }, []);
 
-  if (!person) return <Text p="md">Person Not Found</Text>;
+  if (!person) return <Text p="md">Сотрудник не найден</Text>;
 
   return (
     <Flex direction="column">
@@ -127,32 +127,23 @@ export const PersonPage = () => {
               {person.about}
             </Text>
             <Text fz={18}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-              recusandae voluptatem, modi in numquam inventore laborum, non,
-              ipsa ducimus officiis beatae earum est vel? Recusandae iusto amet
-              culpa porro commodi. Quisquam enim, dignissimos fugiat quia,
-              debitis perferendis earum ex nulla sunt veniam eius eligendi ipsum
-              quaerat qui animi. Sequi voluptate possimus temporibus voluptatem
-              sint iure praesentium ea. Eveniet, nesciunt illum? Possimus
-              suscipit eaque vero optio incidunt eveniet, consequuntur,
-              dignissimos nesciunt fuga quo illo mollitia sed odio cupiditate
-              labore rerum provident harum maiores doloribus corrupti accusamus!
-              Exercitationem perferendis ipsum at repellat. Sequi corporis,
-              esse, quod incidunt eos dolorem officia enim neque delectus
-              laboriosam deleniti aspernatur asperiores. Minus sit porro
-              voluptates, omnis numquam ea ex laudantium illum quibusdam impedit
-              a maxime animi! Accusamus ullam nemo necessitatibus deleniti
-              assumenda natus culpa sed molestiae accusantium, quae ex, modi
-              sint nisi perferendis maiores vitae aliquid et facilis, error
-              quaerat mollitia unde praesentium. Non, molestias id?
+              Наша команда объединяет специалистов с уникальным опытом и
+              глубокими знаниями в своей области. Мы ценим внимание к деталям,
+              умение находить нестандартные решения и стремление к совершенству.
+              Виктория и Камила работают в тесном взаимодействии с клиентами и
+              партнёрами, помогая достигать поставленных целей и создавать
+              долгосрочные ценности. Их профессионализм и вовлечённость — это
+              надёжная основа для успешной реализации даже самых сложных
+              проектов.
             </Text>
+
             <BaseLink
               style={{ color: "#8fd299" }}
               maw={130}
               mt={60}
               href="/people"
             >
-              Back to our people
+              Назад к команде
             </BaseLink>
           </Flex>
         </Flex>

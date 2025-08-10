@@ -31,7 +31,7 @@ export const TeamBanner = () => (
           fw={400}
           c={"white"}
         >
-          Team
+          Наша команда
         </Text>
         <Text
           fz={{base: "42px", md: "4.375rem"}}
@@ -39,7 +39,7 @@ export const TeamBanner = () => (
           fw={400}
           c={"white"}
         >
-          Get to know the incredible individuals behind our company
+          Познакомьтесь с удивительными людьми, создающими успех нашей компании
         </Text>
         <Box>
           <BtnBasic
@@ -51,7 +51,7 @@ export const TeamBanner = () => (
             color="rgba(255, 255, 255, 1)"
             visibleFrom="md"
           >
-            Our People
+             Наша команда
           </BtnBasic>
           <BtnBasic
             component={BaseLink}
@@ -62,7 +62,7 @@ export const TeamBanner = () => (
             color="rgba(255, 255, 255, 1)"
             hiddenFrom="md"
           >
-            Our People
+             Наша команда
           </BtnBasic>
         </Box>
       </Flex>

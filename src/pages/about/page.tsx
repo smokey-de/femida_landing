@@ -22,29 +22,29 @@ import s from "./style.module.scss";
 
 const values = [
   {
-    title: "Insight to light",
+    title: "От понимания к действию",
     description:
-      "by challenging traditional thinking and ways of operating and bringing new perspectives to the toughest problems",
+      "ставя под сомнение традиционное мышление и подходы, а также предлагая новые перспективы для решения самых сложных задач",
   },
   {
-    title: "Drive inspired impact",
+    title: "Стремление к вдохновляющему результату",
     description:
-      "by looking beyond the next deadline to the next decade and by collaborating closely with our clients to enable and energize their organizations.",
+      "смотря дальше ближайшего дедлайна — на десятилетия вперёд, и тесно сотрудничая с клиентами для укрепления и вдохновения их организаций",
   },
   {
-    title: "Conquer complexity",
+    title: "Преодоление сложности",
     description:
-      "by discovering unique sources of competitive advantage and hidden truths in dynamic, complex systems.",
+      "находя уникальные источники конкурентного преимущества и скрытые истины в динамичных и сложных системах",
   },
   {
-    title: "Lead with integrity",
+    title: "Лидерство с честностью",
     description:
-      "by confronting the hard issues, staying true to our values, and stating our views candidly and directly.",
+      "решая трудные вопросы, оставаясь верными своим ценностям и открыто высказывая свою позицию",
   },
   {
-    title: "Grow by growing others",
+    title: "Развитие через развитие других",
     description:
-      "enabling our clients, colleagues, and the broader community to build success and achieve their full potential.",
+      "помогая клиентам, коллегам и всему сообществу достигать успеха и раскрывать свой потенциал",
   },
 ];
 
@@ -61,10 +61,10 @@ export const AboutPage = () => {
         style={{ borderBottom: "1px solid #00000026" }}
       >
         <OtherHeader
-          aboutTitle="About"
-          title="Building Bridges for Sustainable and Inclusive Growth"
-          description="At Breatung, we are a renowned global consulting firm committed to collaborating with business and societal leaders in overcoming their most critical challenges and seizing their greatest opportunities. 
-            Our achievements are rooted in fostering deep collaboration and cultivating a global community of diverse individuals who are dedicated to making positive contributions to the world and to one another on a daily basis."
+          aboutTitle="О нас"
+          title="Строим мосты для устойчивого и инклюзивного роста"
+          description={`В FEMIDA FINANCE мы — молодая и амбициозная компания, предоставляющая бухгалтерские и юридические услуги для бизнеса. 
+          Наш успех основан на глубоком сотрудничестве и создании сообщества квалифицированных специалистов, объединённых целью помогать предпринимателям эффективно решать финансовые и правовые задачи и достигать успеха.`}
         />
       </Box>
 
@@ -77,22 +77,22 @@ export const AboutPage = () => {
           gap={"130px"}
         >
           <SplitSection
-            title="Personal connection at global scale"
-            description="Our expertise"
-            linkTitle="Get to know us"
-            subtitle="Across 45 global markets, Beratung operates with a unique level of autonomy, allowing us to swiftly adapt and prioritize what best serves our clients. This distinctive approach sets us apart from traditional consulting firms, making us more personalized and agile. Our unwavering commitment lies in assisting you in overcoming your most significant challenges and transforming your vision into a tangible reality.
-                At Beratung, our dedication extends far beyond the immediate project. We place great emphasis on establishing trust and fostering your long-term success. We meet you at your current stage, seamlessly integrating our talented professionals with your team, and actively sharing our expertise throughout the entire journey."
+            title="Личный подход в глобальном масштабе"
+            description="Наш опыт"
+            linkTitle="Познакомьтесь с нами"
+            subtitle={`FEMIDA FINANCE работает с бизнесом по всему Узбекистану, обеспечивая уникальную гибкость и оперативность в решении задач клиентов. Такой подход отличает нас от традиционных компаний, делая сотрудничество более персонализированным и эффективным. Наша главная цель — помочь вам преодолевать самые серьёзные вызовы и воплощать ваши бизнес-идеи в реальность.
+  Мы стремимся к долгосрочному партнерству, выстраивая доверие и поддерживая ваш успех на каждом этапе. Наши специалисты тесно интегрируются с вашей командой, активно делясь опытом и знаниями в ходе всего сотрудничества.`}
             imageSrc="https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-yan-krukau-7794093.jpg"
             imagePosition="right"
             showButton={true}
           />
 
           <SplitSection
-            title="Do what is right, always"
-            description="What we believe"
-            linkTitle="Get to Know Our People"
-            subtitle="We embarked on our journey with a distinct approach. Instead of adhering to a demanding, all-or-nothing career path, we prioritized balance and well-being. We provided an opportunity to find fulfillment in both your professional and personal life, placing importance on family and engaging in impactful projects alongside companies within your community.
-                Our core principle was to invest in people, communities, and the success of our clients. Consistently recognized as a top workplace, Beratung has garnered a reputation for creating an environment where individuals thrive. We proudly serve more than half of the Fortune 100 companies and a third of the Fortune 500, while also collaborating with startups, not-for-profit organizations, and a myriad of innovative entities."
+            title="Всегда делать то, что правильно"
+            description="Наши ценности"
+            linkTitle="Познакомьтесь с нашей командой"
+            subtitle={`Мы строим свою работу на балансе между профессиональной деятельностью и личной жизнью, ценим важность семьи и участия в значимых проектах, поддерживая развитие предпринимателей и сообществ по всему Узбекистану.
+  Мы инвестируем в людей и успех наших клиентов, создавая комфортную рабочую атмосферу, где каждый может реализовать свой потенциал. FEMIDA FINANCE гордится сотрудничеством с разнообразными клиентами — от стартапов до крупных компаний, оказывая юридическую и бухгалтерскую поддержку.`}
             imageSrc="https://beratung.vamtam.com/wp-content/uploads/2023/06/pexels-karolina-grabowska-7876781.jpg"
             imagePosition="left"
           />
@@ -114,8 +114,9 @@ export const AboutPage = () => {
               }
               h={18}
               w={22}
+              alt=""
             />
-            <Text>Our purpose</Text>
+            <Text>Наша миссия</Text>
           </Flex>
 
           <SimpleGrid
@@ -174,7 +175,7 @@ export const AboutPage = () => {
           lh={"1.3em"}
           lts={"-1px"}
         >
-          How we work
+          Как мы работаем
         </Text>
         <Text
           style={{ color: "#5F6567" }}
@@ -183,9 +184,9 @@ export const AboutPage = () => {
           maw={800}
           ta={"center"}
         >
-          Transforming organizations sustainably. Unlocking performance
-          excellence. Nurturing thriving workforces for generations. Partner
-          with us for success.
+          Мы трансформируем организации устойчиво, раскрываем их потенциал и
+          создаём эффективные команды для долгосрочного успеха. Сотрудничайте с
+          нами — и достигайте выдающихся результатов.
         </Text>
       </Flex>
 
@@ -212,6 +213,7 @@ export const AboutPage = () => {
               pb={90}
               pr={20}
               justify={"space-between"}
+              gap={50}
             >
               <Flex
                 direction={"column"}
@@ -229,7 +231,7 @@ export const AboutPage = () => {
                   lh={"1.4em"}
                   lts={"-.5px"}
                 >
-                  Innovation & Technology
+                  Инновации и технологии
                 </Text>
                 <Text
                   ff={"Helvetica"}
@@ -239,8 +241,8 @@ export const AboutPage = () => {
                   lts={0}
                   style={{ color: "#5F6567" }}
                 >
-                  In a rapidly changing world, continuous progress is imperative
-                  to meet evolving demands.
+                  В быстро меняющемся мире постоянный прогресс необходим для
+                  удовлетворения новых потребностей.
                 </Text>
               </Flex>
 
@@ -260,7 +262,7 @@ export const AboutPage = () => {
                   lh={"1.4em"}
                   lts={"-.5px"}
                 >
-                  Save Money
+                  Экономьте деньги
                 </Text>
                 <Text
                   ff={"Helvetica"}
@@ -270,8 +272,8 @@ export const AboutPage = () => {
                   lts={0}
                   style={{ color: "#5F6567" }}
                 >
-                  Choose quality from the start. Save time and money by getting
-                  it right with us.
+                  Выбирайте качество с самого начала. Экономьте время и деньги,
+                  делая всё правильно вместе с нами.
                 </Text>
               </Flex>
             </Flex>
@@ -281,6 +283,7 @@ export const AboutPage = () => {
                 src={
                   "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-1.svg"
                 }
+                alt=""
               ></Image>
             </Flex>
 
@@ -290,6 +293,7 @@ export const AboutPage = () => {
               pb={90}
               pl={20}
               justify={"space-between"}
+              gap={50}
             >
               <Flex
                 direction={"column"}
@@ -307,7 +311,7 @@ export const AboutPage = () => {
                   lh={"1.4em"}
                   lts={"-.5px"}
                 >
-                  Client Capabilities Network
+                  Сеть возможностей клиентов
                 </Text>
                 <Text
                   ff={"Helvetica"}
@@ -317,8 +321,8 @@ export const AboutPage = () => {
                   lts={0}
                   style={{ color: "#5F6567" }}
                 >
-                  With our expertise and cutting-edge competencies, we drive
-                  impactful and enduring change.
+                  Благодаря нашему опыту и передовым компетенциям мы
+                  обеспечиваем значимые и устойчивые изменения.
                 </Text>
               </Flex>
 
@@ -338,7 +342,7 @@ export const AboutPage = () => {
                   lh={"1.4em"}
                   lts={"-.5px"}
                 >
-                  Ongoing Support
+                  Постоянная поддержка
                 </Text>
                 <Text
                   ff={"Helvetica"}
@@ -348,9 +352,9 @@ export const AboutPage = () => {
                   lts={0}
                   style={{ color: "#5F6567" }}
                 >
-                  We don&apos;t just plan, we execute. Our talented team
-                  supports your implementation, as part of your founding team or
-                  on project basis.
+                  Мы не только планируем, но и реализуем. Наша команда
+                  профессионалов поддерживает вас на этапе внедрения — будь то в
+                  составе вашей основной команды или на проектной основе.
                 </Text>
               </Flex>
             </Flex>
@@ -369,6 +373,8 @@ export const AboutPage = () => {
             direction={"column"}
             style={{ borderRight: "1px solid #00000026" }}
             visibleFrom="md"
+            gap={5}
+            pr={10}
           >
             <Flex>
               <Image
@@ -377,8 +383,9 @@ export const AboutPage = () => {
                 }
                 h={18}
                 w={22}
+                alt=""
               />
-              <Text>We are honored</Text>
+              <Text>Большая честь</Text>
             </Flex>
 
             <Text
@@ -387,10 +394,10 @@ export const AboutPage = () => {
               lh={"1.5em"}
               maw={800}
             >
-              5 years on Fortune 100 Best Companies to Work For list
+              В списке лучших работодателей
             </Text>
 
-            <BaseLink style={{ color: "#161616" }}>Learn more</BaseLink>
+            <BaseLink style={{ color: "#161616" }}>Узнать больше</BaseLink>
           </Flex>
 
           <Flex
@@ -406,8 +413,9 @@ export const AboutPage = () => {
                 }
                 h={18}
                 w={22}
+                alt=""
               />
-              <Text>We are honored</Text>
+              <Text>Большая честь</Text>
             </Flex>
 
             <Text
@@ -416,10 +424,10 @@ export const AboutPage = () => {
               lh={"1.5em"}
               maw={800}
             >
-              5 years on Fortune 100 Best Companies to Work For list
+              В списке лучших работодателей
             </Text>
 
-            <BaseLink style={{ color: "#161616" }}>Learn more</BaseLink>
+            <BaseLink style={{ color: "#161616" }}>Узнать больше</BaseLink>
           </Flex>
 
           <SimpleGrid
@@ -441,13 +449,13 @@ export const AboutPage = () => {
                 lts={0}
                 style={{ color: "#5F6567" }}
               >
-                2022
+                2025
               </Text>
               <Anchor
                 unstyled
                 className={s.linkAn}
               >
-                Forbes World’s Best Management Consulting Firms
+                Одни из лучших мировых консалтинговых компаний по управлению
               </Anchor>
             </Flex>
             <Flex
@@ -463,13 +471,13 @@ export const AboutPage = () => {
                 lts={0}
                 style={{ color: "#5F6567" }}
               >
-                2022
+                2025
               </Text>
               <Anchor
                 unstyled
                 className={s.linkAn}
               >
-                100 Best Companies To Work For 2022, FORTUNE
+                100 лучших компаний для работы 2025, FORTUNE
               </Anchor>
             </Flex>
             <Flex
@@ -485,13 +493,13 @@ export const AboutPage = () => {
                 lts={0}
                 style={{ color: "#5F6567" }}
               >
-                2022
+                2025
               </Text>
               <Anchor
                 unstyled
                 className={s.linkAn}
               >
-                Glassdoor Best Places to Work
+                Glassdoor — лучшие места для работы
               </Anchor>
             </Flex>
             <Flex
@@ -507,13 +515,13 @@ export const AboutPage = () => {
                 lts={0}
                 style={{ color: "#5F6567" }}
               >
-                2022
+                2025
               </Text>
               <Anchor
                 unstyled
                 className={s.linkAn}
               >
-                Human Rights Campaign Best Places to Work for LGBTQ Equality
+                Лучшие место для работы в поддержку равенства
               </Anchor>
             </Flex>
           </SimpleGrid>
