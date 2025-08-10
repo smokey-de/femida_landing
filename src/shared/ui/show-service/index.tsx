@@ -6,7 +6,6 @@ import {
   Card,
   Center,
   Container,
-  Divider,
   Flex,
   Image,
   Paper,
@@ -20,62 +19,9 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import { ContactForm } from "@/features/contact-form";
-import {
-  ClientReviews,
-  Footer,
-  GuidePrinciples,
-  HeroHeader,
-  Navbar,
-  SplitterBanner,
-  TeamBanner,
-  TrustSection,
-} from "@/shared/ui";
-
-import s from "./style.module.scss";
-
 gsap.registerPlugin(ScrollTrigger);
 
-const serviceData = [
-  {
-    icon: <IconChartBar />,
-    title: "Планирование инвестиций",
-    description:
-      "Разработка индивидуальных инвестиционных решений для роста капитала и достижения целей.",
-  },
-  {
-    icon: <IconArmchair2 />,
-    title: "Пенсионное планирование",
-    description:
-      "Эффективные стратегии, обеспечивающие финансовую стабильность в будущем.",
-  },
-  {
-    icon: <IconBrain />,
-    title: "Оптимизация налогообложения",
-    description:
-      "Законные методы сокращения налоговой нагрузки и увеличения чистой прибыли.",
-  },
-];
-
-export const MainPage = () => (
-  <Flex
-    direction="column"
-    className={s.page}
-  >
-    <Navbar />
-    <HeroHeader />
-    <ShowServices />
-    <SplitterBanner />
-    <TrustSection />
-    <GuidePrinciples />
-    <ClientReviews />
-    <TeamBanner />
-    <ContactSection />
-    <Footer />
-  </Flex>
-);
-
-const ShowServices = () => {
+export const ShowServices = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(
@@ -234,135 +180,26 @@ const ShowServices = () => {
     </Box>
   );
 };
-
-const ContactSection = () => (
-  <Container
-    size="xl"
-    component="section"
-    id="contact"
-    mb={80}
-  >
-    <Space h="8.125rem" />
-    <Box>
-      <Text
-        component="h5"
-        fw={400}
-        lh="1.5rem"
-        fz="1.25rem"
-      >
-        Начало
-      </Text>
-      <Text
-        component="h2"
-        fw={600}
-        lh={{ base: "2.875rem", md: "3.875rem" }}
-        fz={{ base: "32px", md: "48px" }}
-      >
-        Запишитесь на бесплатную консультацию
-      </Text>
-    </Box>
-    <Space h="1rem" />
-
-    <Flex visibleFrom="md">
-      <Flex
-        direction="column"
-        gap="0.75rem"
-        flex={1}
-      >
-        <Image
-          src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg"
-          alt="Свяжитесь с нами"
-        />
-        <Text
-          fz="0.875rem"
-          fw={500}
-          lh="1.313rem"
-          c="rgb(95, 101, 103)"
-        >
-          ИЛИ СВЯЖИТЕСЬ:
-        </Text>
-        <Divider my="md" />
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Тел.: +998 (90) 480 04 20
-        </Text>
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Email: office@femida.com
-        </Text>
-      </Flex>
-      <Paper
-        flex={1}
-        bdrs={0}
-        px="1rem"
-      >
-        <ContactForm />
-      </Paper>
-    </Flex>
-
-    <Flex
-      direction={"column"}
-      hiddenFrom="md"
-    >
-      <Flex
-        direction="column"
-        gap="0.75rem"
-        flex={1}
-      >
-        <Image
-          src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg"
-          alt="Contact Us"
-        />
-        <Divider my="md" />
-
-        <ContactForm />
-      </Flex>
-      <Flex
-        flex={1}
-        bdrs={0}
-        px="1rem"
-        direction={"column"}
-        gap={"0.75rem"}
-      >
-        <Divider my="md" />
-
-        <Text
-          fz="0.875rem"
-          fw={500}
-          lh="1.313rem"
-          c="rgb(95, 101, 103)"
-        >
-          ИЛИ СВЯЖИТЕСЬ:
-        </Text>
-
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Тел.: +998 (90) 480 04 20
-        </Text>
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Email: office@femida.com
-        </Text>
-      </Flex>
-    </Flex>
-  </Container>
-);
+const serviceData = [
+  {
+    icon: <IconChartBar />,
+    title: "Планирование инвестиций",
+    description:
+      "Разработка индивидуальных инвестиционных решений для роста капитала и достижения целей.",
+  },
+  {
+    icon: <IconArmchair2 />,
+    title: "Пенсионное планирование",
+    description:
+      "Эффективные стратегии, обеспечивающие финансовую стабильность в будущем.",
+  },
+  {
+    icon: <IconBrain />,
+    title: "Оптимизация налогообложения",
+    description:
+      "Законные методы сокращения налоговой нагрузки и увеличения чистой прибыли.",
+  },
+];
 
 const MainServiceContainer = Container.withProps({
   fluid: true,

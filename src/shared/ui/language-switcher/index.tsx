@@ -12,9 +12,9 @@ import { usePathname, useRouter } from "@/i18n/navigation";
 import s from "./styles.module.scss";
 
 const languageOptions = [
+  { value: "ru", label: "Ru" },
   { value: "uz", label: "Uz" },
   { value: "en", label: "En" },
-  { value: "ru", label: "Ru" },
 ];
 
 export const LanguageSwitcher = () => {

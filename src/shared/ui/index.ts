@@ -15,4 +15,5 @@ export { ServiceContact } from "./service-links";
 export { OtherSplitter } from "./other-splitter";
 export { PeopleCard } from "./people-card";
 export { Footer } from "./other-footer";
-export { SplitSection } from './split-section/index';
+export { SplitSection } from "./split-section/index";
+export { ShowServices } from "./show-service";

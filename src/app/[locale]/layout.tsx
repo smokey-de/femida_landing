@@ -29,13 +29,17 @@ export default async function Layout({ children, params }: LayoutProps) {
     notFound();
   }
 
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+
   return (
     <html lang={locale}>
       <body className={seoConf.SystemFont.className}>
-        <NextIntlClientProvider>
+        <NextIntlClientProvider
+          messages={messages}
+          locale={locale}
+        >
           <MantineProvider theme={theme}>{children}</MantineProvider>
         </NextIntlClientProvider>
-
       </body>
     </html>
   );
