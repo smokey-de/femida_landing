@@ -8,10 +8,10 @@ export const SplitterBanner = () => (
     <Container size="xl" h="100%" className={s.vector}>
       <Flex direction="column" className={s.flexs} h="100%">
         <Text fz={{base: "36px", sm: "48px", md: "64px"}} fw={600} c="white">
-          Building wealth,
+        Создание богатства,
         </Text>
         <Text fz={{base: "36px", sm: "48px", md: "64px"}} fw={600} c="white">
-          creating futures.
+        создание будущего.
         </Text>
       </Flex>
     </Container>

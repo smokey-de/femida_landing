@@ -32,8 +32,8 @@ export const GuidePrinciples = () => (
           lh={"3.875rem"}
           visibleFrom="md"
         >
-          Guided by integrity, trust, and client-centricity, our values drive
-          everything we do.
+          Наши ценности — честность, доверие и ориентация на клиента —
+          определяют всё, что мы делаем.
         </Text>
         <SimpleGrid
           cols={2}
@@ -89,33 +89,33 @@ const PrincipleItem = ({
 
 const principleItems = [
   {
-    title: "Integrity",
+    title: "Честность",
     description:
-      "Uphold high ethical standards and act with honesty, transparency, and professionalism in all your interactions.",
+      "Соблюдаем высокие этические стандарты, действуем открыто и профессионально в каждой ситуации.",
   },
   {
-    title: "Expertise",
+    title: "Экспертиза",
     description:
-      "Stay up-to-date with industry trends, regulations, and best practices to offer informed advice to your clients.",
+      "Постоянно отслеживаем тренды, изменения в законах и лучшие практики, чтобы давать точные рекомендации.",
   },
   {
-    title: "Trust and Confidentiality",
+    title: "Доверие и конфиденциальность",
     description:
-      "Understand the importance of trust and confidentiality in your client relationships.",
+      "Ценим доверие клиентов и строго соблюдаем конфиденциальность.",
   },
   {
-    title: "Objectivity",
+    title: "Объективность",
     description:
-      "Provide unbiased advice that is based on thorough analysis, research, and a comprehensive understanding of your clients' financial situations.",
+      "Даем взвешенные и беспристрастные советы, основываясь на анализе и фактах.",
   },
   {
-    title: "Long-Term Relationships",
+    title: "Долгосрочные отношения",
     description:
-      "Build long-term relationships with your clients based on trust, open communication, and mutual respect.",
+      "Строим прочные связи на основе доверия, открытого общения и взаимного уважения.",
   },
   {
-    title: "Accountability",
+    title: "Ответственность",
     description:
-      "Monitor progress, review strategies, and make adjustments as needed to help clients stay on track towards their financial goals.",
+      "Отслеживаем прогресс, корректируем стратегии и помогаем клиентам достигать целей.",
   },
 ];

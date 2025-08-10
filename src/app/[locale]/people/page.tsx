@@ -13,26 +13,26 @@ import {
 
 const highlights = [
   {
-    number: "30k",
-    title: "Diverse talent & perspectives",
+    number: "200+",
+    title: "Клиенты по всему Узбекистану",
     description:
-      "Our team includes management consultants, data scientists, engineers, venture architects, and more, operating in over 10 countries.",
+      "Сотрудничаем с ИП, ООО, стартапами и малым бизнесом, предоставляя бухгалтерские и юридические услуги в разных регионах страны.",
   },
   {
-    number: "~900",
-    title: "Commitment to social impact",
+    number: "10+",
+    title: "Лет опыта в команде",
     description:
-      "In 2022, we successfully executed social impact consulting projects.",
+      "Наши специалисты имеют практический опыт в бухгалтерском и налоговом учёте, юридическом сопровождении и развитии бизнеса.",
   },
   {
-    number: "100+",
-    title: "Partnering for greater value",
+    number: "100%",
+    title: "Приверженность интересам клиента",
     description:
-      "We are proud to be a leading organization in our global partner ecosystem.",
+      "Мы работаем прозрачно, соблюдаем конфиденциальность и подбираем решения, которые помогают бизнесу развиваться без лишних рисков.",
   },
 ];
 
-const PeoplePage = () => {
+export const PeoplePage = () => {
   return (
     <Flex
       direction="column"
@@ -42,10 +42,10 @@ const PeoplePage = () => {
 
       <Box>
         <OtherHeader
-          aboutTitle="Our People"
-          title="Building Bridges for Sustainable and Inclusive Growth"
-          description="We approach every client relationship with a unique and invigorating perspective, coupled with an unwavering energy that inspires action. Our commitment to teamwork, trust, and an open-mindedness towards differing opinions creates an environment where clients can concentrate on their potential opportunities, enhance their capabilities, and ultimately succeed in shaping the future. 
-        Together, we achieve remarkable results that transcend the boundaries of what is currently achievable and unlock the true potential of our clients’ visions."
+          aboutTitle="Наша команда"
+          title="Строим мосты для устойчивого и инклюзивного роста"
+          description={`В FEMIDA FINANCE мы — молодая и амбициозная команда профессионалов, которые помогают бизнесу преодолевать финансовые и юридические вызовы, обеспечивая надёжное сопровождение на пути к развитию и успеху. 
+          Наш подход основан на глубоком сотрудничестве и индивидуальном внимании к каждому клиенту, объединённых общей целью — поддерживать и развивать предпринимателей в Узбекистане.`}
         />
       </Box>
 
@@ -88,21 +88,21 @@ const PeoplePage = () => {
               lh={"1.3em"}
               lts={"-1px"}
             >
-              The values driving our culture
+              Ценности, формирующие нашу культуру
             </Text>
             <BtnBasic
               size="xl"
               maw={250}
               visibleFrom="md"
             >
-              Explore our open positions
+              Ознакомьтесь с открытыми вакансиями
             </BtnBasic>
             <BtnBasic
               size="md"
               maw={250}
               hiddenFrom="md"
             >
-              Explore our open positions
+              Ознакомьтесь с открытыми вакансиями
             </BtnBasic>
           </Flex>
 
@@ -116,18 +116,17 @@ const PeoplePage = () => {
               fz={{ base: 16, md: 20 }}
               lh={"1.5em"}
             >
-              At Beratung, we firmly believe that a robust culture built on
-              well-defined values is the cornerstone of our leadership in the
-              market. We are unwavering in our commitment to upholding the
-              highest standards of ethics, business conduct, and company
-              principles. These standards serve as our guiding compass in every
-              decision we make and action we take. We recognize that our
-              employees play a pivotal role in maintaining and nurturing this
-              culture. Therefore, it is an essential expectation for every
-              individual within our organization to uphold these standards in
-              their daily interactions and professional conduct. We place great
-              emphasis on frequent communication and reinforcement of our values
-              to ensure that they remain ingrained in the fabric of our company.
+              В FEMIDA FINANCE мы твёрдо убеждены, что крепкая корпоративная
+              культура, основанная на чётко сформулированных ценностях, является
+              фундаментом нашего лидерства на рынке. Мы неизменно придерживаемся
+              высоких стандартов этики, делового поведения и корпоративных
+              принципов. Эти стандарты служат нам путеводной звездой в каждом
+              решении и действии. Мы понимаем, что сотрудники играют ключевую
+              роль в поддержании и развитии этой культуры, поэтому от каждого
+              ожидается соблюдение этих стандартов в повседневном взаимодействии
+              и профессиональной деятельности. Мы придаём большое значение
+              регулярному общению и укреплению наших ценностей, чтобы они были
+              неотъемлемой частью ДНК нашей компании.
             </Text>
           </Flex>
         </Flex>
@@ -167,7 +166,7 @@ const PeoplePage = () => {
                 h={18}
                 alt="footer_icon"
               />
-              <Text>Empower</Text>
+              <Text>Возможности</Text>
             </Flex>
           </Flex>
           <Flex
@@ -230,7 +229,10 @@ const PeoplePage = () => {
           direction={"row"}
           justify={"space-between"}
         >
-          <Flex direction={"column"}>
+          <Flex
+            direction={"column"}
+            gap={10}
+          >
             <Text
               ff={"Geologica"}
               fz={{ base: 32, md: 48 }}
@@ -240,7 +242,7 @@ const PeoplePage = () => {
               lh={"1.3em"}
               lts={"-1px"}
             >
-              Meet our leaders
+              Наше руководство
             </Text>
             <Text
               fz={14}
@@ -248,12 +250,11 @@ const PeoplePage = () => {
               style={{ color: "#5F6567" }}
               maw={536}
             >
-              Beratung’s global leadership is comprised of several key entities,
-              including the managing partner, the Shareholders Council (elected
-              board of directors), the Acceleration Team (global leadership
-              team), and the leaders of various offices and practices. Together,
-              they drive the strategic direction and operations of the
-              organization.
+              Руководящий состав FEMIDA FINANCE включает ключевых специалистов:
+              директора компании, совет учредителей, управленческую команду и
+              руководителей отделов. Вместе они формируют стратегическое
+              направление и обеспечивают эффективное функционирование
+              организации.
             </Text>
           </Flex>
           <Image
@@ -266,7 +267,6 @@ const PeoplePage = () => {
           />
         </Flex>
       </Container>
-
       <List />
 
       <Footer />

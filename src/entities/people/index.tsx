@@ -40,67 +40,20 @@ export const List = () => {
 
 export const people = [
   {
-    slug: "franklin-grant",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-kampus-production-8353841.jpg",
-    title: "Franklin Grant",
-    subtitle: "Founder & CEO",
+    slug: "privalova-anna",
+    img: "https://i.ibb.co/3wQTXxN/IMG-3239-1.jpg",
+    title: "Привалова Анна",
+    subtitle:
+      "Директор компании FEMIDA FINANCE / Руководитель бухгалтерского отдела",
     about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
+      "Анна обладает более чем 10-летним опытом в области бухгалтерского и налогового учёта для ООО и ИП на системах ОСНО и УСН. За это время она успешно сопровождала множество сложных и масштабных бухгалтерских проектов, тщательно контролируя соблюдение сроков, качество выполнения и полное соответствие актуальному законодательству. Анна прекрасно понимает, что каждая цифра в балансе — это не просто отчётность, а отражение судьбы бизнеса, поэтому к своей работе она подходит с максимальной ответственностью, вниманием к деталям и глубоким профессионализмом. Её системный и комплексный подход позволяет выявлять и своевременно решать любые возникающие вопросы, обеспечивая прозрачность и точность финансовой отчётности. Анна постоянно следит за изменениями в законодательстве и обновляет свои знания, чтобы гарантировать клиентам соответствие новым требованиям и минимизировать риски, связанные с налоговыми проверками. Благодаря её усилиям клиенты получают не только точные и своевременные отчёты, но и уверенность в том, что все финансовые процессы ведутся в полном соответствии с законом. Анна умеет эффективно взаимодействовать с налоговыми органами и другими контролирующими структурами, что способствует быстрому решению возможных проблем и поддержанию положительной репутации компании. В своей работе она всегда ставит во главу угла интересы предпринимателей и компании в целом, обеспечивая надёжное и стабильное сопровождение бизнеса. Её профессионализм и ответственность позволяют клиентам сосредоточиться на развитии и достижении стратегических целей, не беспокоясь о финансовой и юридической стороне дела.",
   },
   {
-    slug: "emily-hunt",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/christina-wocintechchat-com-S3GrMiUhpNU-unsplash.jpg",
-    title: "Emily Hunt",
-    subtitle: "Managing Director",
+    slug: "saidibragimova-kamila",
+    img: "https://i.ibb.co/s9XJRs2x/IMG-3236-1-1.jpg",
+    title: "Саидибрагимова Камила",
+    subtitle: "Руководитель отдела по работе с клиентами",
     about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "julian-boone",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-kampus-production-8353832.jpg",
-    title: "Julian Boone",
-    subtitle: "Chief Executive Officer",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "dora-schwartz",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-christina-morillo-1181686.jpg",
-    title: "Dora Schwartz",
-    subtitle: "Capabilities Leader",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "nina-ray",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-christina-morillo-1181695.jpg",
-    title: "Nina Ray",
-    subtitle: "Industries Leader",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "charles-haynes",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-linkedin-sales-navigator-2182970.jpg",
-    title: "Charles Haynes",
-    subtitle: "Global Managing Partner",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "alta-tyler",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/christina-wocintechchat-com-N_HzomQQ6bc-unsplash.jpg",
-    title: "Alta Tyler",
-    subtitle: "Chief People Officer",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
-  },
-  {
-    slug: "joseph-buchanan",
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-hai-anh-10031556.jpg",
-    title: "Joseph Buchanan",
-    subtitle: "Chief Financial Officer",
-    about:
-      "Prior to founding Beratung in early 2001, Frankiln’s entrepreneurial journey began with the establishment of two Internet companies in Silicon Valley. Following that, Frankiln held various management positions at Salomon in New York, including Vice President in Pixer Income, where he focused on new business development and risk management. Frankiln’s professional experience extends to diverse roles such as senior financial risk management consultant to the financial services industry, software engineer, advertising sales manager for the popular Let’s Go travel guide series, general manager of an advertising and graphic design agency, and engineering intern at the Stanford Linear Accelerator Center. He actively contributed to the entrepreneurial community as a guest speaker at the Phoenix chapter of the Ewing Marion Kauffman Foundation’s FastTrac entrepreneur training program, as well as various programs associated with Arizona State University (ASU). Additionally, Frankiln mentored companies preparing to present before the Arizona Angels and the Arizona Venture Capital Conference (AVCC). He served on the Board of Directors for ITASA (Information Technology Association of Southern Arizona) and was recognized as Entrepreneur of the Week in October 2000 by vCapital.com.",
+      "Камила — опытный и ответственный руководитель отдела по работе с клиентами с более чем 5-летним стажем. Она обладает глубоким пониманием особенностей построения долгосрочных, доверительных и взаимовыгодных отношений с клиентами. Благодаря её системному и внимательному подходу, Камила успешно организует и координирует работу команды менеджеров, обеспечивая высокое качество сопровождения проектов на всех этапах — от первичного контакта до завершения сотрудничества. Под её руководством внедряются эффективные и клиентоориентированные процессы, которые способствуют повышению удовлетворённости клиентов и укреплению их уверенности в успешной реализации бизнес-задач. Камила отлично разбирается в современных инструментах управления, включая внедрение CRM-систем, разработку индивидуальных клиентских сценариев и разрешение сложных ситуаций, что позволяет оперативно и грамотно реагировать на любые вызовы. Её внимание к деталям, умение слушать и стратегическое мышление помогают не только удовлетворять текущие потребности клиентов, но и предвосхищать их, создавая условия для устойчивого роста и развития компании.",
   },
 ];

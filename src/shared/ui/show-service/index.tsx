@@ -72,7 +72,7 @@ export const ShowServices = () => {
           lh="1.5rem"
           fz="1.25rem"
         >
-          Services
+          Услуги
         </Text>
         <Text
           component="h2"
@@ -81,31 +81,38 @@ export const ShowServices = () => {
           fz={{ base: "2.25rem", md: "3rem" }}
           lts={"-1px"}
         >
-          To meet your needs
+          Чтобы удовлетворить ваши потребности
         </Text>
       </Container>
 
       <MainServiceContainer>
         {[
           {
-            type: "Financial",
+            type: "Финансы",
+            title: "Финансовое \nпланирование",
             image:
               "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg",
+            bg: "#E7E8DB",
           },
           {
-            type: "Insurance",
+            type: "Страхование",
+            title: "Планирование \nстрахования",
             image:
               "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
+            bg: "#DDDECB",
           },
           {
-            type: "Advisory",
+            type: "Совет",
+            title: "Консультационное \nсопровождение",
             image:
-              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
+              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1371643065-square.jpg",
+            bg: "#D1D2BC",
           },
         ].map((section, i) => (
           <ContentWrapper
             className="scroll-panel"
             key={i}
+            bg={`${section.bg}`}
           >
             <Box
               maw="1280px"
@@ -122,15 +129,16 @@ export const ShowServices = () => {
                   mt={{ base: "0", md: "250px" }}
                   pos={"relative"}
                   fz={{ base: "2.5rem", md: "4.375rem" }}
-                  style={{ zIndex: 1000 }}
+                  style={{ zIndex: 1000, whiteSpace: "pre-line" }}
                 >
-                  {section.type} planning
+                  {section.title}
                 </ServiceTitle>
               </Flex>
               <CardWrapper>
                 <Flex
                   justify={{ base: "center", md: "flex-start" }}
                   direction={{ base: "column", md: "row" }}
+                  gap={2}
                   w={"100%"}
                 >
                   {serviceData.map((service, index) => (
@@ -172,25 +180,24 @@ export const ShowServices = () => {
     </Box>
   );
 };
-
 const serviceData = [
   {
     icon: <IconChartBar />,
-    title: "Investment planning",
+    title: "Планирование инвестиций",
     description:
-      "Tailored investment strategies to help clients grow their wealth and achieve their financial goals.",
+      "Разработка индивидуальных инвестиционных решений для роста капитала и достижения целей.",
   },
   {
     icon: <IconArmchair2 />,
-    title: "Retirement planning",
+    title: "Пенсионное планирование",
     description:
-      "Comprehensive retirement strategies to ensure financial security in later years.",
+      "Эффективные стратегии, обеспечивающие финансовую стабильность в будущем.",
   },
   {
     icon: <IconBrain />,
-    title: "Tax optimization",
+    title: "Оптимизация налогообложения",
     description:
-      "Effective tax strategies to minimize liabilities and maximize returns.",
+      "Законные методы сокращения налоговой нагрузки и увеличения чистой прибыли.",
   },
 ];
 

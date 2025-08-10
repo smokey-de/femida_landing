@@ -1,10 +1,12 @@
+"use client";
+
 import { Box, Container, Divider, Flex, Text } from "@mantine/core";
 
 import { ContactForm } from "@/features/contact-form";
 import s from "@/pages/contact/style.module.scss";
 import { Navbar, Footer, OtherHeader } from "@/shared/ui";
 
-const ContactPage = () => {
+export const ContactPage = () => {
   return (
     <Flex
       direction="column"
@@ -14,9 +16,9 @@ const ContactPage = () => {
 
       <Box>
         <OtherHeader
-          aboutTitle="Contacts"
-          title="Expert Financial Guidance Just a Call Away"
-          description="Need to find a local office? We have 12 worldwide. To contact us, please complete the form below. We will use your information to communicate with you regarding your inquiry or request. For more information, please see our Privacy Notice."
+          aboutTitle="Контакты"
+          title="Профессиональная финансовая помощь — всего в одном звонке"
+          description="Хотите найти ближайший офис? Чтобы связаться с нами, заполните форму ниже. Мы используем ваши данные исключительно для ответа на ваш запрос. Подробнее см. в нашей Политике конфиденциальности."
         />
       </Box>
 
@@ -38,7 +40,7 @@ const ContactPage = () => {
           my={"60px"}
           w={"100%"}
         >
-          Contact form
+          Форма обратной связи
         </Text>
         <ContactForm />
       </Container>

@@ -1,76 +1,57 @@
+"use client";
+
 import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
 
-import { ContactUs, ViewMore } from "@/features/RedirectClient";
-import s from "@/pages/service/style.module.scss";
 import {
-  Footer,
+  BaseLink,
+  BtnBasic,
   Navbar,
+  Footer,
   OtherHeader,
   OtherSplitter,
-  PeopleCard,
   ServiceContact,
 } from "@/shared/ui";
 
+import s from "@/pages/service/style.module.scss";
+import { List } from "@/entities/people";
+
 const services = [
   {
-    linkLabel: "Business Strategy Development",
-    text: "Craft effective strategies to drive competitiveness and achieve business objectives.",
+    linkLabel: "Разработка бизнес-стратегии",
+    text: "Создание эффективных стратегий для повышения конкурентоспособности и достижения целей бизнеса.",
   },
   {
-    linkLabel: "Process Optimization",
-    text: "Streamline operations and improve efficiency to maximize productivity and reduce costs.",
+    linkLabel: "Оптимизация процессов",
+    text: "Упрощение операций и повышение эффективности для максимальной продуктивности и сокращения затрат.",
   },
   {
-    linkLabel: "Market Research and Analysis",
-    text: "Gain valuable insights into your target market, competitors, and customer needs.",
+    linkLabel: "Маркетинговые исследования и анализ",
+    text: "Получите ценную информацию о целевом рынке, конкурентах и потребностях клиентов.",
   },
   {
-    linkLabel: "Change Management",
-    text: "Navigate organizational change smoothly and ensure successful implementation.",
+    linkLabel: "Управление изменениями",
+    text: "Плавно проходите через организационные изменения и обеспечивайте успешную реализацию.",
   },
   {
-    linkLabel: "Technology Solutions",
-    text: "Diverse technological expertise, collaborative focus, and a results-driven approach.",
+    linkLabel: "Технологические решения",
+    text: "Разнообразная техническая экспертиза, командный подход и ориентация на результат.",
   },
   {
-    linkLabel: "Talent Management and HR Consulting",
-    text: "Recruitment consultancies are constantly responding to the changing demands of today’s workplace.",
+    linkLabel: "Управление талантами и HR-консалтинг",
+    text: "Рекрутинговые агентства постоянно адаптируются к меняющимся условиям современного рынка труда.",
   },
   {
-    linkLabel: "Risk Assessment and Management",
-    text: "Our risk and compliance consulting team helps clients turn uncertainty into opportunity.",
+    linkLabel: "Оценка и управление рисками",
+    text: "Наша команда консультантов по рискам помогает превратить неопределённость в новые возможности.",
   },
   {
-    linkLabel:
-      "Sustainability & Corporate Social Responsibility (CSR) Consulting",
-    text: "Our experience shows that vision and pragmatism go hand in hand.",
+    linkLabel: "Консалтинг по устойчивому развитию и КСО",
+    text: "Наш опыт показывает, что видение и прагматизм всегда идут рука об руку.",
   },
 ];
 
-const people = [
-  {
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-kampus-production-8353841.jpg",
-    title: "Franklin Grant",
-    subtitle: "Founder & CEO",
-  },
-  {
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/christina-wocintechchat-com-S3GrMiUhpNU-unsplash.jpg",
-    title: "Emily Hunt",
-    subtitle: "Managing Director",
-  },
-  {
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-kampus-production-8353832.jpg",
-    title: "Julian Boone",
-    subtitle: "Chief Executive Officer",
-  },
-  {
-    img: "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-christina-morillo-1181686.jpg",
-    title: "Dora Schwartz",
-    subtitle: "Capabilities Leader",
-  },
-];
 
-const ServicePage = () => {
+export const ServicePage = () => {
   return (
     <Flex
       direction="column"
@@ -80,10 +61,10 @@ const ServicePage = () => {
 
       <Box style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader
-          aboutTitle="Practice Аreas"
-          title="Expert Business Consulting Services"
-          description="Our expertise spans a wide range of areas, including strategy, marketing, organization, operations, technology, transformation, digital, advanced analytics, corporate finance, mergers & acquisitions, and sustainability. 
-      We bring deep and specialized knowledge in these fields, but what truly sets us apart is our holistic perspective. We understand that true value lies in capturing synergies and connections across boundaries, bridging the gaps between different parts of an organization. By optimizing the collective impact of all components, we unleash a multiplier effect that goes beyond the sum of individual elements."
+          aboutTitle="Области практики"
+          title="Профессиональные услуги бизнес-консалтинга"
+          description="Наша экспертиза охватывает широкий спектр направлений, включая стратегию, маркетинг, организацию, операции, технологии, трансформацию, цифровые решения, расширенную аналитику, корпоративные финансы, слияния и поглощения, а также устойчивое развитие. 
+          Мы обладаем глубокими знаниями в каждой из этих сфер, но главное наше преимущество — это комплексный подход. Мы понимаем, что настоящая ценность в синергии и соединении различных направлений, в устранении разрывов между отделами компании. Оптимизируя общий результат всех компонентов, мы достигаем эффекта, превышающего простую сумму отдельных элементов."
         />
       </Box>
 
@@ -107,7 +88,7 @@ const ServicePage = () => {
           <Flex
             direction={"column"}
             p={"25px"}
-            bg={"#e4edf3"}
+            style={{ backgroundColor: "#e4edf3" }}
             align-items={"center"}
             justify={"center"}
           >
@@ -119,9 +100,26 @@ const ServicePage = () => {
               lts={"-.4px"}
               mb={"15px"}
             >
-              If you do not see your specific practice areas, please contact us
+              Если вы не нашли нужное направление, свяжитесь с нами
             </Text>
-            <ContactUs />
+            <BtnBasic
+              component={BaseLink}
+              href="/contact"
+              maw={"140px"}
+              size="xl"
+              visibleFrom="md"
+            >
+              Связаться
+            </BtnBasic>
+            <BtnBasic
+              component={BaseLink}
+              href="/contact"
+              maw={"140px"}
+              size="md"
+              hiddenFrom="md"
+            >
+              Связаться
+            </BtnBasic>
           </Flex>
         </SimpleGrid>
       </Container>
@@ -151,8 +149,8 @@ const ServicePage = () => {
                 lts={"-1px"}
                 maw={600}
               >
-                We provide actionable insights that stem from our extensive
-                in-market experience in the world’s major industries.
+                Мы предоставляем практические рекомендации, основанные на
+                обширном опыте работы в ведущих отраслях мира.
               </Text>
             </Flex>
             <Image
@@ -161,7 +159,7 @@ const ServicePage = () => {
               src={
                 "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-3.svg"
               }
-              alt="service illustration"
+              alt="иллюстрация услуги"
             />
           </Flex>
         </Container>
@@ -170,28 +168,18 @@ const ServicePage = () => {
       <Container
         size={"xl"}
         mt={"40px"}
-        mb={"130px"}
       >
-        <SimpleGrid
-          cols={{ base: 1, sm: 2, md: 4 }}
-          spacing={"30px"}
-          verticalSpacing={"35px"}
-          mb={"40px"}
-        >
-          {people.map((person, index) => (
-            <PeopleCard
-              key={index}
-              img={person.img}
-              title={person.title}
-              subtitle={person.subtitle}
-            />
-          ))}
-        </SimpleGrid>
+        <List />
         <Flex
           align-content={"center"}
           justify={"center"}
         >
-          <ViewMore />
+          <BtnBasic
+            component={BaseLink}
+            href="/people"
+          >
+            Смотреть ещё
+          </BtnBasic>
         </Flex>
       </Container>
 
@@ -199,4 +187,5 @@ const ServicePage = () => {
     </Flex>
   );
 };
+
 export default ServicePage;

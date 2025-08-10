@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Box,
   Burger,
   Container,
   Divider,
@@ -27,6 +26,8 @@ import { LanguageSwitcher } from "../language-switcher";
 import { BaseLink } from "../link";
 import s from "./styles.module.scss";
 
+import logo from "@/shared/assets/logo.svg"
+
 gsap.registerPlugin(ScrollTrigger);
 
 type NavbarRoute = {
@@ -35,11 +36,11 @@ type NavbarRoute = {
 };
 
 const LOGO_URL =
-  "https://beratung.vamtam.com/wp-content/uploads/2023/07/logo-white.svg";
+  logo;
 const navbarRoutes: NavbarRoute[] = [
-  { label: "Service", href: "/service" },
-  { label: "People", href: "/people" },
-  { label: "About", href: "/about" },
+  { label: "Услуги", href: "/service" },
+  { label: "Команда", href: "/people" },
+  { label: "О компании", href: "/about" },
   // { label: "Contact", href: "/contact" },
   // { label: "Call us: +1 234 567 890", href: "tel:+1234567890" },
 ];
@@ -98,7 +99,7 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
     >
       <NavContainer>
         <NavElement>
-          <Box
+          <Flex
             component={Link}
             href={"/"}
           >
@@ -108,7 +109,7 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
               width={120}
               height={30}
             />
-          </Box>
+          </Flex>
           {isNotMobile ? <DesktopNavList /> : <MobileNavList />}
         </NavElement>
 
@@ -187,7 +188,7 @@ const ContactBtn = () => (
     color="#fff"
     visibleFrom="md"
   >
-    Contact us
+    Связаться с нами
   </BtnBasic>
 );
 

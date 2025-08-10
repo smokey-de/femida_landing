@@ -44,22 +44,21 @@ export const Footer = () => {
       mt={"65px"}
       direction={"column"}
     >
+      {/* Верхние две кнопки */}
       <Flex
         w={"100%"}
         align={"center"}
         justify={"center"}
-        direction={{base: "column", md: "row"}}
+        direction={{ base: "column", md: "row" }}
       >
         <Flex
-           w={{base: "100%", md: "50%"}}
+          w={{ base: "100%", md: "50%" }}
           justify={"flex-end"}
           bg={"#374b47"}
           pos={"relative"}
         >
           <Image
-            src={
-              "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
-            }
+            src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
             alt="footer_icon"
             pos={"absolute"}
             w={"130px"}
@@ -74,13 +73,13 @@ export const Footer = () => {
             leftSection={<IconPhoneFilled />}
             className={s.topLeft}
             size="xl"
-            w={{base: "100%", md: "55%"}}
+            w={{ base: "100%", md: "55%" }}
           >
-            1-800-356-8933
+            +998 (90) 480 04 20
           </BtnBasic>
         </Flex>
         <Flex
-           w={{base: "100%", md: "50%"}}
+          w={{ base: "100%", md: "50%" }}
           justify={"flex-start"}
           bg={"#8fd299"}
         >
@@ -92,12 +91,13 @@ export const Footer = () => {
             rightSection={<IconCaretRightFilled />}
             className={s.topRight}
             size="xl"
-            w={{base: "100%", md: "80%"}}
+            w={{ base: "100%", md: "80%" }}
           >
-            Schedule a free consultation
+            Записаться на бесплатную консультацию
           </BtnBasic>
         </Flex>
       </Flex>
+
 
       <Flex
         direction={"column"}
@@ -127,16 +127,16 @@ export const Footer = () => {
                 lh={"1.3em"}
                 lts={"-1px"}
               >
-                Building wealth, creating futures.
+                Создаём капитал — строим будущее.
               </Text>
               <Text
                 fz={14}
                 lh={"1.4em"}
                 className={s.about}
               >
-                Trusted financial consulting firm providing expert guidance and
-                personalized solutions to help clients unlock their full
-                financial potential.
+                Надёжная консалтинговая компания, предлагающая экспертные
+                решения и персональный подход, чтобы помочь вам раскрыть весь
+                финансовый потенциал.
               </Text>
             </Flex>
           </Flex>
@@ -150,11 +150,11 @@ export const Footer = () => {
             className={s.secBot}
             visibleFrom="md"
           >
-            <BaseLink href="/">Home</BaseLink>
-            <BaseLink href="/service">Services</BaseLink>
-            <BaseLink href="/people">People</BaseLink>
-            <BaseLink href="/about">About</BaseLink>
-            <BaseLink href="/contact">Contact</BaseLink>
+            <BaseLink href="/">Главная</BaseLink>
+            <BaseLink href="/service">Услуги</BaseLink>
+            <BaseLink href="/people">Команда</BaseLink>
+            <BaseLink href="/about">О компании</BaseLink>
+            <BaseLink href="/contact">Контакты</BaseLink>
           </Flex>
         </Container>
       </Flex>

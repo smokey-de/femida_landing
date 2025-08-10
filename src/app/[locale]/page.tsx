@@ -56,7 +56,7 @@ const ContactSection = () => (
         lh="1.5rem"
         fz="1.25rem"
       >
-        Get started
+        Начало
       </Text>
       <Text
         component="h2"
@@ -64,7 +64,7 @@ const ContactSection = () => (
         lh={{ base: "2.875rem", md: "3.875rem" }}
         fz={{ base: "32px", md: "48px" }}
       >
-        Schedule your personalized consultation today
+        Запишитесь на бесплатную консультацию
       </Text>
     </Box>
     <Space h="1rem" />
@@ -77,7 +77,7 @@ const ContactSection = () => (
       >
         <Image
           src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg"
-          alt="Contact Us"
+          alt="Свяжитесь с нами"
         />
         <Text
           fz="0.875rem"
@@ -85,7 +85,7 @@ const ContactSection = () => (
           lh="1.313rem"
           c="rgb(95, 101, 103)"
         >
-          OR REACH US AT:
+          ИЛИ СВЯЖИТЕСЬ:
         </Text>
         <Divider my="md" />
         <Text
@@ -94,7 +94,7 @@ const ContactSection = () => (
           lh="1.375rem"
           c="rgb(95, 101, 103)"
         >
-          T: 1-800-356-8933
+          Тел.: +998 (90) 480 04 20
         </Text>
         <Text
           fz="1rem"
@@ -102,15 +102,7 @@ const ContactSection = () => (
           lh="1.375rem"
           c="rgb(95, 101, 103)"
         >
-          E: office@beratung.com
-        </Text>
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Seventh Ave, 20th Floor New York
+          Email: office@femida.com
         </Text>
       </Flex>
       <Paper
@@ -154,7 +146,7 @@ const ContactSection = () => (
           lh="1.313rem"
           c="rgb(95, 101, 103)"
         >
-          OR REACH US AT:
+          ИЛИ СВЯЖИТЕСЬ:
         </Text>
 
         <Text
@@ -163,7 +155,7 @@ const ContactSection = () => (
           lh="1.375rem"
           c="rgb(95, 101, 103)"
         >
-          T: 1-800-356-8933
+          Тел.: +998 (90) 480 04 20
         </Text>
         <Text
           fz="1rem"
@@ -171,15 +163,7 @@ const ContactSection = () => (
           lh="1.375rem"
           c="rgb(95, 101, 103)"
         >
-          E: office@beratung.com
-        </Text>
-        <Text
-          fz="1rem"
-          fw={400}
-          lh="1.375rem"
-          c="rgb(95, 101, 103)"
-        >
-          Seventh Ave, 20th Floor New York
+          Email: office@femida.com
         </Text>
       </Flex>
     </Flex>
