@@ -32,7 +32,7 @@ const highlights = [
   },
 ];
 
-export const PeoplePage = () => {
+const PeoplePage = () => {
   return (
     <Flex
       direction="column"
