@@ -1,5 +1,3 @@
-"use client";
-
 import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
 
 import {
@@ -51,7 +49,7 @@ const services = [
 ];
 
 
-export const ServicePage = () => {
+const ServicePage = () => {
   return (
     <Flex
       direction="column"
