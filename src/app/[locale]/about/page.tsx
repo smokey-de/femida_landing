@@ -1,7 +1,6 @@
 "use client";
 
 import {
-  Anchor,
   Box,
   Container,
   Flex,
@@ -11,7 +10,6 @@ import {
 } from "@mantine/core";
 
 import {
-  BaseLink,
   Navbar,
   Footer,
   OtherHeader,
@@ -361,172 +359,6 @@ export const AboutPage = () => {
           </Flex>
         </Container>
       </Flex>
-
-      <Container size={"xl"}>
-        <Flex
-          direction={{ base: "column", md: "row" }}
-          align={"center"}
-          mb={130}
-          gap={70}
-        >
-          <Flex
-            direction={"column"}
-            style={{ borderRight: "1px solid #00000026" }}
-            visibleFrom="md"
-            gap={5}
-            pr={10}
-          >
-            <Flex>
-              <Image
-                src={
-                  "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
-                }
-                h={18}
-                w={22}
-                alt=""
-              />
-              <Text>Большая честь</Text>
-            </Flex>
-
-            <Text
-              style={{ color: "#5F6567" }}
-              fz={20}
-              lh={"1.5em"}
-              maw={800}
-            >
-              В списке лучших работодателей
-            </Text>
-
-            <BaseLink style={{ color: "#161616" }}>Узнать больше</BaseLink>
-          </Flex>
-
-          <Flex
-            direction={"column"}
-            style={{ borderBottom: "1px solid #00000026" }}
-            pb={30}
-            hiddenFrom="md"
-          >
-            <Flex>
-              <Image
-                src={
-                  "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
-                }
-                h={18}
-                w={22}
-                alt=""
-              />
-              <Text>Большая честь</Text>
-            </Flex>
-
-            <Text
-              style={{ color: "#5F6567" }}
-              fz={20}
-              lh={"1.5em"}
-              maw={800}
-            >
-              В списке лучших работодателей
-            </Text>
-
-            <BaseLink style={{ color: "#161616" }}>Узнать больше</BaseLink>
-          </Flex>
-
-          <SimpleGrid
-            cols={{ base: 1, sm: 2, md: 4 }}
-            verticalSpacing={30}
-            pl={{ base: 0, md: 70 }}
-          >
-            <Flex
-              direction={"column"}
-              ml={20}
-              mr={20}
-              gap={20}
-            >
-              <Text
-                ff={"Helvetica"}
-                fz={16}
-                fw={400}
-                lh={"1.4em"}
-                lts={0}
-                style={{ color: "#5F6567" }}
-              >
-                2025
-              </Text>
-              <Anchor
-                unstyled
-                className={s.linkAn}
-              >
-                Одни из лучших мировых консалтинговых компаний по управлению
-              </Anchor>
-            </Flex>
-            <Flex
-              direction={"column"}
-              ml={20}
-              mr={20}
-            >
-              <Text
-                ff={"Helvetica"}
-                fz={16}
-                fw={400}
-                lh={"1.4em"}
-                lts={0}
-                style={{ color: "#5F6567" }}
-              >
-                2025
-              </Text>
-              <Anchor
-                unstyled
-                className={s.linkAn}
-              >
-                100 лучших компаний для работы 2025, FORTUNE
-              </Anchor>
-            </Flex>
-            <Flex
-              direction={"column"}
-              ml={20}
-              mr={20}
-            >
-              <Text
-                ff={"Helvetica"}
-                fz={16}
-                fw={400}
-                lh={"1.4em"}
-                lts={0}
-                style={{ color: "#5F6567" }}
-              >
-                2025
-              </Text>
-              <Anchor
-                unstyled
-                className={s.linkAn}
-              >
-                Glassdoor — лучшие места для работы
-              </Anchor>
-            </Flex>
-            <Flex
-              direction={"column"}
-              ml={20}
-              mr={20}
-            >
-              <Text
-                ff={"Helvetica"}
-                fz={16}
-                fw={400}
-                lh={"1.4em"}
-                lts={0}
-                style={{ color: "#5F6567" }}
-              >
-                2025
-              </Text>
-              <Anchor
-                unstyled
-                className={s.linkAn}
-              >
-                Лучшие место для работы в поддержку равенства
-              </Anchor>
-            </Flex>
-          </SimpleGrid>
-        </Flex>
-      </Container>
 
       <Footer />
     </Flex>
