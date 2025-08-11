@@ -37,8 +37,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts",
-    "src/pages/person/index.ts"
+    ".next/types/**/*.ts"
+    // "src/shared/ui/person/index.ts"
   ],
   "exclude": ["node_modules"]
 }
