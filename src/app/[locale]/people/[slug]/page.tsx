@@ -1,16 +1,19 @@
 import { notFound } from "next/navigation";
-import { people } from "@/entities/people/data";
-import PersonDetailsClient from "@/pages/person/index";
+
+import Person from "@/shared/ui/person";
 
 interface PageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{
+    slug: string;
+  }>;
 }
 
-export default async function PersonPage({ params }: PageProps) {
-  const { slug } = await params; 
-  const person = people.find((p) => p.slug === slug);
+async function People({ params }: PageProps) {
+  const { slug } = await params;
 
-  if (!person) return notFound();
+  if (!slug) return notFound();
 
-  return <PersonDetailsClient person={person} />;
+  return <Person slug={slug} />;
 }
+
+export default People;
