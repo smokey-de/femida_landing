@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   Container,
@@ -15,99 +17,54 @@ import {
 } from "@/shared/ui";
 
 import s from "@/pages/about/style.module.scss";
-
-const values = [
-  {
-    title: "От понимания к действию",
-    description:
-      "ставя под сомнение традиционное мышление и подходы, а также предлагая новые перспективы для решения самых сложных задач",
-  },
-  {
-    title: "Стремление к вдохновляющему результату",
-    description:
-      "смотря дальше ближайшего дедлайна — на десятилетия вперёд, и тесно сотрудничая с клиентами для укрепления и вдохновения их организаций",
-  },
-  {
-    title: "Преодоление сложности",
-    description:
-      "находя уникальные источники конкурентного преимущества и скрытые истины в динамичных и сложных системах",
-  },
-  {
-    title: "Лидерство с честностью",
-    description:
-      "решая трудные вопросы, оставаясь верными своим ценностям и открыто высказывая свою позицию",
-  },
-  {
-    title: "Развитие через развитие других",
-    description:
-      "помогая клиентам, коллегам и всему сообществу достигать успеха и раскрывать свой потенциал",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const AboutPage = () => {
+  const t = useTranslations("about");
+
+  const sections = t.raw("sections");
+  const mission = t.raw("mission");
+  const howWeWork = t.raw("howWeWork");
+  const advantages = t.raw("advantages");
+
   return (
-    <Flex
-      direction="column"
-      className={s.page}
-    >
+    <Flex direction="column" className={s.page}>
       <Navbar darkMode />
 
-      <Box
-        mb={"40px"}
-        style={{ borderBottom: "1px solid #00000026" }}
-      >
+      <Box mb="40px" style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader
-          aboutTitle="О нас"
-          title="Строим мосты для устойчивого и инклюзивного роста"
-          description={`В FEMIDA FINANCE мы — молодая и амбициозная компания, предоставляющая бухгалтерские и юридические услуги для бизнеса. 
-          Наш успех основан на глубоком сотрудничестве и создании сообщества квалифицированных специалистов, объединённых целью помогать предпринимателям эффективно решать финансовые и правовые задачи и достигать успеха.`}
+          aboutTitle={t("aboutTitle")}
+          title={t("title")}
+          description={t("description")}
         />
       </Box>
 
-      <Container
-        size={"xl"}
-        mb={130}
-      >
-        <Flex
-          direction={"column"}
-          gap={"130px"}
-        >
-          <SplitSection
-            title="Личный подход в глобальном масштабе"
-            description="Наш опыт"
-            linkTitle="Познакомьтесь с нами"
-            subtitle={`FEMIDA FINANCE работает с бизнесом по всему Узбекистану, обеспечивая уникальную гибкость и оперативность в решении задач клиентов. Такой подход отличает нас от традиционных компаний, делая сотрудничество более персонализированным и эффективным. Наша главная цель — помочь вам преодолевать самые серьёзные вызовы и воплощать ваши бизнес-идеи в реальность.
-  Мы стремимся к долгосрочному партнерству, выстраивая доверие и поддерживая ваш успех на каждом этапе. Наши специалисты тесно интегрируются с вашей командой, активно делясь опытом и знаниями в ходе всего сотрудничества.`}
-            imageSrc="https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-yan-krukau-7794093.jpg"
-            imagePosition="right"
-            showButton={true}
-          />
-
-          <SplitSection
-            title="Всегда делать то, что правильно"
-            description="Наши ценности"
-            linkTitle="Познакомьтесь с нашей командой"
-            subtitle={`Мы строим свою работу на балансе между профессиональной деятельностью и личной жизнью, ценим важность семьи и участия в значимых проектах, поддерживая развитие предпринимателей и сообществ по всему Узбекистану.
-  Мы инвестируем в людей и успех наших клиентов, создавая комфортную рабочую атмосферу, где каждый может реализовать свой потенциал. FEMIDA FINANCE гордится сотрудничеством с разнообразными клиентами — от стартапов до крупных компаний, оказывая юридическую и бухгалтерскую поддержку.`}
-            imageSrc="https://beratung.vamtam.com/wp-content/uploads/2023/06/pexels-karolina-grabowska-7876781.jpg"
-            imagePosition="left"
-          />
+      <Container size="xl" mb={130}>
+        <Flex direction="column" gap="130px">
+          {sections.map((sec: { title: string; description: string; subtitle?: string }, idx: number) => (
+            <SplitSection
+              key={idx}
+              title={sec.title}
+              description={sec.description}
+              linkTitle={idx === 0 ? t("linkMeetUs", { default: "Познакомьтесь с нами" }) : t("linkMeetTeam", { default: "Познакомьтесь с нашей командой" })}
+              subtitle={sec.subtitle || ""}
+              imageSrc={
+                idx === 0
+                  ? "https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-yan-krukau-7794093.jpg"
+                  : "https://beratung.vamtam.com/wp-content/uploads/2023/06/pexels-karolina-grabowska-7876781.jpg"
+              }
+              imagePosition={idx === 0 ? "right" : "left"}
+              showButton={idx === 0}
+            />
+          ))}
         </Flex>
       </Container>
 
-      <Container
-        size={"xl"}
-        mb={115}
-      >
-        <Flex
-          direction={"column"}
-          gap={30}
-        >
+      <Container size="xl" mb={115}>
+        <Flex direction="column" gap={30}>
           <Flex>
             <Image
-              src={
-                "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
-              }
+              src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
               h={18}
               w={22}
               alt=""
@@ -115,11 +72,8 @@ const AboutPage = () => {
             <Text>Наша миссия</Text>
           </Flex>
 
-          <SimpleGrid
-            cols={{ base: 2, sm: 3, md: 5 }}
-            spacing={20}
-          >
-            {values.map((item, index) => (
+          <SimpleGrid cols={{ base: 2, sm: 3, md: 5 }} spacing={20}>
+            {mission.map((item: { title: string; description: string }, index: number) => (
               <Flex
                 key={index}
                 direction="column"
@@ -150,209 +104,114 @@ const AboutPage = () => {
         </Flex>
       </Container>
 
-      <Box
-        className={`${s.vector} ${s.sec_tr}`}
-        mb={"120px"}
-      ></Box>
+      <Box className={`${s.vector} ${s.sec_tr}`} mb="120px"></Box>
 
-      <Flex
-        w={"100%"}
-        direction={"column"}
-        align={"center"}
-        justify={"center"}
-        mb={60}
-      >
+      <Flex w="100%" direction="column" align="center" justify="center" mb={60}>
         <Text
-          ff={"Geologica"}
+          ff="Geologica"
           fz={{ base: 32, md: 48 }}
           fw={600}
-          tt={"none"}
-          fs={"normal"}
-          lh={"1.3em"}
-          lts={"-1px"}
+          tt="none"
+          fs="normal"
+          lh="1.3em"
+          lts="-1px"
         >
-          Как мы работаем
+          {howWeWork.title}
         </Text>
         <Text
           style={{ color: "#5F6567" }}
           fz={{ base: 16, md: 20 }}
-          lh={"1.5em"}
+          lh="1.5em"
           maw={800}
-          ta={"center"}
+          ta="center"
         >
-          Мы трансформируем организации устойчиво, раскрываем их потенциал и
-          создаём эффективные команды для долгосрочного успеха. Сотрудничайте с
-          нами — и достигайте выдающихся результатов.
+          {howWeWork.description}
         </Text>
       </Flex>
 
-      <Flex
-        style={{ backgroundColor: "#E4EDF4" }}
-        pb={80}
-        pt={80}
-        mb={130}
-      >
-        <Container
-          size={"xl"}
-          maw={1280}
-          w={"100%"}
-        >
+      <Flex style={{ backgroundColor: "#E4EDF4" }} pb={80} pt={80} mb={130}>
+        <Container size="xl" maw={1280} w="100%">
           <Flex
-            w={"100%"}
+            w="100%"
             direction={{ base: "column", md: "row" }}
             justify={{ base: "center", md: "space-between" }}
-            align={"center"}
+            align="center"
           >
-            <Flex
-              direction={"column"}
-              pt={80}
-              pb={90}
-              pr={20}
-              justify={"space-between"}
-              gap={50}
-            >
-              <Flex
-                direction={"column"}
-                gap={15}
-                pb={50}
-                style={{ borderBottom: "1px solid #00000026" }}
-                maw={405}
-              >
-                <Text
-                  ff={"Geologica"}
-                  fz={24}
-                  fw={500}
-                  tt={"none"}
-                  fs={"normal"}
-                  lh={"1.4em"}
-                  lts={"-.5px"}
+            <Flex direction="column" pt={80} pb={90} pr={20} justify="space-between" gap={50}>
+              {advantages.slice(0, 2).map((adv: { title: string; description: string }, i: number) => (
+                <Flex
+                  key={i}
+                  direction="column"
+                  gap={15}
+                  pb={50}
+                  style={{ borderBottom: "1px solid #00000026" }}
+                  maw={405}
                 >
-                  Инновации и технологии
-                </Text>
-                <Text
-                  ff={"Helvetica"}
-                  fz={16}
-                  fw={400}
-                  lh={"1.4em"}
-                  lts={0}
-                  style={{ color: "#5F6567" }}
-                >
-                  В быстро меняющемся мире постоянный прогресс необходим для
-                  удовлетворения новых потребностей.
-                </Text>
-              </Flex>
-
-              <Flex
-                direction={"column"}
-                gap={15}
-                pb={50}
-                style={{ borderBottom: "1px solid #00000026" }}
-                maw={405}
-              >
-                <Text
-                  ff={"Geologica"}
-                  fz={24}
-                  fw={500}
-                  tt={"none"}
-                  fs={"normal"}
-                  lh={"1.4em"}
-                  lts={"-.5px"}
-                >
-                  Экономьте деньги
-                </Text>
-                <Text
-                  ff={"Helvetica"}
-                  fz={16}
-                  fw={400}
-                  lh={"1.4em"}
-                  lts={0}
-                  style={{ color: "#5F6567" }}
-                >
-                  Выбирайте качество с самого начала. Экономьте время и деньги,
-                  делая всё правильно вместе с нами.
-                </Text>
-              </Flex>
+                  <Text
+                    ff="Geologica"
+                    fz={24}
+                    fw={500}
+                    tt="none"
+                    fs="normal"
+                    lh="1.4em"
+                    lts="-.5px"
+                  >
+                    {adv.title}
+                  </Text>
+                  <Text
+                    ff="Helvetica"
+                    fz={16}
+                    fw={400}
+                    lh="1.4em"
+                    lts={0}
+                    style={{ color: "#5F6567" }}
+                  >
+                    {adv.description}
+                  </Text>
+                </Flex>
+              ))}
             </Flex>
 
             <Flex>
               <Image
-                src={
-                  "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-1.svg"
-                }
+                src="https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-1.svg"
                 alt=""
-              ></Image>
+              />
             </Flex>
 
-            <Flex
-              direction={"column"}
-              pt={80}
-              pb={90}
-              pl={20}
-              justify={"space-between"}
-              gap={50}
-            >
-              <Flex
-                direction={"column"}
-                gap={15}
-                pb={50}
-                style={{ borderBottom: "1px solid #00000026" }}
-                maw={405}
-              >
-                <Text
-                  ff={"Geologica"}
-                  fz={24}
-                  fw={500}
-                  tt={"none"}
-                  fs={"normal"}
-                  lh={"1.4em"}
-                  lts={"-.5px"}
+            <Flex direction="column" pt={80} pb={90} pl={20} justify="space-between" gap={50}>
+              {advantages.slice(2).map((adv: { title: string; description: string }, i: number) => (
+                <Flex
+                  key={i}
+                  direction="column"
+                  gap={15}
+                  pb={50}
+                  style={{ borderBottom: "1px solid #00000026" }}
+                  maw={405}
                 >
-                  Сеть возможностей клиентов
-                </Text>
-                <Text
-                  ff={"Helvetica"}
-                  fz={16}
-                  fw={400}
-                  lh={"1.4em"}
-                  lts={0}
-                  style={{ color: "#5F6567" }}
-                >
-                  Благодаря нашему опыту и передовым компетенциям мы
-                  обеспечиваем значимые и устойчивые изменения.
-                </Text>
-              </Flex>
-
-              <Flex
-                direction={"column"}
-                gap={15}
-                pb={50}
-                style={{ borderBottom: "1px solid #00000026" }}
-                maw={405}
-              >
-                <Text
-                  ff={"Geologica"}
-                  fz={24}
-                  fw={500}
-                  tt={"none"}
-                  fs={"normal"}
-                  lh={"1.4em"}
-                  lts={"-.5px"}
-                >
-                  Постоянная поддержка
-                </Text>
-                <Text
-                  ff={"Helvetica"}
-                  fz={16}
-                  fw={400}
-                  lh={"1.4em"}
-                  lts={0}
-                  style={{ color: "#5F6567" }}
-                >
-                  Мы не только планируем, но и реализуем. Наша команда
-                  профессионалов поддерживает вас на этапе внедрения — будь то в
-                  составе вашей основной команды или на проектной основе.
-                </Text>
-              </Flex>
+                  <Text
+                    ff="Geologica"
+                    fz={24}
+                    fw={500}
+                    tt="none"
+                    fs="normal"
+                    lh="1.4em"
+                    lts="-.5px"
+                  >
+                    {adv.title}
+                  </Text>
+                  <Text
+                    ff="Helvetica"
+                    fz={16}
+                    fw={400}
+                    lh="1.4em"
+                    lts={0}
+                    style={{ color: "#5F6567" }}
+                  >
+                    {adv.description}
+                  </Text>
+                </Flex>
+              ))}
             </Flex>
           </Flex>
         </Container>

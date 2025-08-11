@@ -35,7 +35,7 @@ export default async function Layout({ children, params }: LayoutProps) {
     <html lang={locale}>
       <body className={seoConf.SystemFont.className}>
         <NextIntlClientProvider
-          messages={messages}
+          messages={messages} 
           locale={locale}
         >
           <MantineProvider theme={theme}>{children}</MantineProvider>

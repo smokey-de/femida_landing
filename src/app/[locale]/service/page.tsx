@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslations } from "next-intl";
 import { Box, Container, Flex, Image, SimpleGrid, Text } from "@mantine/core";
 
 import {
@@ -11,71 +14,32 @@ import {
 } from "@/shared/ui";
 
 import s from "@/pages/service/style.module.scss";
-import { List } from "@/entities/people";
-
-const services = [
-  {
-    linkLabel: "Разработка бизнес-стратегии",
-    text: "Создание эффективных стратегий для повышения конкурентоспособности и достижения целей бизнеса.",
-  },
-  {
-    linkLabel: "Оптимизация процессов",
-    text: "Упрощение операций и повышение эффективности для максимальной продуктивности и сокращения затрат.",
-  },
-  {
-    linkLabel: "Маркетинговые исследования и анализ",
-    text: "Получите ценную информацию о целевом рынке, конкурентах и потребностях клиентов.",
-  },
-  {
-    linkLabel: "Управление изменениями",
-    text: "Плавно проходите через организационные изменения и обеспечивайте успешную реализацию.",
-  },
-  {
-    linkLabel: "Технологические решения",
-    text: "Разнообразная техническая экспертиза, командный подход и ориентация на результат.",
-  },
-  {
-    linkLabel: "Управление талантами и HR-консалтинг",
-    text: "Рекрутинговые агентства постоянно адаптируются к меняющимся условиям современного рынка труда.",
-  },
-  {
-    linkLabel: "Оценка и управление рисками",
-    text: "Наша команда консультантов по рискам помогает превратить неопределённость в новые возможности.",
-  },
-  {
-    linkLabel: "Консалтинг по устойчивому развитию и КСО",
-    text: "Наш опыт показывает, что видение и прагматизм всегда идут рука об руку.",
-  },
-];
-
+import  List  from "@/entities/people";
 
 const ServicePage = () => {
+  const t = useTranslations("service");
+
+  const services: { linkLabel: string; text: string }[] = t.raw("services"); // т.к. это массив в JSON
+
   return (
-    <Flex
-      direction="column"
-      className={s.page}
-    >
+    <Flex direction="column" className={s.page}>
       <Navbar darkMode />
 
       <Box style={{ borderBottom: "1px solid #00000026" }}>
         <OtherHeader
-          aboutTitle="Области практики"
-          title="Профессиональные услуги бизнес-консалтинга"
-          description="Наша экспертиза охватывает широкий спектр направлений, включая стратегию, маркетинг, организацию, операции, технологии, трансформацию, цифровые решения, расширенную аналитику, корпоративные финансы, слияния и поглощения, а также устойчивое развитие. 
-          Мы обладаем глубокими знаниями в каждой из этих сфер, но главное наше преимущество — это комплексный подход. Мы понимаем, что настоящая ценность в синергии и соединении различных направлений, в устранении разрывов между отделами компании. Оптимизируя общий результат всех компонентов, мы достигаем эффекта, превышающего простую сумму отдельных элементов."
+          aboutTitle={t("header.aboutTitle")}
+          title={t("header.title")}
+          description={t("header.description")}
         />
       </Box>
 
-      <Container
-        size={"xl"}
-        my={"130px"}
-      >
+      <Container size="xl" my="130px">
         <SimpleGrid
           cols={{ base: 1, sm: 2, md: 3 }}
-          spacing={"20px"}
-          verticalSpacing={"50px"}
+          spacing="20px"
+          verticalSpacing="50px"
         >
-          {services.map((service, index) => (
+          {services.map((service: { linkLabel: string; text: string }, index: number) => (
             <ServiceContact
               key={index}
               linkLabel={service.linkLabel}
@@ -84,39 +48,39 @@ const ServicePage = () => {
           ))}
 
           <Flex
-            direction={"column"}
-            p={"25px"}
+            direction="column"
+            p="25px"
             style={{ backgroundColor: "#e4edf3" }}
-            align-items={"center"}
-            justify={"center"}
+            align-items="center"
+            justify="center"
           >
             <Text
               fz={{ base: "16px", md: "20px" }}
               fw={400}
-              fs={"normal"}
-              lh={"1.3em"}
-              lts={"-.4px"}
-              mb={"15px"}
+              fs="normal"
+              lh="1.3em"
+              lts="-.4px"
+              mb="15px"
             >
-              Если вы не нашли нужное направление, свяжитесь с нами
+              {t("contactBlock.text")}
             </Text>
             <BtnBasic
               component={BaseLink}
               href="/contact"
-              maw={"140px"}
+              maw="140px"
               size="xl"
               visibleFrom="md"
             >
-              Связаться
+              {t("contactBlock.btn")}
             </BtnBasic>
             <BtnBasic
               component={BaseLink}
               href="/contact"
-              maw={"140px"}
+              maw="140px"
               size="md"
               hiddenFrom="md"
             >
-              Связаться
+              {t("contactBlock.btn")}
             </BtnBasic>
           </Flex>
         </SimpleGrid>
@@ -125,58 +89,40 @@ const ServicePage = () => {
       <OtherSplitter backgroundUrl="https://beratung.vamtam.com/wp-content/uploads/2023/07/pexels-vlada-karpovich-7433853.jpg" />
 
       <Box style={{ borderBottom: "1px solid #00000026" }}>
-        <Container
-          size={"xl"}
-          pb={"120px"}
-        >
+        <Container size="xl" pb="120px">
           <Flex
             direction={{ base: "column", md: "row" }}
-            gap={"130px"}
-            align={"center"}
-            justify={"center"}
+            gap="130px"
+            align="center"
+            justify="center"
           >
-            <Flex
-              direction={"column"}
-              gap={"30px"}
-            >
+            <Flex direction="column" gap="30px">
               <Text
                 fz={{ base: "26px", md: "30px" }}
                 fw={500}
-                fs={"normal"}
-                lh={"1.3em"}
-                lts={"-1px"}
+                fs="normal"
+                lh="1.3em"
+                lts="-1px"
                 maw={600}
               >
-                Мы предоставляем практические рекомендации, основанные на
-                обширном опыте работы в ведущих отраслях мира.
+                {t("footerBlock.text")}
               </Text>
             </Flex>
             <Image
-              w={"160px"}
-              h={"195px"}
-              src={
-                "https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-3.svg"
-              }
+              w="160px"
+              h="195px"
+              src="https://beratung.vamtam.com/wp-content/uploads/2023/06/illustration-3.svg"
               alt="иллюстрация услуги"
             />
           </Flex>
         </Container>
       </Box>
 
-      <Container
-        size={"xl"}
-        mt={"40px"}
-      >
+      <Container size="xl" mt="40px">
         <List />
-        <Flex
-          align-content={"center"}
-          justify={"center"}
-        >
-          <BtnBasic
-            component={BaseLink}
-            href="/people"
-          >
-            Смотреть ещё
+        <Flex align-content="center" justify="center">
+          <BtnBasic component={BaseLink} href="/people">
+            {t("peopleBtn")}
           </BtnBasic>
         </Flex>
       </Container>

@@ -3,8 +3,8 @@
 import { useGSAP } from "@gsap/react";
 import { Container, Flex, Image, Text } from "@mantine/core";
 import { IconCaretRightFilled, IconPhoneFilled } from "@tabler/icons-react";
-
 import { useRef } from "react";
+import { useTranslations } from "next-intl";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -16,6 +16,7 @@ import s from "./style.module.scss";
 gsap.registerPlugin(ScrollTrigger);
 
 export const Footer = () => {
+  const t = useTranslations("footer"); // подключаем переводы
   const textBoxRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
@@ -30,7 +31,7 @@ export const Footer = () => {
           ease: "power2.out",
           scrollTrigger: {
             trigger: textBoxRef.current,
-            start: "top 90%", // <--- earlier start (from further down)
+            start: "top 90%",
             end: "bottom 20%",
             toggleActions: "play reverse play reverse",
           },
@@ -39,11 +40,9 @@ export const Footer = () => {
     },
     { scope: textBoxRef },
   );
+
   return (
-    <Flex
-      mt={"65px"}
-      direction={"column"}
-    >
+    <Flex mt={"65px"} direction={"column"}>
       {/* Верхние две кнопки */}
       <Flex
         w={"100%"}
@@ -78,6 +77,7 @@ export const Footer = () => {
             +998 (90) 480 04 20
           </BtnBasic>
         </Flex>
+
         <Flex
           w={{ base: "100%", md: "50%" }}
           justify={"flex-start"}
@@ -93,31 +93,20 @@ export const Footer = () => {
             size="xl"
             w={{ base: "100%", md: "80%" }}
           >
-            Записаться на бесплатную консультацию
+            {t("cta")}
           </BtnBasic>
         </Flex>
       </Flex>
 
-
-      <Flex
-        direction={"column"}
-        bg={"#1B2524"}
-      >
-        <Container
-          size={"xl"}
-          ref={textBoxRef}
-        >
+      {/* Нижняя часть */}
+      <Flex direction={"column"} bg={"#1B2524"}>
+        <Container size={"xl"} ref={textBoxRef}>
           <Flex
             direction={"row"}
             style={{ borderBottom: "1px solid #e4edf3" }}
             className={s.secTop}
           >
-            <Flex
-              direction={"column"}
-              pt={45}
-              pb={45}
-              gap={10}
-            >
+            <Flex direction={"column"} pt={45} pb={45} gap={10}>
               <Text
                 className={s.titleText}
                 ff={"Geologica"}
@@ -127,16 +116,10 @@ export const Footer = () => {
                 lh={"1.3em"}
                 lts={"-1px"}
               >
-                Создаём капитал — строим будущее.
+                {t("title")}
               </Text>
-              <Text
-                fz={14}
-                lh={"1.4em"}
-                className={s.about}
-              >
-                Надёжная консалтинговая компания, предлагающая экспертные
-                решения и персональный подход, чтобы помочь вам раскрыть весь
-                финансовый потенциал.
+              <Text fz={14} lh={"1.4em"} className={s.about}>
+                {t("description")}
               </Text>
             </Flex>
           </Flex>
@@ -150,11 +133,11 @@ export const Footer = () => {
             className={s.secBot}
             visibleFrom="md"
           >
-            <BaseLink href="/">Главная</BaseLink>
-            <BaseLink href="/service">Услуги</BaseLink>
-            <BaseLink href="/people">Команда</BaseLink>
-            <BaseLink href="/about">О компании</BaseLink>
-            <BaseLink href="/contact">Контакты</BaseLink>
+            <BaseLink href="/">{t("nav.home")}</BaseLink>
+            <BaseLink href="/service">{t("nav.services")}</BaseLink>
+            <BaseLink href="/people">{t("nav.team")}</BaseLink>
+            <BaseLink href="/about">{t("nav.about")}</BaseLink>
+            <BaseLink href="/contact">{t("nav.contact")}</BaseLink>
           </Flex>
         </Container>
       </Flex>
