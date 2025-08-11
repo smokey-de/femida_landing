@@ -30,7 +30,7 @@ interface PersonDetailsClientProps {
 const Person = ({ slug }: PersonDetailsClientProps) => {
   const person = people.find((p) => p.slug === slug);
 
-  const t = useTranslations();
+  const t = useTranslations("people");
   const rightRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -90,10 +90,9 @@ const Person = ({ slug }: PersonDetailsClientProps) => {
           >
             <Image
               src={person.img}
-              alt={t("privalovaAnna.title")}
+              alt={t(person.titleKey)}
             />
           </Box>
-          {t("main_title")}
           <Flex
             w={"100%"}
             hiddenFrom="md"
