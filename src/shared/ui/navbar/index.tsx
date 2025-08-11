@@ -9,24 +9,20 @@ import {
   Transition,
 } from "@mantine/core";
 import { useDisclosure, useMediaQuery } from "@mantine/hooks";
-
 import { useEffect, useRef } from "react";
-
 import Image from "next/image";
-
 import cn from "classnames";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { mediaQueries } from "@/shared/lib/constants";
 
 import { BtnBasic } from "../btn-basic/ui";
 import { LanguageSwitcher } from "../language-switcher";
 import { BaseLink } from "../link";
 import s from "./styles.module.scss";
-
-import logo from "@/shared/assets/logo.svg"
+import logo from "@/shared/assets/logo.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,23 +31,22 @@ type NavbarRoute = {
   href: string;
 };
 
-const LOGO_URL =
-  logo;
-const navbarRoutes: NavbarRoute[] = [
-  { label: "Услуги", href: "/service" },
-  { label: "Команда", href: "/people" },
-  { label: "О компании", href: "/about" },
-  // { label: "Contact", href: "/contact" },
-  // { label: "Call us: +1 234 567 890", href: "tel:+1234567890" },
-];
+const LOGO_URL = logo;
 
 export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
   const isNotMobile = useMediaQuery(mediaQueries.mobile);
   const navRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations();
+
+  // 🔹 now using translations
+  const navbarRoutes: NavbarRoute[] = [
+    { label: t("navbar_services"), href: "/service" },
+    { label: t("navbar_team"), href: "/people" },
+    { label: t("navbar_about"), href: "/about" },
+  ];
 
   useEffect(() => {
     const nav = navRef.current;
-
     if (!nav) return;
 
     let lastScroll = 0;
@@ -74,6 +69,7 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
         },
       },
     });
+
     ScrollTrigger.create({
       start: "top top",
       end: 99999,
@@ -90,27 +86,20 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, []);
+  }, [darkMode]);
 
   return (
-    <nav
-      ref={navRef}
-      className={cn(s.nav, [darkMode && s.scrolled])}
-    >
+    <nav ref={navRef} className={cn(s.nav, [darkMode && s.scrolled])}>
       <NavContainer>
         <NavElement>
-          <Flex
-            component={Link}
-            href={"/"}
-          >
-            <Image
-              src={LOGO_URL}
-              alt="Logo"
-              width={120}
-              height={30}
-            />
+          <Flex component={Link} href={"/"}>
+            <Image src={LOGO_URL} alt="Logo" width={120} height={30} />
           </Flex>
-          {isNotMobile ? <DesktopNavList /> : <MobileNavList />}
+          {isNotMobile ? (
+            <DesktopNavList navbarRoutes={navbarRoutes} contactLabel={t("navbar_btn")} />
+          ) : (
+            <MobileNavList navbarRoutes={navbarRoutes} contactLabel={t("navbar_btn")} />
+          )}
         </NavElement>
 
         <div className={s.dividerWrapper}>
@@ -121,11 +110,11 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
   );
 };
 
-const DesktopNavList = () => (
+const DesktopNavList = ({ navbarRoutes, contactLabel }: { navbarRoutes: NavbarRoute[], contactLabel: string, }) => (
   <NavList>
-    <NavItems />
+    <NavItems navbarRoutes={navbarRoutes} />
     <LanguageSwitcher />
-    <ContactBtn />
+    <ContactBtn label={contactLabel} />
   </NavList>
 );
 
@@ -136,17 +125,13 @@ const scaleY = {
   transitionProperty: "transform, opacity",
 };
 
-const MobileNavList = () => {
+const MobileNavList = ({ navbarRoutes, contactLabel }: { navbarRoutes: NavbarRoute[], contactLabel: string, }) => {
   const [opened, { toggle }] = useDisclosure();
 
   return (
     <NavList gap={"sm"}>
-      <ContactBtn />
-      <Burger
-        opened={opened}
-        onClick={toggle}
-        color="white"
-      />
+      <ContactBtn  label={contactLabel} />
+      <Burger opened={opened} onClick={toggle} color="white" />
       <Transition
         mounted={opened}
         transition={scaleY}
@@ -155,12 +140,9 @@ const MobileNavList = () => {
         keepMounted
       >
         {(transitionStyle) => (
-          <NavbarDropdown
-            style={{ ...transitionStyle, zIndex: 1 }}
-            bg={"#374B47"}
-          >
+          <NavbarDropdown style={{ ...transitionStyle, zIndex: 1 }} bg={"#374B47"}>
             <NavList direction={"column"}>
-              <NavItems />
+              <NavItems navbarRoutes={navbarRoutes} />
               <LanguageSwitcher />
             </NavList>
           </NavbarDropdown>
@@ -170,17 +152,14 @@ const MobileNavList = () => {
   );
 };
 
-const NavItems = () =>
+const NavItems = ({ navbarRoutes }: { navbarRoutes: NavbarRoute[] }) =>
   navbarRoutes.map((item) => (
-    <BaseLink
-      key={item.label}
-      href={item.href}
-    >
+    <BaseLink key={item.label} href={item.href}>
       {item.label}
     </BaseLink>
   ));
 
-const ContactBtn = () => (
+const ContactBtn =  ({ label }: { label: string }) => (
   <BtnBasic
     component={BaseLink}
     href="/contact"
@@ -188,7 +167,7 @@ const ContactBtn = () => (
     color="#fff"
     visibleFrom="md"
   >
-    Связаться с нами
+     {label}
   </BtnBasic>
 );
 

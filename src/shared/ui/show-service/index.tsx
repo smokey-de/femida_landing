@@ -13,16 +13,16 @@ import {
   Text,
 } from "@mantine/core";
 import { IconArmchair2, IconBrain, IconChartBar } from "@tabler/icons-react";
-
 import { useRef } from "react";
-
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const ShowServices = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations("showServices");
 
   useGSAP(
     () => {
@@ -53,26 +53,59 @@ export const ShowServices = () => {
         ScrollTrigger.getAll().forEach((t) => t.kill());
       };
     },
-    { scope: containerRef },
+    { scope: containerRef }
   );
+
+  const sections = [
+    {
+      type: t("financeType"),
+      title: t("financeTitle"),
+      image:
+        "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg",
+      bg: "#E7E8DB",
+    },
+    {
+      type: t("insuranceType"),
+      title: t("insuranceTitle"),
+      image:
+        "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
+      bg: "#DDDECB",
+    },
+    {
+      type: t("adviceType"),
+      title: t("adviceTitle"),
+      image:
+        "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1371643065-square.jpg",
+      bg: "#D1D2BC",
+    },
+  ];
+
+  const serviceData = [
+    {
+      icon: <IconChartBar />,
+      title: t("service1.title"),
+      description: t("service1.description"),
+    },
+    {
+      icon: <IconArmchair2 />,
+      title: t("service2.title"),
+      description: t("service2.description"),
+    },
+    {
+      icon: <IconBrain />,
+      title: t("service3.title"),
+      description: t("service3.description"),
+    },
+  ];
 
   return (
     <Box
       ref={containerRef}
       mb={{ base: "130vh", sm: "120vh", md: "130vh" }}
     >
-      <Container
-        size="xl"
-        mt="7.5rem"
-        mb="2.813rem"
-      >
-        <Text
-          component="h5"
-          fw={400}
-          lh="1.5rem"
-          fz="1.25rem"
-        >
-          Услуги
+      <Container size="xl" mt="7.5rem" mb="2.813rem">
+        <Text component="h5" fw={400} lh="1.5rem" fz="1.25rem">
+          {t("services")}
         </Text>
         <Text
           component="h2"
@@ -81,44 +114,18 @@ export const ShowServices = () => {
           fz={{ base: "2.25rem", md: "3rem" }}
           lts={"-1px"}
         >
-          Чтобы удовлетворить ваши потребности
+          {t("subtitle")}
         </Text>
       </Container>
 
       <MainServiceContainer>
-        {[
-          {
-            type: "Финансы",
-            title: "Финансовое \nпланирование",
-            image:
-              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg",
-            bg: "#E7E8DB",
-          },
-          {
-            type: "Страхование",
-            title: "Планирование \nстрахования",
-            image:
-              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
-            bg: "#DDDECB",
-          },
-          {
-            type: "Совет",
-            title: "Консультационное \nсопровождение",
-            image:
-              "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1371643065-square.jpg",
-            bg: "#D1D2BC",
-          },
-        ].map((section, i) => (
+        {sections.map((section, i) => (
           <ContentWrapper
             className="scroll-panel"
             key={i}
             bg={`${section.bg}`}
           >
-            <Box
-              maw="1280px"
-              m={{ base: "0 0", md: "0 auto" }}
-              pos="relative"
-            >
+            <Box maw="1280px" m={{ base: "0 0", md: "0 auto" }} pos="relative">
               <Center visibleFrom="md">
                 <ServiceText>
                   0{i + 1} {section.type}
@@ -147,7 +154,7 @@ export const ShowServices = () => {
                       p={{ base: "15px", md: "4.375rem 1.875rem 3.125rem" }}
                       maw={{ base: "100%", md: "25%" }}
                     >
-                      <Flex direction={{ base: "column", md: "column" }}>
+                      <Flex direction="column">
                         <CardIcon>{service.icon}</CardIcon>
                         <CardTitle>{service.title}</CardTitle>
                         <CardDescription>{service.description}</CardDescription>
@@ -180,26 +187,6 @@ export const ShowServices = () => {
     </Box>
   );
 };
-const serviceData = [
-  {
-    icon: <IconChartBar />,
-    title: "Планирование инвестиций",
-    description:
-      "Разработка индивидуальных инвестиционных решений для роста капитала и достижения целей.",
-  },
-  {
-    icon: <IconArmchair2 />,
-    title: "Пенсионное планирование",
-    description:
-      "Эффективные стратегии, обеспечивающие финансовую стабильность в будущем.",
-  },
-  {
-    icon: <IconBrain />,
-    title: "Оптимизация налогообложения",
-    description:
-      "Законные методы сокращения налоговой нагрузки и увеличения чистой прибыли.",
-  },
-];
 
 const MainServiceContainer = Container.withProps({
   fluid: true,

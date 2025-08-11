@@ -10,10 +10,12 @@ import {
   Space,
   Text,
 } from "@mantine/core";
-
+import { useTranslations } from "next-intl";
 import { BaseLink } from "../link";
 
 export const TrustSection = () => {
+  const t = useTranslations("trustSection");
+
   return (
     <Container
       size="xl"
@@ -32,7 +34,7 @@ export const TrustSection = () => {
           lh="1.5rem"
           fz="1.25rem"
         >
-          Почему мы
+          {t("whyUs")}
         </Text>
         <Text
           component="h2"
@@ -40,7 +42,7 @@ export const TrustSection = () => {
           lh={{ base: "2.5rem", md: "3.875rem" }}
           fz={{ base: "2rem", sm: "2.5rem", lg: "3rem" }}
         >
-          Надёжные эксперты с опытом и профессиональными аккредитациями
+          {t("headline")}
         </Text>
       </Flex>
 
@@ -60,21 +62,17 @@ export const TrustSection = () => {
             my="2rem"
           >
             <Description>
-              В FEMIDA FINANCE мы сопровождаем вас в финансовых и юридических
-              вопросах с экспертизой, честностью и индивидуальным подходом. Наша
-              команда специалистов помогает вам достигать целей и развивать
-              бизнес уверенно.
+              {t("desc1")}
             </Description>
             <Description>
-              Наша миссия — дать вам знания и инструменты для принятия верных
-              решений, обеспечения стабильности и долгосрочного успеха.
+              {t("desc2")}
             </Description>
           </Flex>
           <BaseLink
             href="/"
             c="black"
           >
-            О нас
+            {t("aboutUsBtn")}
           </BaseLink>
         </Box>
 
@@ -84,7 +82,7 @@ export const TrustSection = () => {
             width="100%"
             height="auto"
             src="https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1408433542.svg"
-            alt="Описание"
+            alt={t("imageAlt")}
           />
         </Box>
 
@@ -98,22 +96,22 @@ export const TrustSection = () => {
             <InfoContent
               ml={{ base: 0, md: "25%", lg: "50%" }}
               value="10"
-              label="ЛЕТ ОПЫТА"
-              description="Десятилетие проверенной практики и знаний."
+              label={t("yearsExp.label")}
+              description={t("yearsExp.desc")}
             />
             <InfoContent
               hasDivider
               ml={{ base: 0, md: "10%", lg: "25%" }}
               value="110"
-              label="КЛИЕНТОВ"
-              description="Сотни довольных предпринимателей по всему Узбекистану."
+              label={t("clients.label")}
+              description={t("clients.desc")}
             />
             <InfoContent
               hasDivider
               ml={0}
               value="20+"
-              label="СПЕЦИАЛИСТОВ"
-              description="Команда экспертов, готовых помочь в любой ситуации."
+              label={t("specialists.label")}
+              description={t("specialists.desc")}
             />
           </Flex>
         </Box>

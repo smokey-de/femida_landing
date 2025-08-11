@@ -1,3 +1,330 @@
 {
-    "title": "WAS UP!"
+  "navbar_services": "Services",
+  "navbar_team": "Team",
+  "navbar_about": "About the company",
+  "navbar_btn": "Contact us",
+
+  "main_title": "Unlock the potential of your business with",
+
+  "headlines_planning": "comprehensive planning",
+  "headlines_solutions": "practical solutions",
+  "headlines_technologies": "modern technologies",
+  "headlines_strategy": "strategic approach",
+  "headlines_advice": "personal advice",
+
+  "header_subtitle": "Financial and legal solutions tailored to your needs",
+  "header_btn1": "Free consultation",
+  "header_btn2": "Free",
+
+  "showServices": {
+    "services": "Services",
+    "subtitle": "To meet your needs",
+
+    "financeType": "Finance",
+    "financeTitle": "Financial \nplanning",
+
+    "insuranceType": "Insurance",
+    "insuranceTitle": "Insurance \nplanning",
+
+    "adviceType": "Advice",
+    "adviceTitle": "Consultative \nsupport",
+
+    "service1": {
+      "title": "Investment planning",
+      "description": "Development of individual investment solutions for capital growth and goal achievement."
+    },
+    "service2": {
+      "title": "Pension planning",
+      "description": "Effective strategies ensuring financial stability in the future."
+    },
+    "service3": {
+      "title": "Tax optimization",
+      "description": "Legal methods to reduce tax burden and increase net profit."
+    }
+  },
+
+  "splitterBanner": {
+    "wealthCreation": "Wealth creation,",
+    "futureCreation": "creating the future."
+  },
+
+  "trustSection": {
+    "whyUs": "Why us",
+    "headline": "Reliable experts with experience and professional accreditations",
+    "desc1": "At FEMIDA FINANCE, we support you in financial and legal matters with expertise, honesty, and an individual approach. Our team of specialists helps you achieve goals and confidently grow your business.",
+    "desc2": "Our mission is to provide you with knowledge and tools to make the right decisions, ensure stability, and long-term success.",
+    "aboutUsBtn": "About us",
+    "imageAlt": "Description",
+    "yearsExp": {
+      "label": "YEARS OF EXPERIENCE",
+      "desc": "A decade of proven practice and knowledge."
+    },
+    "clients": {
+      "label": "CLIENTS",
+      "desc": "Hundreds of satisfied entrepreneurs across Uzbekistan."
+    },
+    "specialists": {
+      "label": "SPECIALISTS",
+      "desc": "A team of experts ready to help in any situation."
+    }
+  },
+
+  "guidePrinciples": {
+    "headline": "Our values — honesty, trust, and client orientation — define everything we do.",
+    "items": {
+      "honesty": {
+        "title": "Honesty",
+        "description": "We adhere to high ethical standards, acting openly and professionally in every situation."
+      },
+      "expertise": {
+        "title": "Expertise",
+        "description": "We constantly track trends, legal changes, and best practices to provide accurate recommendations."
+      },
+      "trust": {
+        "title": "Trust and confidentiality",
+        "description": "We value client trust and strictly observe confidentiality."
+      },
+      "objectivity": {
+        "title": "Objectivity",
+        "description": "We provide balanced and impartial advice based on analysis and facts."
+      },
+      "longTerm": {
+        "title": "Long-term relationships",
+        "description": "We build strong connections based on trust, open communication, and mutual respect."
+      },
+      "responsibility": {
+        "title": "Responsibility",
+        "description": "We track progress, adjust strategies, and help clients achieve goals."
+      }
+    }
+  },
+
+  "clientReviews": {
+    "subtitle": "Reviews",
+    "title": "Those who trust us",
+    "items": [
+      {
+        "name": "Alisher T.",
+        "review": "The consultations and support I received were invaluable. The team understands my needs well and helps me make complex financial decisions easily."
+      },
+      {
+        "name": "Abdul R.",
+        "review": "Collaboration with FEMIDA FINANCE was a turning point for my financial future. Their experience and individual approach helped me confidently achieve my goals."
+      },
+      {
+        "name": "Anya B.",
+        "review": "I have been working with FEMIDA FINANCE for a long time and always appreciate their high professionalism, honesty, and full dedication. They are reliable and always accommodating."
+      }
+    ]
+  },
+
+  "teamBanner": {
+    "subtitle": "Our team",
+    "title": "Meet the amazing people creating our company's success",
+    "button": "Our team"
+  },
+
+  "contactSection": {
+    "subtitle": "Start",
+    "title": "Sign up for a free consultation",
+    "imageAlt": "Contact us",
+    "contactLabel": "OR CONTACT:",
+    "phone": "Phone: +998 (90) 480 04 20",
+    "email": "Email: office@femida.com"
+  },
+
+  "footer": {
+    "title": "Creating capital — building the future.",
+    "description": "A reliable consulting company offering expert solutions and a personal approach to help you unlock your full financial potential.",
+    "cta": "Sign up for a free consultation",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "team": "Team",
+      "about": "About",
+      "contact": "Contacts"
+    }
+  },
+
+  "service": {
+    "header": {
+      "aboutTitle": "Practice areas",
+      "title": "Professional business consulting services",
+      "description": "Our expertise covers a wide range of areas including strategy, marketing, organization, operations, technology, transformation, digital solutions, advanced analytics, corporate finance, mergers and acquisitions, as well as sustainable development. We possess deep knowledge in each of these fields, but our main advantage is a comprehensive approach. We understand that real value lies in synergy and connecting different areas, closing gaps between company departments. By optimizing the overall result of all components, we achieve an effect exceeding the simple sum of individual elements."
+    },
+    "services": [
+      {
+        "linkLabel": "Business strategy development",
+        "text": "Creating effective strategies to increase competitiveness and achieve business goals."
+      },
+      {
+        "linkLabel": "Process optimization",
+        "text": "Simplifying operations and improving efficiency for maximum productivity and cost reduction."
+      },
+      {
+        "linkLabel": "Marketing research and analysis",
+        "text": "Gain valuable insights about target markets, competitors, and customer needs."
+      },
+      {
+        "linkLabel": "Change management",
+        "text": "Smoothly navigate organizational changes and ensure successful implementation."
+      },
+      {
+        "linkLabel": "Technological solutions",
+        "text": "Diverse technical expertise, team approach, and result orientation."
+      },
+      {
+        "linkLabel": "Talent management and HR consulting",
+        "text": "Recruitment agencies constantly adapt to changing conditions of the modern labor market."
+      },
+      {
+        "linkLabel": "Risk assessment and management",
+        "text": "Our team of risk consultants helps turn uncertainty into new opportunities."
+      },
+      {
+        "linkLabel": "Sustainability and CSR consulting",
+        "text": "Our experience shows that vision and pragmatism always go hand in hand."
+      }
+    ],
+    "contactBlock": {
+      "text": "If you didn’t find the right direction, contact us",
+      "btn": "Contact"
+    },
+    "footerBlock": {
+      "text": "We provide practical recommendations based on extensive experience in leading industries worldwide."
+    },
+    "peopleBtn": "See more"
+  },
+
+  "people": {
+    "privalova-anna": {
+      "title": "Anna Privalova",
+      "subtitle": "Director of FEMIDA FINANCE / Head of Accounting Department",
+      "about": "Anna has more than 10 years of experience in accounting and tax accounting for LLCs and individual entrepreneurs under the general and simplified taxation systems. During this time, she successfully supported many complex and large-scale accounting projects, carefully controlling deadlines, quality of execution, and full compliance with current legislation. Anna understands that every figure in the balance sheet is not just a report but a reflection of the business's fate, so she approaches her work with maximum responsibility, attention to detail, and deep professionalism. Her systematic and comprehensive approach allows her to identify and promptly solve any arising issues, ensuring transparency and accuracy of financial reporting. Anna constantly monitors legislative changes and updates her knowledge to guarantee clients compliance with new requirements and minimize risks associated with tax audits. Thanks to her efforts, clients receive not only accurate and timely reports but also confidence that all financial processes are conducted fully in accordance with the law. Anna effectively interacts with tax authorities and other controlling bodies, which contributes to quick resolution of possible problems and maintaining a positive company reputation. In her work, she always puts the interests of entrepreneurs and the company as a whole first, providing reliable and stable business support. Her professionalism and responsibility allow clients to focus on development and achieving strategic goals without worrying about the financial and legal aspects."
+    },
+    "saidibragimova-kamila": {
+      "title": "Kamila Saidibragimova",
+      "subtitle": "Head of Client Relations Department",
+      "about": "Kamila is an experienced and responsible head of client relations with more than 5 years of experience. She has a deep understanding of building long-term, trusting, and mutually beneficial client relationships. Thanks to her systematic and attentive approach, Kamila successfully organizes and coordinates the work of a team of managers, ensuring high-quality project support at all stages — from initial contact to the completion of cooperation. Under her leadership, effective and client-oriented processes are implemented, contributing to increased client satisfaction and strengthening their confidence in the successful implementation of business tasks. Kamila is well versed in modern management tools, including CRM implementation, developing individual client scenarios, and resolving complex situations, allowing her to promptly and competently respond to any challenges. Her attention to detail, listening skills, and strategic thinking help not only meet current client needs but also anticipate them, creating conditions for sustainable company growth and development."
+    },
+    "personpage_more": "Our team brings together specialists with unique experience and deep knowledge in their fields. We value attention to detail, the ability to find unconventional solutions, and the pursuit of excellence. Viktoria and Kamila work closely with clients and partners, helping achieve goals and create long-term value. Their professionalism and involvement are a reliable foundation for the successful implementation of even the most complex projects.",
+    "personpage_btn": "Back to team"
+  },
+
+  "peoplePage": {
+    "header": {
+      "aboutTitle": "Our team",
+      "title": "Building bridges for sustainable and inclusive growth",
+      "description": "At FEMIDA FINANCE, we are a young and ambitious team of professionals helping businesses overcome financial and legal challenges, providing reliable support on the path to development and success. Our approach is based on deep collaboration and individual attention to each client, united by a common goal — to support and develop entrepreneurs in Uzbekistan."
+    },
+    "values": {
+      "title": "Values shaping our culture",
+      "btn": "Check open vacancies",
+      "description": "At FEMIDA FINANCE, we firmly believe that a strong corporate culture based on clearly defined values is the foundation of our market leadership. We consistently adhere to high standards of ethics, business conduct, and corporate principles. These standards serve as our guiding star in every decision and action. We understand that employees play a key role in maintaining and developing this culture, so each is expected to comply with these standards in daily interactions and professional activities. We place great importance on regular communication and strengthening our values so that they become an integral part of our company's DNA."
+    },
+    "opportunities": {
+      "label": "Opportunities",
+      "items": [
+        {
+          "title": "Clients across Uzbekistan",
+          "description": "We cooperate with individual entrepreneurs, LLCs, startups, and small businesses, providing accounting and legal services in various regions of the country."
+        },
+        {
+          "title": "Years of experience in the team",
+          "description": "Our specialists have practical experience in accounting and tax accounting, legal support, and business development."
+        },
+        {
+          "title": "Commitment to client interests",
+          "description": "We work transparently, maintain confidentiality, and select solutions that help businesses grow without unnecessary risks."
+        }
+      ]
+    },
+    "management": {
+      "title": "Our management",
+      "description": "The management team of FEMIDA FINANCE includes key specialists: company director, board of founders, management team, and department heads. Together they form the strategic direction and ensure effective organization functioning."
+    }
+  },
+
+  "about": {
+    "aboutTitle": "About us",
+    "title": "Building bridges for sustainable and inclusive growth",
+    "description": "At FEMIDA FINANCE, we are a young and ambitious company providing accounting and legal services for business. Our success is based on deep collaboration and creating a community of qualified specialists united by the goal to help entrepreneurs effectively solve financial and legal tasks and achieve success.",
+    "sections": [
+      {
+        "title": "Personal approach on a global scale",
+        "description": "Our experience",
+        "subtitle": "FEMIDA FINANCE works with businesses across Uzbekistan, providing unique flexibility and promptness in solving clients’ tasks. This approach distinguishes us from traditional companies, making cooperation more personalized and effective. Our main goal is to help you overcome the most serious challenges and bring your business ideas to life. We strive for long-term partnership, building trust and supporting your success at every stage. Our specialists closely integrate with your team, actively sharing experience and knowledge throughout the collaboration."
+      },
+      {
+        "title": "Always do what’s right",
+        "description": "Our values",
+        "subtitle": "We build our work on balancing professional activities and personal life, valuing family importance and involvement in significant projects, supporting entrepreneurs and communities throughout Uzbekistan. We invest in people and the success of our clients, creating a comfortable working environment where everyone can realize their potential. FEMIDA FINANCE is proud to cooperate with diverse clients — from startups to large companies, providing legal and accounting support."
+      }
+    ],
+    "mission": [
+      {
+        "title": "From understanding to action",
+        "description": "questioning traditional thinking and approaches, as well as offering new perspectives to solve the most complex tasks"
+      },
+      {
+        "title": "Striving for inspiring results",
+        "description": "looking beyond the nearest deadline — decades ahead, and closely collaborating with clients to strengthen and inspire their organizations"
+      },
+      {
+        "title": "Overcoming complexity",
+        "description": "finding unique sources of competitive advantage and hidden truths in dynamic and complex systems"
+      },
+      {
+        "title": "Leadership with honesty",
+        "description": "solving difficult issues while remaining true to our values and openly expressing our position"
+      },
+      {
+        "title": "Development through the development of others",
+        "description": "helping clients, colleagues, and the entire community achieve success and unlock their potential"
+      }
+    ],
+    "howWeWork": {
+      "title": "How we work",
+      "description": "We transform organizations sustainably, unlock their potential, and build effective teams for long-term success. Collaborate with us and achieve outstanding results."
+    },
+    "advantages": [
+      {
+        "title": "Innovation and technology",
+        "description": "In a rapidly changing world, continuous progress is necessary to meet new needs."
+      },
+      {
+        "title": "Save money",
+        "description": "Choose quality from the start. Save time and money by doing everything right with us."
+      },
+      {
+        "title": "Client opportunity network",
+        "description": "Thanks to our experience and advanced competencies, we provide meaningful and sustainable changes."
+      },
+      {
+        "title": "Constant support",
+        "description": "We not only plan but also implement. Our team of professionals supports you during implementation — whether as part of your core team or on a project basis."
+      }
+    ],
+    "linkMeetUs": "Meet us",
+    "linkMeetTeam": "Meet our team"
+  },
+
+  "contact": {
+    "aboutTitle": "Contacts",
+    "title": "Professional financial assistance — just one call away",
+    "description": "Want to find the nearest office? To contact us, fill out the form below. We use your data exclusively to respond to your inquiry. See more in our Privacy Policy.",
+    "formTitle": "Feedback form"
+  },
+
+  "contactForm": {
+    "labelName": "Name",
+    "placeholderName": "Your name",
+    "labelPhone": "Number",
+    "placeholderPhone": "Your phone number",
+    "labelTopic": "Topic",
+    "placeholderTopic": "Enter here",
+    "labelMessage": "Message",
+    "placeholderMessage": "Write here",
+    "buttonSend": "Send"
+  }
 }

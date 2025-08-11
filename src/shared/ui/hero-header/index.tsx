@@ -2,7 +2,7 @@
 
 import { Box, Container, Flex, Group, Text } from "@mantine/core";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import gsap from "gsap";
 
@@ -10,13 +10,8 @@ import { BtnBasic } from "@/shared/ui";
 
 import s from "./style.module.scss";
 
-const headlines = [
-  "комплексное планирование",
-  "практичные решения",
-  "современные технологии",
-  "стратегический подход",
-  "персональные советы",
-];
+import { useTranslations } from "next-intl";
+
 
 const images = [
   "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1426960043.jpg",
@@ -33,16 +28,34 @@ export const HeroHeader = () => {
   const letterRefs = useRef<HTMLSpanElement[]>([]);
   const bgRefs = useRef<HTMLDivElement[]>([]);
 
+  const t = useTranslations();
+
+  const headlines = useMemo(() => [
+    { id: 1, key: t("headlines_planning") },
+    { id: 2, key: t("headlines_solutions") },
+    { id: 3, key: t("headlines_technologies") },
+    { id: 4, key: t("headlines_strategy") },
+    { id: 5, key: t("headlines_advice") },
+  ], [t]);  
+
   useEffect(() => {
-    setLetters(headlines[0].split(""));
-  }, []);
+    const current = headlines[index].key.padEnd(35, " ").split("");
+    setLetters(current);
+  
+    current.forEach((char, i) => {
+      const el = letterRefs.current[i];
+      if (el) {
+        el.textContent = char === " " ? "\u00A0" : char;
+      }
+    });
+  }, [headlines, index]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (index + 1) % headlines.length;
-      const next = headlines[nextIndex].padEnd(25, " ").split("");
+      const next = headlines[nextIndex].key.padEnd(35, " ").split("");
 
-      next.forEach((nextChar, i) => {
+      next.forEach((nextChar: string, i: number) => {
         const el = letterRefs.current[i];
         if (!el) return;
 
@@ -66,7 +79,7 @@ export const HeroHeader = () => {
     }, 10000);
 
     return () => clearInterval(interval);
-  }, [index]);
+  }, [index, headlines, letterRefs]);
 
   useEffect(() => {
     const bgInterval = setInterval(() => {
@@ -85,7 +98,8 @@ export const HeroHeader = () => {
     }, 10000);
 
     return () => clearInterval(bgInterval);
-  }, [bgIndex]);
+  }, [bgIndex, bgRefs]);
+
 
   return (
     <Box
@@ -125,10 +139,10 @@ export const HeroHeader = () => {
               fw={500}
               lh={"1.2em"}
             >
-              Раскройте потенциал вашего бизнеса с
+              {t("main_title")}
             </Text>
             <Group className={s.line}>
-              {Array(25)
+              {Array(letters.length)
                 .fill("")
                 .map((_, i) => (
                   <Text
@@ -154,7 +168,7 @@ export const HeroHeader = () => {
               lh={"1.2em"}
               mb={"30px"}
             >
-              Финансовые и юридические решения под ваши задачи
+              {t("header_subtitle")}
             </Text>
           </Flex>
           <BtnBasic
@@ -164,7 +178,7 @@ export const HeroHeader = () => {
             color="rgba(255, 255, 255, 1)"
             visibleFrom="md"
           >
-            Бесплатная консультация
+            {t("header_btn1")}
           </BtnBasic>
           <BtnBasic
             variant="filled"
@@ -173,7 +187,7 @@ export const HeroHeader = () => {
             color="rgba(255, 255, 255, 1)"
             hiddenFrom="md"
           >
-            Бесплатно
+            {t("header_btn2")}
           </BtnBasic>
         </Flex>
       </Container>
