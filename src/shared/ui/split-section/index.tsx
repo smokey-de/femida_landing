@@ -61,6 +61,7 @@ export const SplitSection = ({
               src={
                 "https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
               }
+              alt={""}
               h={18}
               w={22}
             />
@@ -115,6 +116,7 @@ export const SplitSection = ({
         <Box>
           <Image
             src={imageSrc}
+            alt=""
             w={{ base: "100%", lg: 625 }}
             h={{ base: "100%", lg: 600 }}
           />
