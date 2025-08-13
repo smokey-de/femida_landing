@@ -1,328 +1,352 @@
 {
-  "navbar_services": "Хизматлар",
-  "navbar_team": "Жамоа",
-  "navbar_about": "Компания ҳақида",
-  "navbar_btn": "Биз билан боғланиш",
+  "navbar_services": "Xizmatlar",
+  "navbar_team": "Jamoa",
+  "navbar_about": "Kompaniya haqida",
+  "navbar_btn": "Biz bilan bog'laning",
 
-  "main_title": "Бизнесингизнинг салоҳиятини очинг",
+  "main_title": "Sizning biznesingiz uchun ishonchli hamkor.",
+  "main_subtitle": "Huquqiy va moliyaviy masalalarda professional yordam.",
 
-  "headlines_planning": "комплекс режалаштириш билан",
-  "headlines_solutions": "амалий ечимлар билан",
-  "headlines_technologies": "замонавий технологиялар билан",
-  "headlines_strategy": "стратегик ёндашув билан",
-  "headlines_advice": "шахсий маслаҳатлар билан",
+  "headlines_planning": "kompleks rejalashtirish",
+  "headlines_solutions": "amaliy yechimlar",
+  "headlines_technologies": "zamonaviy texnologiyalar",
+  "headlines_strategy": "strategik yondashuv",
+  "headlines_advice": "shaxsiy maslahatlar",
 
-  "header_subtitle": "Молиявий ва ҳуқуқий ечимлар сизга мос",
-  "header_btn1": "Бепул маслаҳат",
-  "header_btn2": "Бепул",
+  "header_subtitle": "FEMIDA FINANCE — O'zbekistonda buxgalteriya va huquqiy xizmatlar",
+  "header_btn1": "Bepul maslahat",
+  "header_btn2": "Bepul",
 
   "showServices": {
-    "services": "Хизматлар",
-    "subtitle": "Сизга мослаштириш учун",
+    "services": "Xizmatlar",
+    "subtitle": "Sizning ehtiyojlaringizni qondirish uchun",
 
-    "financeType": "Молия",
-    "financeTitle": "Молиявий \nрежалаштириш",
+    "financeType": "Buxgalteriya",
+    "financeTitle": "Buxgalteriya \nxizmatlari",
 
-    "insuranceType": "Сугурта",
-    "insuranceTitle": "Сугурта \nрежалаштириш",
+    "insuranceType": "Huquqiy",
+    "insuranceTitle": "Huquqiy \nxizmatlar",
 
-    "adviceType": "Маслаҳат",
-    "adviceTitle": "Консультация \nқўллаб-қувватлаш",
+    "adviceType": "Maslahat",
+    "adviceTitle": "Maslahat berish \nva qo‘llab-quvvatlash",
 
     "service1": {
-      "title": "Инвестицияларни режалаштириш",
-      "description": "Капитал ўсиши ва мақсадларга эришиш учун индивидуал инвестиция ечимларини ишлаб чиқиш."
+      "title": "Buxgalteriya hisobini tashkil etish va yuritish",
+      "description": "Sizning kompaniyangizning barcha buxgalteriya hisobini yuritish, daromad va xarajatlarni hisobga olish va moliyaviy operatsiyalarni nazorat qilish."
     },
     "service2": {
-      "title": "Пенсия режалаштириши",
-      "description": "Келажакда молиявий барқарорликни таъминловчи самарали стратегиялар."
+      "title": "Soliq organlariga hisobot tayyorlash va topshirish",
+      "description": "Soliq xizmatlari uchun barcha majburiy hisobotlarni o‘z vaqtida va to‘g‘ri tayyorlash, jarimalar va tekshiruvlardan qochish."
     },
     "service3": {
-      "title": "Солиқларни оптималлаштириш",
-      "description": "Солиқ юкини қонуний камайтириш ва sof фойдани ошириш усуллари."
+      "title": "Soliq rejalashtirish va optimizatsiya",
+      "description": "Kompaniyaning sof foydasini oshirish va soliq yukini qonuniy ravishda kamaytirish strategiyalarini ishlab chiqish."
+    },
+
+    "insuranceService1": {
+      "title": "Yuridik shaxslarni ro‘yxatdan o‘tkazish va tugatish",
+      "description": "Yangi kompaniyalarni ro‘yxatdan o‘tkazish va mavjudlarni tugatish jarayonini to‘liq qonuniy tarzda qo‘llab-quvvatlash."
+    },
+    "insuranceService2": {
+      "title": "Shartnomalarni tayyorlash va tahlil qilish",
+      "description": "Kompaniya manfaatlarini himoya qilish va huquqiy xavflarni kamaytirish uchun shartnomalarni ekspert tekshiruvi va rasmiylashtirish."
+    },
+    "insuranceService3": {
+      "title": "Biznesni huquqiy qo‘llab-quvvatlash",
+      "description": "Barcha huquqiy masalalarda professional yordam, shu jumladan maslahatlar, hujjatlarni rasmiylashtirish va kompaniya manfaatlarini himoya qilish."
     }
   },
 
   "splitterBanner": {
-    "wealthCreation": "Бойлик яратиш,",
-    "futureCreation": "келажакни яратиш."
+    "wealthCreation": "Professionalizm,",
+    "futureCreation": "shaxsiy yondashuv."
   },
 
   "trustSection": {
-    "whyUs": "Нега биз",
-    "headline": "Тажрибали ва профессионал аккредитацияга эга ишончли мутахассислар",
-    "desc1": "FEMIDA FINANCEда молиявий ва ҳуқуқий масалаларда сизга билим ва холис ёндашув билан ёрдам берамиз. Биздан мутахассислар жамоаси мақсадларга эришишингизга ва бизнесингизни ишонч билан ривожлантиришга ёрдам беради.",
-    "desc2": "Бизинг миссиямиз - тўғри қарорлар қабул қилиш, барқарорлик ва узоқ муддатли муваффақият учун билим ва воситаларни бериш.",
-    "aboutUsBtn": "Биз ҳақимизда",
-    "imageAlt": "Тасвир",
+    "whyUs": "Nima uchun biz",
+    "headline": "Sizning biznesingiz uchun yangi avlodning ishonchli hamkori.",
+    "desc1": "FEMIDA FINANCE — bu bozorimizda yangi nom, ammo jamoamiz ortida haqiqiy tajriba, professional bilimlar va mijozlarga zamonaviy yondashuv mavjud.",
+    "desc2": "Biz kompaniyani shunday g‘oya bilan yaratdik: buxgalteriya va huquqiy yordam tushunarli, qulay va samarali bo‘lishi kerak.",
+    "aboutUsBtn": "Biz haqimizda",
+    "imageAlt": "Tavsif",
+
     "yearsExp": {
-      "label": "ТАЖРИБА ЙИЛЛАРИ",
-      "desc": "Ўн йиллик синовдан ўтган тажриба ва билимлар."
+      "label": "TAJRIBA YILLARI",
+      "desc": "O‘n yillik sinovdan o‘tgan amaliyot va bilimlar."
     },
     "clients": {
-      "label": "МИЖОЗЛАР",
-      "desc": "Ўзбекистон бўйлаб юзлаб мамнун тадбиркорлар."
+      "label": "MIJOZLAR",
+      "desc": "O‘zbekiston bo‘ylab yuzlab mamnun tadbirkorlar."
     },
     "specialists": {
-      "label": "МУТАХАССИСЛАР",
-      "desc": "Ҳар қандай вазиятда ёрдам берувчи мутахассислар жамоаси."
+      "label": "MUTAXASSISLAR",
+      "desc": "Har qanday vaziyatda yordam berishga tayyor ekspertlar jamoasi."
     }
   },
 
   "guidePrinciples": {
-    "headline": "Қимматлиликларимиз — ростгўйлик, ишонч ва мижозга йўналтирилганлик — барча ишларимизни белгилайди.",
+    "headline": "Bizning qadriyatlarimiz — halollik, ishonch va mijozga yo‘naltirilganlik — har bir ishimizni belgilaydi.",
     "items": {
       "honesty": {
-        "title": "Ростгўйлик",
-        "description": "Ҳар бир ҳолатда юқори этик меъёрларга риоя қиламиз, очиқ ва профессионал ҳаракат қиламиз."
+        "title": "Hozirgi bilimlarga ega yosh jamoa",
+        "description": "Har bir mijozga individual yondashuv"
       },
       "expertise": {
-        "title": "Мутахассислик",
-        "description": "Трендлар, қонунлар ўзгаришлари ва энг яхши амалиётларни доимий кузатамиз, аниқ тавсиялар берамиз."
+        "title": "Texnologiyalar va onlayn formatlarga urg‘u",
+        "description": "Onlayn qo‘llab-quvvatlash va raqamli yechimlar"
       },
       "trust": {
-        "title": "Ишонч ва махфийлик",
-        "description": "Мижозлар ишончини қадрлаймиз ва махфийликка қатъий риоя қиламиз."
+        "title": "Xizmatlar — maslahatdan sudda himoyagacha",
+        "description": "Tezkor javob va diqqatli munosabat"
       },
       "objectivity": {
-        "title": "Объективлик",
-        "description": "Таҳлил ва фактларга асосланган мувозанатли ва бетараф маслаҳат берамиз."
-      },
-      "longTerm": {
-        "title": "Узоқ муддатли муносабатлар",
-        "description": "Ишонч, очиқ мулоқот ва ўзаро ҳурматга асосланган мустаҳкам алоқаларни бунём кўтамиз."
-      },
-      "responsibility": {
-        "title": "Жавобгарлик",
-        "description": "Ривожланишни кузатамиз, стратегияларни тўғрилаймиз ва мижозларга мақсадларга эришишда ёрдам берамиз."
+        "title": "Hisob-kitoblarda shaffoflik va halollik",
+        "description": "Shaffof narx belgilash"
       }
     }
   },
 
   "clientReviews": {
-    "subtitle": "Фикрлар",
-    "title": "Бизга ишонганлар",
+    "subtitle": "Fikrlar",
+    "title": "Bizga ishonadiganlar",
     "items": [
       {
-        "name": "Алишер Т.",
-        "review": "Олган маслаҳатлар ва қўллаб-қувватлаш мен учун беқиёс эди. Жамоа менинг эҳтиёжларимни яхши тушуниб, мураккаб молиявий қарорларни осон қабул қилишга ёрдам беради."
+        "name": "OOO ZENIN",
+        "review": "FEMIDA FINANCE OOO ZENIN kompaniyasiga maslahat va qo‘llab-quvvatlash ko‘rsatadi, bu jamoaga murakkab moliyaviy qarorlarni osongina qabul qilish va maqsadlarga erishish imkonini beradi."
       },
       {
-        "name": "Абдул Р.",
-        "review": "FEMIDA FINANCE билан ҳамкорлик менинг молиявий келажагим учун бурилиш нуқтаси бўлди. Улар тажрибаси ва шахсий ёндашуви менга мақсадларимга ишонч билан эришишга ёрдам берди."
+        "name": "OOO FANCY WORK",
+        "review": "FEMIDA FINANCE OOO FANCY WORKni moliyaviy masalalarda qo‘llab-quvvatladi, tajriba va individual yondashuv bilan biznesni ishonch bilan rivojlantirish va kompaniya maqsadlariga erishish imkonini berdi."
       },
       {
-        "name": "Аня Б.",
-        "review": "Мен FEMIDA FINANCE билан узоқ вақтдан бери ҳамкорлик қиламан ва уларнинг юқори профессионализми, ростгўйлиги ва тўлиқ берилганлигига доимо ишонаман. Улар ишончли ва ҳар доим ёрдам берадилар."
+        "name": "OOO ADLUMA",
+        "review": "FEMIDA FINANCE OOO ADLUMA bilan hamkorlik qiladi, yuqori professionalizm, ishonchlilik va to‘liq sadoqat bilan kompaniyaga moliyaviy va huquqiy masalalarni samarali hal qilishda yordam beradi."
       }
     ]
   },
 
   "teamBanner": {
-    "subtitle": "Жамоамиз",
-    "title": "Компаниямизнинг муваффақиятини яратаётган ажойиб инсонлар билан танишинг",
-    "button": "Жамоамиз"
+    "subtitle": "Bizning jamoa",
+    "title": "Kompaniyamiz muvaffaqiyatini yaratayotgan ajoyib insonlar bilan tanishing",
+    "button": "Bizning jamoa"
   },
 
   "contactSection": {
-    "subtitle": "Бошлаш",
-    "title": "Бепул маслаҳат учун рўйхатдан ўтинг",
-    "imageAlt": "Биз билан боғланинг",
-    "contactLabel": "ЁКИ БОҒЛАНИНГ:",
-    "phone": "Телефон: +998 (90) 480 04 20",
-    "email": "Email: office@femida.com"
+    "subtitle": "Boshlash",
+    "title": "Bepul maslahat olish uchun ro‘yxatdan o‘ting",
+    "imageAlt": "Biz bilan bog'laning",
+    "contactLabel": "YOKI BOG‘LANING:",
+    "phone": "Tel.: +998 (90) 480 04 20",
+    "email": "Email: femida.fin.group@gmail.com"
   },
 
   "footer": {
-    "title": "Капитал яратамиз — келажак қурилади.",
-    "description": "Ишончли консалтинг компанияси, сизнинг молиявий салоҳиятингизни тўлиқ очишга ёрдам берадиган эксперт ечимлар ва шахсий ёндашув таклиф этади.",
-    "cta": "Бепул маслаҳат учун рўйхатдан ўтинг",
+    "title": "Kapital yaratayapmiz — kelajakni qurayapmiz.",
+    "description": "Ishonchli konsalting kompaniyasi, ekspert yechimlar va shaxsiy yondashuv bilan sizga moliyaviy salohiyatni ochishga yordam beradi.",
+    "cta": "Bepul maslahat olish",
     "nav": {
-      "home": "Бош саҳифа",
-      "services": "Хизматлар",
-      "team": "Жамоа",
-      "about": "Компания ҳақида",
-      "contact": "Боғланиш"
+      "home": "Bosh sahifa",
+      "services": "Xizmatlar",
+      "team": "Jamoa",
+      "about": "Kompaniya haqida",
+      "contact": "Kontaktlar"
     }
   },
 
   "service": {
     "header": {
-      "aboutTitle": "Фаолият соҳалари",
-      "title": "Профессионал бизнес консалтинг хизматлари",
-      "description": "Бизнинг мутахассислигимиз стратегия, маркетинг, ташкилот, операциялар, технология, трансформация, рақамли ечимлар, кенгайтирилган таҳлил, корпоратив молия, бирлашиш ва олдириш, шунингдек барқарор ривожланишни ўз ичига олган кенг қамровли йўналишларни қамраб олади. Биз ҳар бир соҳада чуқур билимларга эгамиз, лекин асосий афзаллигимиз комплекс ёндашувдир. Ҳақиқий қиймат турли соҳаларнинг синергиясида ва уларни боғлашда, компания бўлинмалари ўртасидаги бўшлиқларни ёпишда эканлигини тушунамиз. Барча компонентларнинг умумий натижасини оптималлаштирган ҳолда, алоҳида элементларнинг содда йиғиндисидан юқори натижага эришамиз."
+      "aboutTitle": "Amaliy sohalar",
+      "title": "Biznes konsaltingining professional xizmatlari",
+      "description": "Bizning tajribamiz strategiya, marketing, tashkilot, operatsiyalar, texnologiya, transformatsiya, raqamli yechimlar, ilg‘or tahlil, korporativ moliya, birlashmalar va qo‘shilish, shuningdek barqaror rivojlanishni o‘z ichiga oladi. Har bir sohada chuqur bilimga egamiz, ammo eng katta afzalligimiz — kompleks yondashuv. Biz turli yo‘nalishlarni uyg‘unlashtirish, bo‘limlar orasidagi bo‘shliqlarni yo‘qotish orqali haqiqiy qiymat yaratilishini tushunamiz. Barcha komponentlarning umumiy natijasini optimallashtirish orqali oddiy yig‘indidan yuqori effektga erishamiz."
     },
     "services": [
       {
-        "linkLabel": "Бизнес стратегиясини ишлаб чиқиш",
-        "text": "Рақобатбардошликни ошириш ва бизнес мақсадларига эришиш учун самарали стратегиялар яратиш."
+        "linkLabel": "Biznes strategiyasini ishlab chiqish",
+        "text": "Raqobatbardoshlikni oshirish va biznes maqsadlariga erishish uchun samarali strategiyalar yaratish."
       },
       {
-        "linkLabel": "Жараёнларни оптималлаштириш",
-        "text": "Операцияларни соддалаштириш ва самарадорликни ошириш орқали максимал продуктивлик ва харажатларни қисқартириш."
+        "linkLabel": "Jarayonlarni optimizatsiya qilish",
+        "text": "Operatsiyalarni soddalashtirish va samaradorlikni oshirish orqali maksimal unumdorlik va xarajatlarni kamaytirish."
       },
       {
-        "linkLabel": "Маркетинг тадқиқотлари ва таҳлил",
-        "text": "Мақсадли бозор, рақобатчилар ва мижоз эҳтиёжлари ҳақида қимматли маълумотлар олинг."
+        "linkLabel": "Marketing tadqiqotlari va tahlil",
+        "text": "Maqsadli bozor, raqobatchilar va mijozlar ehtiyojlari haqida qimmatli ma’lumot oling."
       },
       {
-        "linkLabel": "Ўзгаришларни бошқариш",
-        "text": "Ташкилий ўзгаришлардан муваффақиятли ўтиш ва амалга оширишни таъминлаш."
+        "linkLabel": "O‘zgarishlarni boshqarish",
+        "text": "Tashkiliy o‘zgarishlarni muvaffaqiyatli amalga oshirish va qo‘llab-quvvatlash."
       },
       {
-        "linkLabel": "Технологик ечимлар",
-        "text": "Ҳар хил техник мутахассислик, жамоавий ёндашув ва натижага қаратилганлик."
+        "linkLabel": "Texnologik yechimlar",
+        "text": "Turli texnik ekspertiza, jamoaviy yondashuv va natijaga yo‘naltirilganlik."
       },
       {
-        "linkLabel": "Талантларни бошқариш ва HR консалтинг",
-        "text": "Рекрутинг агентликлари замонавий меҳнат бозорининг ўзгараётган шароитларига доимий мослашиб боради."
+        "linkLabel": "Talentlarni boshqarish va HR konsalting",
+        "text": "Rekrutment agentliklari zamonaviy ish bozori sharoitlariga moslashadi."
       },
       {
-        "linkLabel": "Хавфларни баҳолаш ва бошқариш",
-        "text": "Хавфлар бўйича маслаҳатчилар жамоамиз ноаниқликни янги имкониятларга айлантиришга ёрдам беради."
+        "linkLabel": "Xavf baholash va boshqarish",
+        "text": "Bizning xavf bo‘yicha maslahatchilarimiz noaniqlikni yangi imkoniyatlarga aylantirishga yordam beradi."
       },
       {
-        "linkLabel": "Барқарор ривожланиш ва CSR консалтинг",
-        "text": "Тажрибамиз кўрсатадики, виждон ва амалийлик доимо бирга юради."
+        "linkLabel": "Barqaror rivojlanish va CSR bo‘yicha konsalting",
+        "text": "Tajriba shuni ko‘rsatadiki, ko‘rish qobiliyati va pragmatizm har doim qo‘lma-qo‘l boradi."
       }
     ],
     "contactBlock": {
-      "text": "Мос келадиган йўналиш топмаган бўлсангиз, биз билан боғланинг",
-      "btn": "Боғланиш"
+      "text": "Kerakli yo‘nalishni topa olmasangiz, biz bilan bog‘laning",
+      "btn": "Bog‘lanish"
     },
     "footerBlock": {
-      "text": "Биз дунёдаги етакчи соҳалардаги кенг тажрибага асосланган амалий тавсияларни тақдим этамиз."
+      "text": "Biz dunyodagi yetakchi sohalarda keng tajribaga asoslangan amaliy tavsiyalar beramiz."
     },
-    "peopleBtn": "Батафсил кўриш"
+    "peopleBtn": "Ko‘rishni davom eting"
   },
 
+  "people": {
     "privalovaAnna": {
-      "title": "Анна Привалова",
-      "subtitle": "FEMIDA FINANCE компанияси директори / Бухгалтерия бўлими раҳбари",
-      "about": "Анна умумий ва соддалаштирилган солиқ тизимидаги МЧЖ ва Якка тартибдаги тадбиркорлик учун бухгалтерия ва солиқ ҳисобида 10 йилдан ортиқ тажрибага эга. Ушбу вақт ичида кўплаб мураккаб ва катта бухгалтерия лойиҳаларини муваффақиятли қўллаб-қувватлади, муддатлар, сифат ва қонунчиликка тўлиқ мувофиқликни қатъий назорат қилди. Анна ҳар бир баланстаги рақам бизнес тақдири эмас, деб тушунган ҳолда максимал масъулият ва чуқур профессионаллик билан ишлайди. Унинг тизимли ва комплекс ёндашуви ҳар қандай муаммони ўз вақтида аниқлаб, ечишга имкон беради, молиявий ҳисоботларнинг ошкоралиги ва аниқлигини таъминлайди. Анна доимий равишда қонунчилик ўзгаришларини кузатиб боради ва ўз билимларини янгилайди, мижозларни янги талабларга мувофиқ ишлашга ва солиқ аудитлари хавфларини камайтиришга кафолат беради. У солиқ органлари ва бошқа назорат идоралари билан самарали ҳамкорлик қилиб, эҳтимолий муаммоларни тезда ҳал қилишга ва компаниянинг ижобий обрўсини сақлашга ёрдам беради. У ўз ишида ҳар доим тадбиркорлар ва компаниянинг манфаатларини биринчи ўринга қўяди, ишончли ва барқарор бизнес қўллаб-қувватлашни таъминлайди. Унинг профессионализми ва масъулияти мижозларга молиявий ва ҳуқуқий жиҳатлар ҳақида хавотир олмасдан ривожланиш ва стратегик мақсадларга эришиш имконини беради."
+      "title": "Privalova Anna",
+      "subtitle": "FEMIDA FINANCE direktori / Buxgalteriya bo‘limi rahbari",
+      "about": "Anna 10 yildan ortiq tajribaga ega, OSNO va USN tizimlarida MChJ va IP uchun buxgalteriya va soliq hisobini yuritadi. U murakkab va keng ko‘lamli buxgalteriya loyihalarini muvaffaqiyatli boshqargan, muddatlarga rioya qilish, sifat va qonuniy talablarni nazorat qiladi. Har bir balans raqami biznes taqdirini aks ettiradi, shuning uchun Anna ishga maksimal mas’uliyat, diqqat va professionalizm bilan yondashadi. U qonunlardagi o‘zgarishlarni doimo kuzatib boradi, mijozlarga yangi talablar bilan mos kelishini ta’minlaydi va soliq tekshiruvlari bilan bog‘liq xavflarni kamaytiradi. Anna soliqlar organlari bilan samarali ishlaydi, muammolarni tez hal qiladi va kompaniyaning ijobiy obro‘sini saqlaydi. U doimo tadbirkorlar va kompaniya manfaatlarini birinchi o‘ringa qo‘yadi, ishonchli va barqaror biznesni qo‘llab-quvvatlaydi. U professionalizm va mas’uliyati bilan mijozlarga moliyaviy va huquqiy masalalardan xavotirlanmasdan rivojlanish va strategik maqsadlarga erishishga imkon beradi."
+    },
+    "yarmatova-viktoriya": {
+      "title": "Yarmatova Viktoriya",
+      "subtitle": "Rivojlanish va huquqiy qo‘llab-quvvatlash bo‘yicha rahbar",
+      "about": "Viktoriya 6 yildan ortiq tajribaga ega, mijozlar va hamkorlar bilan uzoq muddatli, ishonchli va foydali munosabatlarni yaratishni chuqur tushunadi. U jamoani samarali tashkil qiladi va loyihalarni boshqaradi, sifatli qo‘llab-quvvatlashni ta’minlaydi. Viktoriya CRM tizimlarini joriy etish, individual mijoz senariylarini ishlab chiqish va murakkab vaziyatlarni hal qilishda yetakchilik qiladi. Detallarga e’tibor, tinglash qobiliyati va strategik fikrlash orqali u mijoz ehtiyojlarini qondiradi va kompaniyaning barqaror o‘sishini ta’minlaydi."
     },
     "saidibragimova-kamila": {
-      "title": "Камила Саидибрагимова",
-      "subtitle": "Мижозлар билан алоқалар бўлими раҳбари",
-      "about": "Камила 5 йилдан ортиқ тажрибага эга масъулиятли ва тажрибали мижозлар билан алоқалар бўлими раҳбари. У узоқ муддатли, ишончли ва ўзаро манфаатли мижозлар муносабатларини қуришни яхши тушунади. Унинг тизимли ва диққатли ёндашуви орқали Камила раҳбарлигидаги менежерлар жамоаси юқори сифатли лойиҳа қўллаб-қувватлашини таъминлайди — биринчи боғланишдан ҳамкорликни якунлашгача. Унинг раҳбарлигида самарали ва мижозга йўналтирилган жараёнлар жорий этилган, бу мижозлар қониқишини ошириш ва бизнес вазифаларининг муваффақиятли амалга оширилишини мустаҳкамлайди. Камила замонавий бошқарув воситаларини, жумладан CRM жорий этиш, индивидуал мижоз сценарийларини ишлаб чиқиш ва мураккаб вазиятларни ҳал қилишни яхши билади, бу эса ҳар қандай муаммоларга тез ва малакали жавоб беришга имкон беради. Унинг диққати, эшитиш қобилияти ва стратегик фикрлаш қобилиятлари нафақат жорий мижоз эҳтиёжларини қондиришга, балки уларни олдиндан кўриб, барқарор компания ривожланишини таъминлашга ёрдам беради."
+      "title": "Saidibragimova Kamila",
+      "subtitle": "Mijozlar bilan ishlash bo‘limi rahbari",
+      "about": "Kamila 5 yildan ortiq tajribaga ega, mijozlar bilan uzoq muddatli, ishonchli va foydali munosabatlarni yaratadi. U jamoani samarali tashkil qiladi, loyihalarni yuqori sifat bilan boshqaradi va mijozlar ehtiyojlarini qondiradi. CRM tizimlarini joriy etadi, individual mijoz senariylarini ishlab chiqadi va murakkab vaziyatlarni hal qiladi. Detallarga e’tibor va strategik fikrlash orqali u mijozlarni qondiradi va kompaniyaning barqaror o‘sishini ta’minlaydi."
     },
-    "personpage_more": "Жамоамиз ўз соҳасида ўзига хос тажриба ва чуқур билимларга эга мутахассисларни бирлаштиради. Биз диққат ва ноодатий ечимларни топиш қобилияти ҳамда мукаммалликка интилишни қадрлаймиз. Виктория ва Камила мижозлар ва ҳамкорлар билан яқин ҳамкорлик қилиб, мақсадларга эришиш ва узоқ муддатли қиймат яратишга ёрдам берадилар. Уларнинг профессионализми ва иштирокчилиги энг мураккаб лойиҳаларни муваффақиятли амалга ошириш учун ишончли асосдир.",
-    "personpage_btn": "Жамоага қайтиш",
+    "tangatarova-sabina": {
+      "title": "Tangatarova Sabina",
+      "subtitle": "Buxgalter",
+      "about": ""
+    },
+    "alimova-parvina": {
+      "title": "Alimova Parvina",
+      "subtitle": "Buxgalter yordamchisi",
+      "about": ""
+    },
+
+    "personpage_more": "Bizning jamoa o‘z sohasida noyob tajriba va chuqur bilimga ega mutaxassislardan iborat. Biz detallarga e’tibor, noodatiy yechimlar va mukammallikka intilishni qadrlaymiz. Viktoriya va Kamila mijozlar va hamkorlar bilan yaqin hamkorlik qiladi, maqsadlarga erishishga va uzoq muddatli qiymat yaratishga yordam beradi. Ularning professionalizmi va jalb qilinishi eng murakkab loyihalarni ham muvaffaqiyatli amalga oshirishning ishonchli poydevori hisoblanadi.",
+    "personpage_btn": "Jamoaga qaytish"
+  },
 
   "peoplePage": {
     "header": {
-      "aboutTitle": "Жамоамиз",
-      "title": "Барқарор ва инклюзив ривожланиш учун кўприк қуриш",
-      "description": "FEMIDA FINANCEда биз ёш ва амбицияли мутахассислар жамоасимиз, бизнесларга молиявий ва ҳуқуқий муаммоларни енгиб ўтишда ёрдам берамиз, ривожланиш ва муваффақият йўлида ишончли қўллаб-қувватлаймиз. Бизнинг ёндашувимиз ҳар бир мижозга алоҳида эътибор ва чуқур ҳамкорликка асосланган, умумий мақсадимиз — Ўзбекистон тадбиркорларини қўллаб-қувватлаш ва ривожлантириш."
+      "aboutTitle": "Bizning jamoa",
+      "title": "Barqaror va inklyuziv o‘sish uchun ko‘priklar quramiz",
+      "description": "FEMIDA FINANCE — yosh va ambitsiyali jamoa, moliyaviy va huquqiy qiyinchiliklarni yengishda biznesga yordam beradi, rivojlanish va muvaffaqiyat yo‘lida ishonchli qo‘llab-quvvatlashni ta’minlaydi. Bizning yondashuvimiz har bir mijozga individual e’tibor va chuqur hamkorlikka asoslangan, umumiy maqsad — tadbirkorlarni O‘zbekistonda rivojlantirish va qo‘llab-quvvatlash."
     },
     "values": {
-      "title": "Маданиятимизни шакллантирувчи қимматлиликлар",
-      "btn": "Очиқ вакансияларни текшириш",
-      "description": "FEMIDA FINANCEда биз мустаҳкам корпоратив маданиятнинг аниқ белгиланган қимматлиликларга асосланганлиги бозорда етакчиликнинг асоси, деб ишонамиз. Биз юқори этика, бизнес одоби ва корпоратив принципларга қатъий амал қиламиз. Бу стандартлар ҳар бир қарор ва ҳаракатимиз учун йўриқчи йулдуздир. Ходимларнинг бу маданиятни сақлаш ва ривожлантиришда муҳим ўрин эгалашини тушунамиз, шунинг учун ҳар бир ходим кундалик мулоқот ва профессионал фаолиятда ушбу стандартларга риоя этиши кутилмоқда. Биз қимматлиликларни мунтазам мустаҳкамлаш ва алоқаларни кучайтиришга катта аҳамият берамиз, шунда улар компаниямиз ДНКсининг ажралмас қисмига айланади."
+      "title": "Madaniyatimizni shakllantiruvchi qadriyatlar",
+      "btn": "Kompaniya haqida",
+      "description": "FEMIDA FINANCEda biz kuchli korporativ madaniyatni qadriyatlar asosida qurish bo‘yicha qat’iy e’tiqodga egamiz. Biz doimiy ravishda yuqori axloqiy va ish standartlariga rioya qilamiz, bu har bir qarorimiz va harakatimiz uchun yo‘l-yo‘riq bo‘ladi. Xodimlar kundalik ishlarida va professional faoliyatda ushbu standartlarga rioya qilishi kerak. Biz qadriyatlarni mustahkamlash va doimiy kommunikatsiyaga katta e’tibor beramiz, shunda ular kompaniyamiz DNKning ajralmas qismiga aylanadi."
     },
     "opportunities": {
-      "label": "Имкониятлар",
+      "label": "Imkoniyatlar",
       "items": [
         {
-          "title": "Ўзбекистон бўйлаб мижозлар",
-          "description": "Биз Якка тартибдаги тадбиркорлар, МЧЖ, стартаплар ва кичик бизнеслар билан ҳамкорлик қиламиз, мамлакатнинг турли ҳудудларида бухгалтерия ва ҳуқуқий хизматлар кўрсатамиз."
+          "title": "O‘zbekiston bo‘ylab mijozlar",
+          "description": "IP, MChJ, startaplar va kichik biznes bilan hamkorlik qilamiz."
         },
         {
-          "title": "Жамоадаги тажриба йиллари",
-          "description": "Мутахассисларимиз бухгалтерия ва солиқ ҳисобида, ҳуқуқий қўллаб-қувватлашда ва бизнесни ривожлантиришда амалий тажрибага эгадир."
+          "title": "Jamoadagi tajriba yillari",
+          "description": "Bizning mutaxassislar buxgalteriya, soliq, huquqiy qo‘llab-quvvatlash va biznes rivojlanish sohasida amaliy tajribaga ega."
         },
         {
-          "title": "Мижоз манфаатларига содиқлик",
-          "description": "Биз очиқ ишлаймиз, махфийликни сақлаймиз ва бизнесни ривожлантиришга ёрдам берувчи ечимларни танлаймиз."
+          "title": "Mijoz manfaatlariga sodiqlik",
+          "description": "Biz shaffof ishlaymiz, maxfiylikni saqlaymiz va biznes o‘sishini ta’minlovchi yechimlar taklif qilamiz."
         }
       ]
     },
     "management": {
-      "title": "Бошқарувимиз",
-      "description": "FEMIDA FINANCE бошқарув жамоаси компания директори, таъсисчилар кенгаши, бошқарув гуруҳи ва бўлим раҳбарларидан иборат. Улар биргаликда стратегик йўналишни белгилайди ва самарали фаолиятни таъминлайди."
+      "title": "Boshqaruv",
+      "description": "FEMIDA FINANCE boshqaruvi asosiy mutaxassislarni o‘z ichiga oladi: direktorlar, asoschilar kengashi, ijrochi jamoa va bo‘lim rahbarlari. Ular strategik yo‘nalishni belgilaydi va tashkilot samaradorligini ta’minlaydi."
     }
   },
 
   "about": {
-    "aboutTitle": "Биз ҳақимизда",
-    "title": "Барқарор ва инклюзив ривожланиш учун кўприк қуриш",
-    "description": "FEMIDA FINANCE — бизнес учун бухгалтерия ва ҳуқуқий хизматларни тақдим этадиган ёш ва амбицияли компания. Бизнинг муваффақиятимиз чуқур ҳамкорлик ва малакали мутахассислар жамиятини яратишга асосланган, улар тадбиркорларга молиявий ва ҳуқуқий вазифаларни самарали ҳал қилишда ёрдам беради ва муваффақиятга эришишга кўмаклашади.",
+    "aboutTitle": "Kompaniya haqida",
+    "title": "Barqaror va inklyuziv o‘sish uchun ko‘priklar quramiz",
+    "description": "FEMIDA FINANCE — yosh va ambitsiyali kompaniya, biznes uchun buxgalteriya va huquqiy xizmatlar ko‘rsatadi. Bizning muvaffaqiyatimiz har bir mijozga individual e’tibor va malakali mutaxassislar hamkorligiga asoslangan, ular tadbirkorlarning moliyaviy va huquqiy muammolarini samarali hal qilishga yordam beradi.",
     "sections": [
       {
-        "title": "Шахсий ёндашув глобал миқёсда",
-        "description": "Бизинг тажриба",
-        "subtitle": "FEMIDA FINANCE Ўзбекистон бўйлаб бизнеслар билан ҳамкорлик қилади, мижозларнинг вазифаларини тез ва мослашувчан ҳал қилишда ўзгача ёндашувни таклиф этади. Бу анъанавий компаниялардан фарқ қилади ва ҳамкорликни шахсийлаштирилган ва самарали қилади. Асосий мақсадимиз сизга энг жиддий муаммоларни енгиб ўтишда ёрдам бериш ва бизнес ғояларингизни амалга оширишдир. Биз узоқ муддатли шерикликка интиламиз, ишонч қуриш ва ҳар босқичда муваффақиятингизни қўллаб-қувватлашни таъминлаймиз. Бизнинг мутахассисларимиз жамоангиз билан яқин интеграцияланиб, ҳамкорлик давомида тажриба ва билимлар билан фаол алмашадилар."
+        "title": "Shaxsiy yondashuv global darajada",
+        "description": "Bizning tajriba",
+        "subtitle": "FEMIDA FINANCE O‘zbekiston bo‘ylab biznes bilan ishlaydi, mijoz vazifalariga tezkor va moslashuvchan yondashadi. Bu yondashuv an’anaviy kompaniyalardan farq qiladi, hamkorlikni yanada shaxsiy va samarali qiladi. Bizning maqsadimiz sizni eng murakkab vazifalardan o‘tkazish va biznes g‘oyalarni hayotga tadbiq etishdir."
       },
       {
-        "title": "Ҳар доим тўғри иш қилиш",
-        "description": "Биз қадриятларимиз",
-        "subtitle": "Биз профессионал фаолият ва шахсий ҳаётни мувозанатлаштиришга асосланган ишлаймиз, оиланинг аҳамияти ва муҳим лойиҳаларда иштирокни қадрлаймиз, Ўзбекистон бўйлаб тадбиркорлар ва жамоаларни қўллаб-қувватлаймиз. Биз одамларга ва мижозларимиз муваффақиятига сармоя киритамиз, ҳамма ўз салоҳиятини амалга ошира оладиган қулай иш муҳитини яратамиз. FEMIDA FINANCE стартаплардан то катта компанияларгача турли хил мижозлар билан ҳамкорлик қилишдан ғурурланади, ҳуқуқий ва бухгалтерия қўллаб-қувватлашни таъминлайди."
+        "title": "Har doim to‘g‘ri ish qilamiz",
+        "description": "Biz qadriyatlarimizga asoslanib ish qilamiz, oilani qadrlaymiz va muhim loyihalarda ishtirok etamiz, O‘zbekistondagi tadbirkorlar va jamoalarni qo‘llab-quvvatlaymiz. Biz xodimlarni va mijozlar muvaffaqiyatini qadrlaymiz, qulay ish muhitini yaratamiz va har bir xodim o‘z salohiyatini amalga oshirishi mumkin."
       }
     ],
     "mission": [
       {
-        "title": "Тушунишдан амалгача",
-        "description": "Анъанавий фикрлаш ва ёндашувларни сўроқ қилиш, энг мураккаб вазифаларни ечиш учун янги қарашларни таклиф қилиш"
+        "title": "Tushunishdan harakatgacha",
+        "description": "An’anaviy yondashuvlarni savolga tortish va murakkab vazifalarni hal qilish uchun yangi qarashlarni taklif qilish."
       },
       {
-        "title": "Илҳомлантирувчи натижаларга интилиш",
-        "description": "Энг яқин муддатдан ташқари қараб — ўн йилликларча олдин, мижозлар билан яқин ҳамкорликда уларнинг ташкилотларини мустаҳкамлаш ва илҳомлантириш"
+        "title": "Ilhomlantiruvchi natijaga intilish",
+        "description": "Yaqin muddatdan tashqarini ko‘rish — o‘nlab yillar oldinga, mijozlar bilan yaqindan ishlash."
       },
       {
-        "title": "Мураккабликни енгиб ўтиш",
-        "description": "Динамик ва мураккаб тизимларда рақобат афзалликлари ва яширин ҳақиқатларни топиш"
+        "title": "Murakkablikni yengish",
+        "description": "Dinamik tizimlarda noyob raqobat ustunliklari va yashirin haqiqatlarni topish."
       },
       {
-        "title": "Ростгўйлик билан лидерлик",
-        "description": "Қийин масалаларни ечишда ўз қадриятларимизга содиқ қолиш ва позициямизни очиқ билдириш"
+        "title": "Halollik bilan yetakchilik",
+        "description": "Qiyin masalalarni hal qilishda qadriyatlarimizga sodiq qolish va o‘z pozitsiyamizni ochiq ifodalash."
       },
       {
-        "title": "Бошқалар ривожланиши орқали ўз ривожланишимиз",
-        "description": "Мижозларга, ҳамкасбларга ва бутун жамоатчиликка муваффақиятга эришишда ва салоҳиятни очишда ёрдам бериш"
+        "title": "Boshqalarni rivojlantirish orqali o‘sish",
+        "description": "Mijozlar, hamkasblar va jamiyatni muvaffaqiyatga erishish va salohiyatini amalga oshirishga yordam berish."
       }
     ],
     "howWeWork": {
-      "title": "Қандай ишлаймиз",
-      "description": "Ташкилотларни барқарор ўзгартириш, уларнинг салоҳиятини очиш ва узоқ муддатли муваффақият учун самарали жамоалар қуриш. Биз билан ҳамкорлик қилинг ва ажойиб натижаларга эришинг."
+      "title": "Biz qanday ishlaymiz",
+      "description": "Biz tashkilotlarni barqaror tarzda o‘zgartiramiz, ularning imkoniyatlarini ochamiz va samarali jamoalar yaratamiz. Biz bilan hamkorlik qiling va ajoyib natijalarga erishing."
     },
     "advantages": [
       {
-        "title": "Инновация ва технологиялар",
-        "description": "Тез ўзгараётган дунёда янги эҳтиёжларга жавоб бериш учун доимий ривожланиш зарур."
+        "title": "Innovatsiya va Texnologiya",
+        "description": "Tez o‘zgarayotgan dunyoda yangi ehtiyojlarni qondirish uchun doimiy taraqqiyot zarur."
       },
       {
-        "title": "Пулни тежаш",
-        "description": "Бошиданоқ сифатни танланг. Биз билан ҳаммани тўғри қилиб, вақт ва пулни тежанг."
+        "title": "Pulni tejash",
+        "description": "Birinchi navbatda sifatni tanlang. Biz bilan hammasi to‘g‘ri bajarilgan holda vaqt va mablag‘ni tejang."
       },
       {
-        "title": "Мижозлар учун имкониятлар тармоғи",
-        "description": "Биз тажриба ва илғор компетенцияларимиз орқали маъноли ва барқарор ўзгаришлар берамиз."
+        "title": "Mijoz imkoniyatlari tarmog‘i",
+        "description": "Tajriba va ilg‘or bilimlar yordamida biz sezilarli va barqaror o‘zgarishlarni ta’minlaymiz."
       },
       {
-        "title": "Доимий қўллаб-қувватлаш",
-        "description": "Биз нафақат режалаштирамиз, балки амалга оширамиз. Профессионаллар жамоамиз амалга ошириш даврида ёрдам беради — асосий жамоангиз аъзоси сифатида ёки лойиҳа асосида."
+        "title": "Doimiy qo‘llab-quvvatlash",
+        "description": "Biz nafaqat rejalashtiramiz, balki amalga oshiramiz. Mutaxassislarimiz sizni loyihani amalga oshirishda qo‘llab-quvvatlaydi."
       }
     ],
-    "linkMeetUs": "Биз билан танишинг",
-    "linkMeetTeam": "Жамоамиз билан танишинг"
+    "linkMeetUs": "Biz bilan tanishing",
+    "linkMeetTeam": "Jamoamiz bilan tanishing"
   },
 
   "contact": {
-    "aboutTitle": "Боғланиш",
-    "title": "Профессионал молиявий ёрдам — фақат бир қўнғироқда",
-    "description": "Энг яқин офисни топмоқчимисиз? Биз билан боғланиш учун қуйидаги формани тўлдиринг. Биз сизинг маълумотларингизни фақат сўровингизга жавоб бериш учун фойдаланамиз. Батафсил Privacy Policy да кўринг.",
-    "formTitle": "Фикр билдириш формаси"
+    "aboutTitle": "Kontaktlar",
+    "title": "Professional moliyaviy yordam — faqat bir qo‘ng‘iroq masofada",
+    "description": "Biz bilan bog‘lanish uchun quyidagi formani to‘ldiring. Ma’lumotlaringiz faqat so‘rovingizga javob berish uchun ishlatiladi.",
+    "formTitle": "Aloqa formasi"
   },
 
   "contactForm": {
-    "labelName": "Исм",
-    "placeholderName": "Исмингиз",
-    "labelPhone": "Рақам",
-    "placeholderPhone": "Телефон рақамингиз",
-    "labelTopic": "Мавзу",
-    "placeholderTopic": "Бу ерга киритинг",
-    "labelMessage": "Хабар",
-    "placeholderMessage": "Бу ерга ёзинг",
-    "buttonSend": "Жўнатиш"
+    "labelName": "Ism",
+    "placeholderName": "Ismingiz",
+    "labelPhone": "Telefon",
+    "placeholderPhone": "Telefon raqamingiz",
+    "labelTopic": "Mavzu",
+    "placeholderTopic": "Bu yerga yozing",
+    "labelMessage": "Xabar",
+    "placeholderMessage": "Bu yerga yozing",
+    "buttonSend": "Yuborish"
   }
 }

@@ -25,15 +25,7 @@ export const GuidePrinciples = () => {
     {
       title: t("items.objectivity.title"),
       description: t("items.objectivity.description"),
-    },
-    {
-      title: t("items.longTerm.title"),
-      description: t("items.longTerm.description"),
-    },
-    {
-      title: t("items.responsibility.title"),
-      description: t("items.responsibility.description"),
-    },
+    }
   ];
 
   return (

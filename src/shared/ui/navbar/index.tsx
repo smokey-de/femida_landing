@@ -23,6 +23,8 @@ import { LanguageSwitcher } from "../language-switcher";
 import { BaseLink } from "../link";
 import s from "./styles.module.scss";
 import logo from "@/shared/assets/logo.svg";
+import logosmall from "@/shared/assets/logo_small.svg";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,6 +34,7 @@ type NavbarRoute = {
 };
 
 const LOGO_URL = logo;
+const LOGOSM_URL = logosmall;
 
 export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
   const isNotMobile = useMediaQuery(mediaQueries.mobile);
@@ -92,8 +95,11 @@ export const Navbar = ({ darkMode }: { darkMode?: boolean }) => {
     <nav ref={navRef} className={cn(s.nav, [darkMode && s.scrolled])}>
       <NavContainer>
         <NavElement>
-          <Flex component={Link} href={"/"}>
-            <Image src={LOGO_URL} alt="Logo" width={120} height={30} />
+          <Flex visibleFrom="md" component={Link} href={"/"} justify={"flex-start"}>
+            <Image src={LOGO_URL} alt="Logo" height={30}  />
+          </Flex>
+          <Flex hiddenFrom="md" component={Link} href={"/"} justify={"flex-start"}>
+            <Image src={LOGOSM_URL} alt="Logo" height={30}  />
           </Flex>
           {isNotMobile ? (
             <DesktopNavList navbarRoutes={navbarRoutes} contactLabel={t("navbar_btn")} />

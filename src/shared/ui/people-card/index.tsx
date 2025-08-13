@@ -15,12 +15,15 @@ export const PeopleCard = ({ img, title, subtitle }: PeopleCardProps) => {
       direction={"column"}
       gap={"20px"}
     >
+      <Flex align={"center"} justify={"center"}   miw={{base: "100%", md: "200px"}} mih={{base: "100%", md: "400px"}}>
       <Image
-        src={img}
+        src={img || "https://www.vecteezy.com/png/19879186-user-icon-on-transparent-background"}
         alt={title}
         className={s.image}
-        maw={"300px"}
+
       />
+      </Flex>
+
       <Flex
         direction={"column"}
         gap={"5px"}
