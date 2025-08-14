@@ -95,14 +95,14 @@ export const TrustSection = () => {
           >
             <InfoContent
               ml={{ base: 0, md: "25%", lg: "50%" }}
-              value="10"
+              value="2+"
               label={t("yearsExp.label")}
               description={t("yearsExp.desc")}
             />
             <InfoContent
               hasDivider
               ml={{ base: 0, md: "10%", lg: "25%" }}
-              value="110"
+              value="100+"
               label={t("clients.label")}
               description={t("clients.desc")}
             />

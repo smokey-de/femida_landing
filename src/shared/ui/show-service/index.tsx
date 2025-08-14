@@ -56,6 +56,7 @@ export const ShowServices = () => {
     { scope: containerRef }
   );
 
+  // Каждому section присвоен уникальный набор сервисов
   const sections = [
     {
       type: t("financeType"),
@@ -63,6 +64,23 @@ export const ShowServices = () => {
       image:
         "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1125619200-square.jpg",
       bg: "#E7E8DB",
+      services: [
+        {
+          icon: <IconChartBar />,
+          title: t("service1.title"),
+          description: t("service1.description"),
+        },
+        {
+          icon: <IconArmchair2 />,
+          title: t("service2.title"),
+          description: t("service2.description"),
+        },
+        {
+          icon: <IconBrain />,
+          title: t("service3.title"),
+          description: t("service3.description"),
+        },
+      ],
     },
     {
       type: t("insuranceType"),
@@ -70,31 +88,23 @@ export const ShowServices = () => {
       image:
         "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1138996754-1024x686.jpg",
       bg: "#DDDECB",
-    },
-    {
-      type: t("adviceType"),
-      title: t("adviceTitle"),
-      image:
-        "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1371643065-square.jpg",
-      bg: "#D1D2BC",
-    },
-  ];
-
-  const serviceData = [
-    {
-      icon: <IconChartBar />,
-      title: t("service1.title"),
-      description: t("service1.description"),
-    },
-    {
-      icon: <IconArmchair2 />,
-      title: t("service2.title"),
-      description: t("service2.description"),
-    },
-    {
-      icon: <IconBrain />,
-      title: t("service3.title"),
-      description: t("service3.description"),
+      services: [
+        {
+          icon: <IconArmchair2 />,
+          title: t("insuranceService1.title"),
+          description: t("insuranceService1.description"),
+        },
+        {
+          icon: <IconBrain />,
+          title: t("insuranceService2.title"),
+          description: t("insuranceService2.description"),
+        },
+        {
+          icon: <IconChartBar />,
+          title: t("insuranceService3.title"),
+          description: t("insuranceService3.description"),
+        },
+      ],
     },
   ];
 
@@ -135,7 +145,7 @@ export const ShowServices = () => {
                 <ServiceTitle
                   mt={{ base: "0", md: "250px" }}
                   pos={"relative"}
-                  fz={{ base: "2.5rem", md: "4.375rem" }}
+                  fz={{ base: "2.0  rem", md: "4.375rem" }}
                   style={{ zIndex: 1000, whiteSpace: "pre-line" }}
                 >
                   {section.title}
@@ -148,7 +158,7 @@ export const ShowServices = () => {
                   gap={2}
                   w={"100%"}
                 >
-                  {serviceData.map((service, index) => (
+                  {section.services.map((service, index) => (
                     <ServiceCard
                       key={index}
                       p={{ base: "15px", md: "4.375rem 1.875rem 3.125rem" }}

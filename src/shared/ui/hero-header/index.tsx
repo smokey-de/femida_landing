@@ -1,17 +1,16 @@
 "use client";
 
-import { Box, Container, Flex, Group, Text } from "@mantine/core";
+import { Box, Container, Flex, Text } from "@mantine/core";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+
+import { useTranslations } from "next-intl";
 
 import gsap from "gsap";
 
 import { BtnBasic } from "@/shared/ui";
 
 import s from "./style.module.scss";
-
-import { useTranslations } from "next-intl";
-
 
 const images = [
   "https://beratung.vamtam.com/wp-content/uploads/2023/07/GettyImages-1426960043.jpg",
@@ -24,24 +23,27 @@ const images = [
 export const HeroHeader = () => {
   const [index, setIndex] = useState(0);
   const [bgIndex, setBgIndex] = useState(0);
-  const [letters, setLetters] = useState<string[]>([]);
+  // const [letters, setLetters] = useState<string[]>([]);
   const letterRefs = useRef<HTMLSpanElement[]>([]);
   const bgRefs = useRef<HTMLDivElement[]>([]);
 
   const t = useTranslations();
 
-  const headlines = useMemo(() => [
-    { id: 1, key: t("headlines_planning") },
-    { id: 2, key: t("headlines_solutions") },
-    { id: 3, key: t("headlines_technologies") },
-    { id: 4, key: t("headlines_strategy") },
-    { id: 5, key: t("headlines_advice") },
-  ], [t]);  
+  const headlines = useMemo(
+    () => [
+      { id: 1, key: t("headlines_planning") },
+      { id: 2, key: t("headlines_solutions") },
+      { id: 3, key: t("headlines_technologies") },
+      { id: 4, key: t("headlines_strategy") },
+      { id: 5, key: t("headlines_advice") },
+    ],
+    [t],
+  );
 
   useEffect(() => {
     const current = headlines[index].key.padEnd(35, " ").split("");
-    setLetters(current);
-  
+    // setLetters(current);
+
     current.forEach((char, i) => {
       const el = letterRefs.current[i];
       if (el) {
@@ -100,7 +102,6 @@ export const HeroHeader = () => {
     return () => clearInterval(bgInterval);
   }, [bgIndex, bgRefs]);
 
-
   return (
     <Box
       className={s.heroWrapper}
@@ -138,10 +139,11 @@ export const HeroHeader = () => {
               fz={{ base: "24px", md: "60px" }}
               fw={500}
               lh={"1.2em"}
+              mb={30}
             >
               {t("main_title")}
             </Text>
-            <Group className={s.line}>
+            {/* <Group className={s.line}>
               {Array(letters.length)
                 .fill("")
                 .map((_, i) => (
@@ -161,7 +163,16 @@ export const HeroHeader = () => {
                     {letters[i] ?? "\u00A0"}
                   </Text>
                 ))}
-            </Group>
+            </Group> */}
+            <Text
+              fz={{ base: "20px", md: "56px" }}
+              fw={500}
+              lh={"1.2em"}
+              style={{whiteSpace: "break-spaces"}}
+              mb={15}
+            >
+              {t("main_subtitle")}
+            </Text>
             <Text
               fz={{ base: "16px", sm: "20px", md: "24px" }}
               fw={500}

@@ -1,9 +1,11 @@
 "use client";
 
 import { Box, Container, Flex, Image, Text } from "@mantine/core";
+
 import { useTranslations } from "next-intl";
 
-import  List  from "@/entities/people";
+import List from "@/entities/people";
+import { Link } from "@/i18n/navigation";
 import s from "@/pages/people/style.module.scss";
 import {
   BtnBasic,
@@ -18,8 +20,8 @@ type Highlight = {
 };
 
 const highlightsStatic: Highlight[] = [
-  { number: "200+" },
-  { number: "10+" },
+  { number: "100+" },
+  { number: "2+" },
   { number: "100%" },
 ];
 
@@ -27,7 +29,10 @@ const PeoplePage = () => {
   const t = useTranslations("peoplePage");
 
   return (
-    <Flex direction="column" className={s.page}>
+    <Flex
+      direction="column"
+      className={s.page}
+    >
       <Navbar darkMode />
 
       <Box>
@@ -57,8 +62,15 @@ const PeoplePage = () => {
       </Box>
 
       <Container size="xl">
-        <Flex direction={{ base: "column", md: "row" }} mb={115} gap={160}>
-          <Flex direction="column" gap={40}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          mb={115}
+          gap={160}
+        >
+          <Flex
+            direction="column"
+            gap={40}
+          >
             <Text
               ff="Geologica"
               fz={{ base: "32px", md: "48px" }}
@@ -68,16 +80,33 @@ const PeoplePage = () => {
             >
               {t("values.title")}
             </Text>
-            <BtnBasic size="xl" maw={250} visibleFrom="md">
-              {t("values.btn")}
-            </BtnBasic>
-            <BtnBasic size="md" maw={250} hiddenFrom="md">
-              {t("values.btn")}
-            </BtnBasic>
+            <Link href={"/about"} style={{width: "fit-content"}}>
+              <BtnBasic
+                size="xl"
+                maw={250}
+                visibleFrom="md"
+              >
+                {t("values.btn")}
+              </BtnBasic>
+            </Link>
+            <Link href={"/about"}  style={{width: "fit-content"}}>
+              <BtnBasic
+                size="md"
+                maw={250}
+                hiddenFrom="md"
+              >
+                {t("values.btn")}
+              </BtnBasic>
+            </Link>
           </Flex>
 
           <Flex direction="column">
-            <Text maw={625} c="#5F6567" fz={{ base: 16, md: 20 }} lh="1.5em">
+            <Text
+              maw={625}
+              c="#5F6567"
+              fz={{ base: 16, md: 20 }}
+              lh="1.5em"
+            >
               {t("values.description")}
             </Text>
           </Flex>
@@ -96,9 +125,20 @@ const PeoplePage = () => {
           borderTop: "1px solid #00000026",
         }}
       >
-        <Flex direction="column" gap={40}>
-          <Flex w="100%" direction="row" justify="flex-start">
-            <Flex className={s.aboutTitle} gap="4px" align="center">
+        <Flex
+          direction="column"
+          gap={40}
+        >
+          <Flex
+            w="100%"
+            direction="row"
+            justify="flex-start"
+          >
+            <Flex
+              className={s.aboutTitle}
+              gap="4px"
+              align="center"
+            >
               <Image
                 src="https://beratung.vamtam.com/wp-content/uploads/2023/06/fav-icon-150x150.png"
                 h={18}
@@ -117,7 +157,12 @@ const PeoplePage = () => {
             pl={{ base: 0, md: 100 }}
           >
             {highlightsStatic.map((item, index) => (
-              <Flex key={index} direction="column" gap={10} maw={295}>
+              <Flex
+                key={index}
+                direction="column"
+                gap={10}
+                maw={295}
+              >
                 <Text
                   ff="Geologica"
                   fz={{ base: 52, md: 70 }}
@@ -137,7 +182,11 @@ const PeoplePage = () => {
                 >
                   {t(`opportunities.items.${index}.title`)}
                 </Text>
-                <Text fz={14} lh="1.4em" style={{ color: "#5F6567" }}>
+                <Text
+                  fz={14}
+                  lh="1.4em"
+                  style={{ color: "#5F6567" }}
+                >
                   {t(`opportunities.items.${index}.description`)}
                 </Text>
               </Flex>
@@ -146,9 +195,19 @@ const PeoplePage = () => {
         </Flex>
       </Container>
 
-      <Container size="xl" w="100%" maw={1280}>
-        <Flex direction="row" justify="space-between">
-          <Flex direction="column" gap={10}>
+      <Container
+        size="xl"
+        w="100%"
+        maw={1280}
+      >
+        <Flex
+          direction="row"
+          justify="space-between"
+        >
+          <Flex
+            direction="column"
+            gap={10}
+          >
             <Text
               ff="Geologica"
               fz={{ base: 32, md: 48 }}
@@ -158,7 +217,12 @@ const PeoplePage = () => {
             >
               {t("management.title")}
             </Text>
-            <Text fz={14} lh="1.4em" style={{ color: "#5F6567" }} maw={536}>
+            <Text
+              fz={14}
+              lh="1.4em"
+              style={{ color: "#5F6567" }}
+              maw={536}
+            >
               {t("management.description")}
             </Text>
           </Flex>
