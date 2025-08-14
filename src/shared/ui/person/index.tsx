@@ -116,6 +116,12 @@ const Person = ({ slug }: PersonDetailsClientProps) => {
             ref={rightRef}
           >
             <Text
+              fz={{ base: 32, md: 48 }}
+              fw={700}
+            >
+              {t(person.titleKey)}
+            </Text>
+            <Text
               fz={{ base: 20, md: 24 }}
               style={{ color: "#8fd299" }}
             >
